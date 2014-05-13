@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+
+<title>CS:GO Autoexec creator</title>
+
+<!-- CSS stylesheet file -->
+<link rel="stylesheet" href="assets/css/styles.css" />
+
+<!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+	<div id="wrapper">
+		<div id="tabContainer">
+			<div class="tabs">
+				<ul>
+					<li id="tabHeader_1">Rates</li>
+					<li id="tabHeader_2">Audio</li>
+					<li id="tabHeader_3">Video</li>
+				</ul>
+			</div>
+			<div class="tabscontent">
+				<div class="tabpage" id="tabpage_1">
+					<h2>Below is "default" rates. Use them as a guideline, and
+						modify as you see fit.</h2>
+					<p>Remember, matchmaking servers are 64 tick, so if you play
+						soley on MM, this is not going to have a major impact on your
+						gameplay. It makes sense to have the best possible configurations
+						as default for the times when you do decide to play on high-end
+						servers.</p>
+
+					<p>
+						<b>Rate</b><br>
+					<form>
+						<input id="rate" type="range" name="rate" min="0" max="128000"
+							value="128000" oninput="this.form.rate_num.value=this.value" />
+						<input type="number" name="rate_num" min="0" max="128000"
+							value="128000" oninput="this.form.rate.value=this.value" />
+					</form>
+
+					<b>Update Rate</b><br>
+
+					<form>
+						<input type="range" name="cl_updaterate" min="0" max="128"
+							value="128" oninput="this.form.cl_updaterate_num.value=this.value" />
+						<input type="number" name="cl_updaterate_num" min="0" max="128"
+							value="128" oninput="this.form.cl_updaterate.value=this.value" />
+					</form>
+
+					<b>CMD rate</b><br>
+
+					<form>
+						<input type="range" name="cl_cmdrate" min="0" max="128"
+							value="128" oninput="this.form.cl_cmdrate_num.value=this.value" />
+						<input type="number" name="cl_cmdrate_num" min="0" max="128"
+							value="128" oninput="this.form.cl_cmdrate.value=this.value" />
+					</form>
+
+
+					<b>Lag compensation (serverside)</b>
+
+					<input id="cl_lagcompensation" name="cl_lagcompensation" value="your_value2" type="checkbox" checked><br>
+					
+					
+
+				</div>
+				<div class="tabpage" id="tabpage_2">
+					<h2>Audio</h2>
+
+					<form>
+						<input type="range" name="amountRange100" min="0" max="20" value="0"
+							oninput="this.form.amountInput100.value=this.value" /> <input
+							type="number" name="amountInput100" min="0" max="20" value="0"
+							oninput="this.form.amountRange100.value=this.value" />
+					</form>
+
+
+				</div>
+				<div class="tabpage" id="tabpage_3">
+					<h2>Video</h2>
+					<p></p>
+				</div>
+			</div>
+		</div>
+
+		<input type="button" value="Update" id="updateButton"> <input
+			type="button" value="Download" id="downloadButton"> <input
+			type="button" value="Test" id="testButton">
+
+
+	</div>
+
+
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+	<script src="assets/js/jquery.generateFile.js"></script>
+	<script src="assets/js/script.js"></script>
+	<script src="assets/js/tabs.js"></script>
+
+	<? /*
+		Big thanks to everyone that made this possible. Resourced that helped a lot:
+		http://www.my-html-codes.com/javascript-tabs-html-5-css3
+		http://tutorialzine.com/2011/05/generating-files-javascript-php/
+		https://developer.valvesoftware.com/wiki/Console_Command_List
+		http://developer.att.com/technical-library/ui-elements/html5-text-fields
+		http://developer.att.com/technical-library/ui-elements/html5-slider
+		http://stackoverflow.com/questions/4901410/correct-way-to-do-html5-checkbox
+
+		*/?>
+
+
+</body>
+</html>
