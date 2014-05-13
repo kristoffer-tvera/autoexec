@@ -21,6 +21,10 @@
 					<li id="tabHeader_1">Rates</li>
 					<li id="tabHeader_2">Audio</li>
 					<li id="tabHeader_3">Video</li>
+					<li id="tabHeader_4">Mouse</li>
+					<li id="tabHeader_5">Misc</li>
+					<li id="tabHeader_6">HUD</li>
+					<li id="tabHeader_7">Keybinds - buy</li>
 				</ul>
 			</div>
 			<div class="tabscontent">
@@ -46,8 +50,9 @@
 
 					<form>
 						<input type="range" name="cl_updaterate" min="0" max="128"
-							value="128" oninput="this.form.cl_updaterate_num.value=this.value" />
-						<input type="number" name="cl_updaterate_num" min="0" max="128"
+							value="128"
+							oninput="this.form.cl_updaterate_num.value=this.value" /> <input
+							type="number" name="cl_updaterate_num" min="0" max="128"
 							value="128" oninput="this.form.cl_updaterate.value=this.value" />
 					</form>
 
@@ -61,21 +66,21 @@
 					</form>
 
 
-					<b>Lag compensation (serverside)</b>
+					<b>Lag compensation (serverside)</b> <input id="cl_lagcompensation"
+						name="cl_lagcompensation" value="your_value2" type="checkbox"
+						checked><br>
 
-					<input id="cl_lagcompensation" name="cl_lagcompensation" value="your_value2" type="checkbox" checked><br>
-					
-					
+
 
 				</div>
 				<div class="tabpage" id="tabpage_2">
 					<h2>Audio</h2>
 
 					<form>
-						<input type="range" name="amountRange100" min="0" max="20" value="0"
-							oninput="this.form.amountInput100.value=this.value" /> <input
-							type="number" name="amountInput100" min="0" max="20" value="0"
-							oninput="this.form.amountRange100.value=this.value" />
+						<input type="range" name="amountRange100" min="0" max="20"
+							value="0" oninput="this.form.amountInput100.value=this.value" />
+						<input type="number" name="amountInput100" min="0" max="20"
+							value="0" oninput="this.form.amountRange100.value=this.value" />
 					</form>
 
 
@@ -84,24 +89,49 @@
 					<h2>Video</h2>
 					<p></p>
 				</div>
+				<div class="tabpage" id="tabpage_4">
+					<h2>Mouse</h2>
+					<b>Sensitivity</b><br>
+
+					<form>
+						<input type="range" name="sensitivity" min="0.05" max="10.0"
+							value="2.0" step="0.05" oninput="this.form.sensitivity_num.value=this.value" />
+						<input type="number" name="sensitivity_num" min="0.0" max="10.0"
+							value="2.0" step="0.05" oninput="this.form.sensitivity.value=this.value" />
+					</form> <br>
+					
+					
+					
+				</div>
+				<div class="tabpage" id="tabpage_5">
+					<h2>Misc</h2>
+					<p></p>
+				</div>
+				<div class="tabpage" id="tabpage_6">
+					<h2>HUD</h2>
+					<p></p>
+				</div>
+				<div class="tabpage" id="tabpage_7">
+					<h2>Keybinds</h2>
+					<p></p>
+				</div>
 			</div>
+
+			<input type="button" value="Update" id="updateButton"> <input
+				type="button" value="Download" id="downloadButton"> <input
+				type="button" value="Test" id="testButton">
+
+
 		</div>
 
-		<input type="button" value="Update" id="updateButton"> <input
-			type="button" value="Download" id="downloadButton"> <input
-			type="button" value="Test" id="testButton">
 
+		<script
+			src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+		<script src="assets/js/jquery.generateFile.js"></script>
+		<script src="assets/js/script.js"></script>
+		<script src="assets/js/tabs.js"></script>
 
-	</div>
-
-
-	<script
-		src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
-	<script src="assets/js/jquery.generateFile.js"></script>
-	<script src="assets/js/script.js"></script>
-	<script src="assets/js/tabs.js"></script>
-
-	<? /*
+		<? /*
 		Big thanks to everyone that made this possible. Resourced that helped a lot:
 		http://www.my-html-codes.com/javascript-tabs-html-5-css3
 		http://tutorialzine.com/2011/05/generating-files-javascript-php/
@@ -112,7 +142,5 @@
 
 
 		*/?>
-
-
 </body>
 </html>
