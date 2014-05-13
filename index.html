@@ -46,6 +46,15 @@
 							value="128000" oninput="this.form.rate.value=this.value" />
 					</form>
 
+<b>CMD rate</b><br>
+
+					<form>
+						<input type="range" name="cl_cmdrate" min="0" max="128"
+							value="128" oninput="this.form.cl_cmdrate_num.value=this.value" />
+						<input type="number" name="cl_cmdrate_num" min="0" max="128"
+							value="128" oninput="this.form.cl_cmdrate.value=this.value" />
+					</form>
+
 					<b>Update Rate</b><br>
 
 					<form>
@@ -56,14 +65,26 @@
 							value="128" oninput="this.form.cl_updaterate.value=this.value" />
 					</form>
 
-					<b>CMD rate</b><br>
+                   <b>Interp</b><br>
 
 					<form>
-						<input type="range" name="cl_cmdrate" min="0" max="128"
-							value="128" oninput="this.form.cl_cmdrate_num.value=this.value" />
-						<input type="number" name="cl_cmdrate_num" min="0" max="128"
-							value="128" oninput="this.form.cl_cmdrate.value=this.value" />
+						<input type="range" name="cl_updaterate" min="0.0" max="1.0"
+							value="0.0"
+							oninput="this.form.cl_updaterate_num.value=this.value" /> <input
+							type="number" name="cl_updaterate_num" min="0.0" max="1.0"
+							value="0.0" oninput="this.form.cl_updaterate.value=this.value" />
 					</form>
+					
+					<b>Interp Ratio</b><br>
+
+						<form>
+						<input type="range" name="cl_updaterate" min="0.0" max="1.0"
+							value="0.0"
+							oninput="this.form.cl_updaterate_num.value=this.value" /> <input
+							type="number" name="cl_updaterate_num" min="0.0" max="1.0"
+							value="0.0" oninput="this.form.cl_updaterate.value=this.value" />
+					</form>
+					
 
 
 					<b>Lag compensation (serverside)</b> <input id="cl_lagcompensation"
@@ -76,18 +97,100 @@
 				<div class="tabpage" id="tabpage_2">
 					<h2>Audio</h2>
 
+					<b>Volume</b><br>
 					<form>
-						<input type="range" name="amountRange100" min="0" max="20"
-							value="0" oninput="this.form.amountInput100.value=this.value" />
-						<input type="number" name="amountInput100" min="0" max="20"
-							value="0" oninput="this.form.amountRange100.value=this.value" />
-					</form>
+<input type="range" name="volume" min="0.0" max="1.0" step="0.05" value="0.0" oninput="this.form.volume_num.value=this.value" /> 
+<input type="number" name="volume_num" min="0.0" max="1.0" step="0.05" value="0.0" oninput="this.form.volume.value=this.value" />
+</form>
+					
+					<b>Voice Enable</b><br>
+					<input id="voice_enable" name="voice_enable" value="your_value2" type="checkbox" checked><br>
+					
+					<b>Voice Scale</b><br>
+					<form>
+<input type="range" name="voice_scale" min="0.0" max="1.0" step="0.05" value="0.0" oninput="this.form.voice_scale_num.value=this.value" /> 
+<input type="number" name="voice_scale_num" min="0.0" max="1.0" step="0.05" value="0.0" oninput="this.form.voice_scale.value=this.value" />
+</form>
+					
+					<b>Windows Speaker Config</b><br>
+					
+					<b>Music Volume</b><br>
+					<form>
+<input type="range" name="snd_musicvolume" min="0.0" max="1.0" step="0.05" value="0.0" oninput="this.form.snd_musicvolume_num.value=this.value" /> 
+<input type="number" name="snd_musicvolume_num" min="0.0" max="1.0" step="0.05" value="0.0" oninput="this.form.snd_musicvolume.value=this.value" />
+</form>
+					
+					<b>Sound Delay</b><br>
+					<form>
+<input type="range" name="snd_mixahead" min="0.0" max="1.0" step="0.05" value="0.0" oninput="this.form.snd_mixahead_num.value=this.value" /> 
+<input type="number" name="snd_mixahead_num" min="0.0" max="1.0" step="0.05" value="0.0" oninput="this.form.snd_mixahead.value=this.value" />
+</form>
+					
+					<b>Headphone pan exponent</b><br>
+					<form>
+<input type="range" name="snd_headphone_pan_exponent" min="0" max="100" step="1" value="100" oninput="this.form.snd_headphone_pan_exponent_num.value=this.value" /> 
+<input type="number" name="snd_headphone_pan_exponent_num" min="0" max="100" step="1" value="100" oninput="this.form.snd_headphone_pan_exponent.value=this.value" />
+</form>
+					
+					<b>Headphone pan radial</b><br>
+					<form>
+<input type="range" name="snd_headphone_pan_radial_weight" min="0" max="100" step="1" value="100" oninput="this.form.snd_headphone_pan_radial_weight_num.value=this.value" /> 
+<input type="number" name="snd_headphone_pan_radial_weight_num" min="0" max="100" step="1" value="100" oninput="this.form.snd_headphone_pan_radial_weight.value=this.value" />
+</form>
+					
+					<b>Legacy surround</b><br>
+					<input id="snd_legacy_surround" name="snd_legacy_surround" value="your_value2" type="checkbox" checked><br>
+					
+					<b>Mute game when in windows</b><br>
+					<input id="snd_mute_losefocus" name="snd_mute_losefocus" value="your_value2" type="checkbox" checked><br>
+					
+					<b>Voice chat in lobby</b><br>
+					<input id="lobby_voice_chat_enabled" name="lobby_voice_chat_enabled" value="your_value2" type="checkbox" checked><br>
 
 
 				</div>
 				<div class="tabpage" id="tabpage_3">
 					<h2>Video</h2>
-					<p></p>
+					
+					<b>Monitor Gamma</b><br>
+					<form>
+<input type="range" name="mat_monitorgamma" min="0.0" max="5.0" step="0.1" value="2.1" oninput="this.form.mat_monitorgamma_num.value=this.value" /> 
+<input type="number" name="mat_monitorgamma_num" min="0.0" max="5.0" step="0.1" value="2.1" oninput="this.form.mat_monitorgamma.value=this.value" />
+</form>
+					
+					
+					<b>Video processing queue mode (multi core rendering, leave on -1 unless you know what you are doing)</b><br>
+					<form>
+<input type="range" name="mat_queue_mode" min="-1" max="16" step="1" value="-1" oninput="this.form.mat_queue_mode_num.value=this.value" /> 
+<input type="number" name="mat_queue_mode_num" min="-1" max="16" step="1" value="-1" oninput="this.form.mat_queue_mode.value=this.value" />
+</form>
+					
+					<b>Vertical Sync</b><br>
+					<input id="mat_vsync" name="mat_vsync" value="your_value2" type="checkbox" ><br>
+					
+					<b>FPS max</b><br>
+					<form>
+<input type="range" name="fps_max" min="0" max="100" step="1" value="100" oninput="this.form.fps_max_num.value=this.value" /> 
+<input type="number" name="fps_max_num" min="0" max="100" step="1" value="100" oninput="this.form.fps_max.value=this.value" />
+</form>
+					
+					<b>FPS max in menus)</b><br>
+					<form>
+<input type="range" name="fps_max_menu" min="0" max="100" step="1" value="100" oninput="this.form.fps_max_menu_num.value=this.value" /> 
+<input type="number" name="fps_max_menu_num" min="0" max="100" step="1" value="100" oninput="this.form.fps_max_menu.value=this.value" />
+</form>
+					
+					<b>Dynamic</b><br>
+					<input id="r_dynamic" name="r_dynamic" value="your_value2" type="checkbox" ><br>
+					
+					<b>Draw Tracers in first person mode</b><br>
+					<input id="r_drawtracers_firstperson" name="r_drawtracers_firstperson" value="your_value2" type="checkbox" ><br>
+					
+					<b>Draw particles</b><br>
+					<input id="r_drawparticles" name="r_drawparticles" value="your_value2" type="checkbox" ><br>
+					
+					
+					
 				</div>
 				<div class="tabpage" id="tabpage_4">
 					<h2>Mouse</h2>
@@ -102,13 +205,72 @@
 							oninput="this.form.sensitivity.value=this.value" />
 					</form>
 					<br>
+					
+					<b>Raw input</b><br>
+					<input id="m_rawinput" name="m_rawinput" value="your_value2" type="checkbox" checked><br>
+					
+					<b>Custom acceleration X</b><br>
+					<form>
+<input type="range" name="m_customaccel" min="0.0" max="1.0" step="0.05" value="0.0" oninput="this.form.m_customaccel_num.value=this.value" /> 
+<input type="number" name="m_customaccel_num" min="0.0" max="1.0" step="0.05" value="0.0" oninput="this.form.m_customaccel.value=this.value" />
+</form>
 
+					<b>Custom acceleration Y</b><br>
+					<form>
+<input type="range" name="m_mouseaccel1" min="0.0" max="1.0" step="0.05" value="0.0" oninput="this.form.m_mouseaccel1_num.value=this.value" /> 
+<input type="number" name="m_mouseaccel1_num" min="0.0" max="1.0" step="0.05" value="0.0" oninput="this.form.m_mouseaccel1.value=this.value" />
+</form>
+
+					<b>Custom acceleration Z</b><br>
+<form>
+<input type="range" name="m_mouseaccel2" min="0.0" max="1.0" step="0.05" value="0.0" oninput="this.form.m_mouseaccel2_num.value=this.value" /> 
+<input type="number" name="m_mouseaccel2_num" min="0.0" max="1.0" step="0.05" value="0.0" oninput="this.form.m_mouseaccel2.value=this.value" />
+</form>
 
 
 				</div>
 				<div class="tabpage" id="tabpage_5">
 					<h2>Misc</h2>
-					<p></p>
+					
+					<b>Developer (must be enabled to get effect from a few of the commands below)</b><br>
+					
+					<b>Ingame Console overlay ingame</b><br>
+					
+					<b>Position of ingame console</b><br>
+					
+					<b>Filter setting 1</b><br>
+					
+					<b>Filter setting 2</b><br>
+					
+					<b>Steam notifications position</b><br>
+					
+					<b>Max ping when looking for matchmaking server</b><br>
+					
+					<b>Force matchmaking from these servers:</b><br>
+					
+					<b>Basic game instructions</b><br>
+					
+					<b>Toggle duck?</b><br>
+					
+					<b>Toggle walk?</b><br>
+					
+					<b>Force Preload</b><br>
+					
+					<b>Raw input</b><br>
+					
+					<b>Raw input</b><br>
+					
+					<b>Raw input</b><br>
+					
+					<b>Raw input</b><br>
+					
+					<b>Raw input</b><br>
+					
+					<b>Raw input</b><br>
+					<b>Raw input</b><br>
+					
+					
+					
 				</div>
 				<div class="tabpage" id="tabpage_6">
 					<h2>HUD</h2>
@@ -124,6 +286,8 @@
 
 		<br> <br> <input id="updateButton" type="button"
 			value="Update autoexec" /> <br> <br> <br> <br>
+			
+			<button id="updateButton" type="button">Update!</button>
 
 		<form action="./" method="post">
 			<textarea id="finalConfig" name="finalConfig"

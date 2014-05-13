@@ -18,12 +18,12 @@ $(document).ready(function(){
 		var rates = [];
 
 		rates.push("//Rates");
-		rates.push("rate ");
-		rates.push("cl_cmdrate ");
-		rates.push("cl_updaterate ");
-		rates.push("cl_interp ");
-		rates.push("cl_interp_ratio ");
-		rates.push("cl_lagcompensation ");
+		rates.push("rate "+$('#rate').val());
+		rates.push("cl_cmdrate "+$('#cl_cmdrate').val());
+		rates.push("cl_updaterate "+$('#rate').val());
+		rates.push("cl_interp "+$('#cl_interp').val());
+		rates.push("cl_interp_ratio "+$('#cl_interp_ratio').val());
+		rates.push("cl_lagcompensation "+$("#cl_lagcompensation").is(':checked') ? 1 : 0;);
 		
 
 		for ( var i = 0; i < rates.length; i = i + 1 ) {
@@ -34,15 +34,15 @@ $(document).ready(function(){
 
 		var audio = [];
 		audio.push("//Audio");
-		audio.push("voice_enable ");
-		audio.push("windows_speaker_config ");
-		audio.push("snd_musicvolume ");
-		audio.push("snd_mixahead ");
-		audio.push("snd_headphone_pan_exponent ");
-		audio.push("snd_headphone_pan_radial_weight ");
-		audio.push("snd_legacy_surround ");
-		audio.push("snd_mute_losefocus ");
-		audio.push("lobby_voice_chat_enabled ");
+		audio.push("voice_enable "+$('#voice_enable').val());
+		audio.push("windows_speaker_config "+$('#windows_speaker_config').val());
+		audio.push("snd_musicvolume "+$('#snd_musicvolume').val());
+		audio.push("snd_mixahead "+$('#snd_mixahead').val());
+		audio.push("snd_headphone_pan_exponent "+$('#snd_headphone_pan_exponent').val());
+		audio.push("snd_headphone_pan_radial_weight "+$('#snd_headphone_pan_radial_weight').val());
+		audio.push("snd_legacy_surround "+$('#snd_legacy_surround').val());
+		audio.push("snd_mute_losefocus "+$('#snd_mute_losefocus').val());
+		audio.push("lobby_voice_chat_enabled "+$('#lobby_voice_chat_enabled').val());
 
 
 		for ( var i = 0; i < audio.length; i = i + 1 ) {
@@ -54,17 +54,17 @@ $(document).ready(function(){
 		var video = [];
 
 		video.push("//Video");
-		video.push("mat_setvideomode ");
-		video.push("mat_monitorgamma ");
-		video.push("mat_queue_mode ");
-		video.push("mat_vsync ");
-		video.push("fps_max ");
-		video.push("fps_max_menu ");
-		video.push("r_dynamic ");
-		video.push("r_drawtracers_firstperson ");
-		video.push("r_drawparticles ");
-		video.push("mat_savechanges ");
-
+		//video.push("mat_setvideomode "+$('#mat_setvideomode').val());
+		video.push("mat_monitorgamma "+$('#mat_monitorgamma').val());
+		video.push("mat_queue_mode "+$('#mat_queue_mode').val());
+		video.push("mat_vsync "+$('#mat_vsync').val());
+		video.push("fps_max "+$('#fps_max').val());
+		video.push("fps_max_menu "+$('#fps_max_menu').val());
+		video.push("r_dynamic "+$('#r_dynamic').val());
+		video.push("r_drawtracers_firstperson "+$('#r_drawtracers_firstperson').val());
+		video.push("r_drawparticles "+$('#r_drawparticles').val());
+		video.push("mat_savechanges //write settings to registry");
+		
 
 
 		for ( var i = 0; i < video.length; i = i + 1 ) {
@@ -76,11 +76,11 @@ $(document).ready(function(){
 		var mouse = [];
 
 		mouse.push("//Mouse");
-		mouse.push("zoom_sensitivity_ratio_mouse ");
-		mouse.push("m_rawinput ");
-		mouse.push("m_customaccel ");
-		mouse.push("m_mouseaccel1 ");
-		mouse.push("m_mouseaccel2 ");
+		mouse.push("zoom_sensitivity_ratio_mouse "+$('#zoom_sensitivity_ratio_mouse').val());
+		mouse.push("m_rawinput "+$('#m_rawinput').val());
+		mouse.push("m_customaccel "+$('#m_customaccel').val());
+		mouse.push("m_mouseaccel1 "+$('#m_mouseaccel1').val());
+		mouse.push("m_mouseaccel2 "+$('#m_mouseaccel2').val());
 
 
 		for ( var i = 0; i < mouse.length; i = i + 1 ) {
@@ -92,30 +92,30 @@ $(document).ready(function(){
 		var misc = [];
 
 		misc.push("//Misc");
-		misc.push("developer ");
-		misc.push("con_enable ");
-		misc.push("con_filter_enable ");
-		misc.push("con_filter_text ");
-		misc.push("con_filter_text_out ");
-		misc.push("ui_steam_overlay_notification_position ");
-		misc.push("player_nevershow_communityservermessage ");
-		misc.push("mm_dedicated_search_maxping ");
-		misc.push("mm_dedicated_force_servers ");
-		misc.push("gameinstructor_enable ");
-		misc.push("option_duck_method ");
-		misc.push("option_speed_method ");
-		misc.push("cl_forcepreload ");
-		misc.push("cl_downloadfilter ");
-		misc.push("cl_disablehtmlmotd ");
-		misc.push("cl_autohelp ");
-		misc.push("cl_showhelp ");
-		misc.push("cl_disablefreezecam ");
-		misc.push("cl_dm_buyrandomweapons ");
-		misc.push("cl_teammate_colors_show ");
-		misc.push("cl_autowepswitch ");
-		misc.push("cl_use_opens_buy_menu ");
-		misc.push("closeonbuy ");
-		misc.push("hud_takesshots ");
+		misc.push("developer "+$('#developer').val());
+		misc.push("con_enable "+$('#con_enable').val());
+		misc.push("con_filter_enable "+$('#con_filter_enable').val());
+		misc.push("con_filter_text "+$('#con_filter_text').val());
+		misc.push("con_filter_text_out "+$('#con_filter_text_out').val());
+		misc.push("ui_steam_overlay_notification_position "+$('#ui_steam_overlay_notification_position').val());
+		misc.push("player_nevershow_communityservermessage "+$('#player_nevershow_communityservermessage').val());
+		misc.push("mm_dedicated_search_maxping "+$('#mm_dedicated_search_maxping').val());
+		misc.push("mm_dedicated_force_servers "+$('#mm_dedicated_force_servers').val());
+		misc.push("gameinstructor_enable "+$('#gameinstructor_enable').val());
+		misc.push("option_duck_method "+$('#option_duck_method').val());
+		misc.push("option_speed_method "+$('#option_speed_method').val());
+		misc.push("cl_forcepreload "+$('#cl_forcepreload').val());
+		misc.push("cl_downloadfilter "+$('#cl_downloadfilter').val());
+		misc.push("cl_disablehtmlmotd "+$('#cl_disablehtmlmotd').val());
+		misc.push("cl_autohelp "+$('#cl_autohelp').val());
+		misc.push("cl_showhelp "+$('#cl_showhelp').val());
+		misc.push("cl_disablefreezecam "+$('#cl_disablefreezecam').val());
+		misc.push("cl_dm_buyrandomweapons "+$('#cl_dm_buyrandomweapons').val());
+		misc.push("cl_teammate_colors_show "+$('#cl_teammate_colors_show').val());
+		misc.push("cl_autowepswitch "+$('#cl_autowepswitch').val());
+		misc.push("cl_use_opens_buy_menu "+$('#cl_use_opens_buy_menu').val());
+		misc.push("closeonbuy "+$('#closeonbuy').val());
+		misc.push("hud_takesshots "+$('#hud_takesshots').val());
 
 
 		for ( var i = 0; i < misc.length; i = i + 1 ) {
@@ -127,26 +127,26 @@ $(document).ready(function(){
 		var hud = [];
 
 		hud.push("//HUD");
-		hud.push("hud_scaling ");
-		hud.push("hud_showtargetid ");
-		hud.push("cl_draw_only_deathnotices ");
-		hud.push("cl_righthand ");
-		hud.push("cl_showloadout ");
-		hud.push("cl_showpos ");
-		hud.push("cl_showfps ");
-		hud.push("net_graph ");
-		hud.push("net_graphproportionalfont ");
-		hud.push("viewmodel_presetpos ");
-		hud.push("viewmodel_fov ");
-		hud.push("viewmodel_offset_x ");
-		hud.push("viewmodel_offset_y ");
-		hud.push("viewmodel_offset_z ");
-		hud.push("cl_viewmodel_shift_left_amt ");
-		hud.push("cl_viewmodel_shift_right_amt ");
-		hud.push("cl_bobcycle ");
-		hud.push("cl_bob_lower_amt ");
-		hud.push("cl_bobamt_lat ");
-		hud.push("cl_bobamt_vert ");
+		hud.push("hud_scaling "+$('#hud_scaling').val());
+		hud.push("hud_showtargetid "+$('#hud_showtargetid').val());
+		hud.push("cl_draw_only_deathnotices "+$('#cl_draw_only_deathnotices').val());
+		hud.push("cl_righthand "+$('#cl_righthand').val());
+		hud.push("cl_showloadout "+$('#cl_showloadout').val());
+		hud.push("cl_showpos "+$('#cl_showpos').val());
+		hud.push("cl_showfps "+$('#cl_showfps').val());
+		hud.push("net_graph "+$('#net_graph').val());
+		hud.push("net_graphproportionalfont "+$('#net_graphproportionalfont').val());
+		hud.push("viewmodel_presetpos "+$('#viewmodel_presetpos').val());
+		hud.push("viewmodel_fov "+$('#viewmodel_fov').val());
+		hud.push("viewmodel_offset_x "+$('#viewmodel_offset_x').val());
+		hud.push("viewmodel_offset_y "+$('#viewmodel_offset_y').val());
+		hud.push("viewmodel_offset_z "+$('#viewmodel_offset_z').val());
+		hud.push("cl_viewmodel_shift_left_amt "+$('#cl_viewmodel_shift_left_amt').val());
+		hud.push("cl_viewmodel_shift_right_amt "+$('#cl_viewmodel_shift_right_amt').val());
+		hud.push("cl_bobcycle "+$('#cl_bobcycle').val());
+		hud.push("cl_bob_lower_amt "+$('#cl_bob_lower_amt').val());
+		hud.push("cl_bobamt_lat "+$('#cl_bobamt_lat').val());
+		hud.push("cl_bobamt_vert "+$('#cl_bobamt_vert').val());
 
 		for ( var i = 0; i < hud.length; i = i + 1 ) {
 			$('#finalConfig').append(hud[ i ]+'\n');
@@ -157,10 +157,10 @@ $(document).ready(function(){
 		var radar = [];
 
 		radar.push("//Radar");
-		radar.push("cl_radar_always_centered ");
-		radar.push("cl_radar_rotate ");
-		radar.push("cl_radar_scale ");
-		radar.push("cl_radar_icon_scale_min ");
+		radar.push("cl_radar_always_centered "+$('#cl_radar_always_centered').val());
+		radar.push("cl_radar_rotate "+$('#cl_radar_rotate').val());
+		radar.push("cl_radar_scale "+$('#cl_radar_scale').val());
+		radar.push("cl_radar_icon_scale_min "+$('#cl_radar_icon_scale_min').val());
 
 
 		for ( var i = 0; i < radar.length; i = i + 1 ) {
