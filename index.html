@@ -233,48 +233,181 @@
 					<h2>Misc</h2>
 					
 					<b>Developer (must be enabled to get effect from a few of the commands below)</b><br>
+					<input id="developer" name="developer" value="your_value2" type="checkbox" checked><br>
 					
 					<b>Ingame Console overlay ingame</b><br>
+					<input id="con_enable" name="con_enable" value="your_value2" type="checkbox" checked><br>
 					
 					<b>Position of ingame console</b><br>
+					<form>
+<input type="range" name="con_filter_enable" min="0" max="4" step="1" value="2" oninput="this.form.con_filter_enable_num.value=this.value" /> 
+<input type="number" name="con_filter_enable_num" min="0" max="4" step="1" value="2" oninput="this.form.con_filter_enable.value=this.value" />
+</form>
 					
 					<b>Filter setting 1</b><br>
+					<input id="con_filter_text" type="text" value="Damage">
 					
 					<b>Filter setting 2</b><br>
+					<input id="con_filter_text_out" type="text" value="Player:">
 					
-					<b>Steam notifications position</b><br>
+					<b>Steam notifications position (bottom/top + right/left)</b><br>
+					<input id="ui_steam_overlay_notification_position" type="text" value="bottomright">
 					
 					<b>Max ping when looking for matchmaking server</b><br>
+					<form>
+<input type="range" name="mm_dedicated_search_maxping" min="50" max="1000" step="1" value="100" oninput="this.form.mm_dedicated_search_maxping_num.value=this.value" /> 
+<input type="number" name="mm_dedicated_search_maxping" min="50" max=""1000"" step="1" value="100" oninput="this.form.mm_dedicated_search_maxping.value=this.value" />
+</form>
 					
 					<b>Force matchmaking from these servers:</b><br>
 					
 					<b>Basic game instructions</b><br>
+					<input id="gameinstructor_enable" name="gameinstructor_enable" value="your_value2" type="checkbox" ><br>
 					
 					<b>Toggle duck?</b><br>
+					<input id="option_duck_method" name="option_duck_method" value="your_value2" type="checkbox" ><br>
 					
 					<b>Toggle walk?</b><br>
+					<input id="option_speed_method" name="option_speed_method" value="your_value2" type="checkbox" ><br>
 					
 					<b>Force Preload</b><br>
+					<input id="cl_forcepreload" name="cl_forcepreload" value="your_value2" type="checkbox" checked><br>
 					
-					<b>Raw input</b><br>
+					<b>Downloadfilter</b><br>
+					<input id="ui_steam_overlay_notification_position" type="text" value="nosounds">
 					
-					<b>Raw input</b><br>
+					<b>Disable HTML Message-of-the-Day</b><br>
+					<input id="cl_lagcompensation" name="cl_lagcompensation" value="your_value2" type="checkbox" checked><br>
 					
-					<b>Raw input</b><br>
+					<b>Automatic help</b><br>
+					<input id="cl_autohelp" name="cl_autohelp" value="your_value2" type="checkbox" ><br>
 					
-					<b>Raw input</b><br>
+					<b>Show help</b><br>
+					<input id="cl_showhelp" name="cl_showhelp" value="your_value2" type="checkbox" ><br>
 					
-					<b>Raw input</b><br>
+					<b>Disable freeze cam</b><br>
+					<input id="cl_disablefreezecam" name="cl_disablefreezecam" value="your_value2" type="checkbox" checked><br>
 					
-					<b>Raw input</b><br>
-					<b>Raw input</b><br>
+					<b>Show teammates color</b><br>
+					<input id="cl_teammate_colors_show" name="cl_teammate_colors_show" value="your_value2" type="checkbox" checked><br>
 					
+					<b>Automatically switch to better weapon if picked up</b><br>
+					<input id="cl_autowepswitch" name="cl_autowepswitch" value="your_value2" type="checkbox" ><br>
+					
+					<b>"E" opens buy menu</b><br>
+					<input id="cl_use_opens_buy_menu" name="cl_use_opens_buy_menu" value="your_value2" type="checkbox" ><br>
+					
+					<b>Close buymenu every time you purchase something</b><br>
+					<input id="closeonbuy" name="closeonbuy" value="your_value2" type="checkbox" ><br>
+					
+					<b>Take a screenshot of scoreboard after every game</b><br>
+					<input id="hud_takesshots" name="hud_takesshots" value="your_value2" type="checkbox" ><br>
 					
 					
 				</div>
 				<div class="tabpage" id="tabpage_6">
 					<h2>HUD</h2>
-					<p></p>
+					
+					<b>HUD scale</b><br>
+					<form>
+<input type="range" name="hud_scaling" min="0.0" max="1.0" step="0.01" value="0.8" oninput="this.form.hud_scaling_num.value=this.value" /> 
+<input type="number" name="hud_scaling_num" min="0.0" max="1.0" step="0.01" value="0.8" oninput="this.form.hud_scaling.value=this.value" />
+</form>
+					
+					<b>Show target ID</b><br>
+					<input id="hud_showtargetid" name="hud_showtargetid" value="your_value2" type="checkbox" checked><br>
+					
+					<b>Remove most of the hud apart from death notices</b><br>
+					<input id="cl_draw_only_deathnotices" name="cl_draw_only_deathnotices" value="your_value2" type="checkbox" ><br>
+					
+					<b>Righthanded?</b><br>
+					<input id="cl_righthand" name="cl_righthand" value="your_value2" type="checkbox" checked><br>
+					
+					<b>Show loadout</b><br>
+					<input id="cl_showloadout" name="cl_showloadout" value="your_value2" type="checkbox" checked><br>
+					
+					<b>Show your postion</b><br>
+					<input id="cl_showpos" name="cl_showpos" value="your_value2" type="checkbox" checked><br>
+					
+					<b>Show your FPS</b><br>
+					<input id="cl_showfps" name="cl_showfps" value="your_value2" type="checkbox" checked><br>
+					
+					<b>Net Graph</b><br>
+					<input id="net_graph" name="net_graph" value="your_value2" type="checkbox" checked><br>
+					
+					<b>Small net graph font size</b><br>
+					<input id="net_graphproportionalfont" name="net_graphproportionalfont" value="your_value2" type="checkbox" checked><br>
+					
+					<h2> The following settings relate to what your gun looks like to you (i.e how big it is on YOUR screen)</h2>
+					
+					
+					<b>Starting position </b><br>
+					<form>
+<input type="range" name="viewmodel_presetpos" min="0" max="100" step="1" value="0" oninput="this.form.viewmodel_presetpos_num.value=this.value" /> 
+<input type="number" name="viewmodel_presetpos_num" min="0" max="100" step="1" value="0" oninput="this.form.viewmodel_presetpos.value=this.value" />
+</form>
+					
+					<b>Field of View</b><br>
+					<form>
+<input type="range" name="viewmodel_fov" min="0" max="100" step="1" value="65" oninput="this.form.viewmodel_fov_num.value=this.value" /> 
+<input type="number" name="viewmodel_fov_num" min="0" max="100" step="1" value="65" oninput="this.form.viewmodel_fov.value=this.value" />
+</form>
+					
+					<b>Offset X</b><br>
+					<form>
+<input type="range" name="viewmodel_offset_x" min="-100" max="100" step="1" value="2" oninput="this.form.viewmodel_offset_x_num.value=this.value" /> 
+<input type="number" name="viewmodel_offset_x_num" min="-100" max="100" step="1" value="2" oninput="this.form.viewmodel_offset_x.value=this.value" />
+</form>
+					
+					<b>Offset Y</b><br>
+					<form>
+<input type="range" name="viewmodel_offset_y" min="-100" max="100" step="1" value="2" oninput="this.form.viewmodel_offset_y_num.value=this.value" /> 
+<input type="number" name="viewmodel_offset_y_num" min="-100" max="100" step="1" value="2" oninput="this.form.viewmodel_offset_y.value=this.value" />
+</form>
+					
+					<b>Offset Z</b><br>
+					<form>
+<input type="range" name="viewmodel_offset_z" min="-100" max="100" step="1" value="-2" oninput="this.form.viewmodel_offset_z_num.value=this.value" /> 
+<input type="number" name="viewmodel_offset_z_num" min="-100" max="100" step="1" value="-2" oninput="this.form.viewmodel_offset_z.value=this.value" />
+</form>
+					
+					<b>Gun wiggle when croucing left</b><br>
+					<form>
+<input type="range" name="cl_viewmodel_shift_left_amt" min="0.0" max="1.0" step="0.05" value="0.5" oninput="this.form.cl_viewmodel_shift_left_amt_num.value=this.value" /> 
+<input type="number" name="cl_viewmodel_shift_left_amt_num" min="0.0" max="1.0" step="0.05" value="0.5" oninput="this.form.cl_viewmodel_shift_left_amt.value=this.value" />
+</form>
+					
+					<b>Gun wiggle when croucing right</b><br>
+					<form>
+<input type="range" name="cl_viewmodel_shift_right_amt" min="0.0" max="1.0" step="0.05" value="0.5" oninput="this.form.cl_viewmodel_shift_right_amt.value=this.value" /> 
+<input type="number" name="cl_viewmodel_shift_right_amt_num" min="0.0" max="1.0" step="0.05" value="0.5" oninput="this.form.cl_viewmodel_shift_right_amt.value=this.value" />
+</form>
+					
+					<b>Bobcycle (0.98 is enforced by ESL)</b><br>
+					<form>
+<input type="range" name="cl_bobcycle" min="0.0" max="2.0" step="0.01" value="0.98" oninput="this.form.cl_bobcycle_num.value=this.value" /> 
+<input type="number" name="cl_bobcycle_num" min="0.0" max="2.0" step="0.01" value="0.98" oninput="this.form.cl_bobcycle.value=this.value" />
+</form>
+					
+					<b>Bob (lower limit)</b><br>
+					<form>
+<input type="range" name="cl_bob_lower_amt" min="0" max="15" step="1" value="5" oninput="this.form.cl_bob_lower_amt_num.value=this.value" /> 
+<input type="number" name="cl_bob_lower_amt_num" min="0" max="15" step="1" value="5" oninput="this.form.cl_bob_lower_amt.value=this.value" />
+</form>
+					
+				    <b>Bob - lat</b><br>
+					<form>
+<input type="range" name="cl_bobamt_lat" min="0.0" max="1.0" step="0.05" value="0.1" oninput="this.form.cl_bobamt_lat_num.value=this.value" /> 
+<input type="number" name="cl_bobamt_lat_num" min="0.0" max="1.0" step="0.05" value="0.1" oninput="this.form.cl_bobamt_lat.value=this.value" />
+</form>
+					
+					<b>Bob - vert</b><br>
+					<form>
+<input type="range" name="cl_bobamt_vert" min="0.0" max="1.0" step="0.05" value="0.1" oninput="this.form.cl_bobamt_vert_num.value=this.value" /> 
+<input type="number" name="cl_bobamt_vert_num" min="0.0" max="1.0" step="0.05" value="0.1" oninput="this.form.cl_bobamt_vert.value=this.value" />
+</form>
+					
+					
 				</div>
 				<div class="tabpage" id="tabpage_7">
 					<h2>Keybinds</h2>

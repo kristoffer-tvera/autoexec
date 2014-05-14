@@ -110,7 +110,7 @@ $(document).ready(function(){
 		misc.push("cl_autohelp "+$('#cl_autohelp').val());
 		misc.push("cl_showhelp "+$('#cl_showhelp').val());
 		misc.push("cl_disablefreezecam "+$('#cl_disablefreezecam').val());
-		misc.push("cl_dm_buyrandomweapons "+$('#cl_dm_buyrandomweapons').val());
+		//misc.push("cl_dm_buyrandomweapons "+$('#cl_dm_buyrandomweapons').val());
 		misc.push("cl_teammate_colors_show "+$('#cl_teammate_colors_show').val());
 		misc.push("cl_autowepswitch "+$('#cl_autowepswitch').val());
 		misc.push("cl_use_opens_buy_menu "+$('#cl_use_opens_buy_menu').val());
