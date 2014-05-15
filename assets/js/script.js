@@ -185,9 +185,9 @@ $(document).ready(function(){
 		$('#finalConfig').append('echo ""\n');
 		$('#finalConfig').append('echo ""\n');
 
-		var numberOfLines = $('#finalConfig').height()*4.2 // <-- magic number needs to be fixed
+		// <-- magic number needs to be fixed
 
-		$('#finalConfig').height(numberOfLines);
+		$('#finalConfig').height(1700);
 
 		e.preventDefault();
 	});
