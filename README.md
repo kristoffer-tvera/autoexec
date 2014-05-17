@@ -6,7 +6,7 @@ Autoexec.cfg creator
 Getting Started
 --------------
 
-After downloading your newly aquired autoexec file, you will want to place this in `...\Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg`
+After downloading your newly acquired autoexec file, you will want to place this in `...\Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg`
 
 
 Why?
@@ -16,6 +16,6 @@ Because why not. Autoexecs are largely handwritten, this just addresses the mena
 
 How?
 --------------
-Primarly created using JavaScript, html5, some php.
+Primarily created using jQuery, html5, php. Sorry for using PHP. I used jQuery because you can never get enough jQuery. Never.
 
 
