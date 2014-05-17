@@ -13,6 +13,26 @@
 <body>
 	<div id="wrapper">
 		<div id="tabContainer">
+
+			<p>
+				<font color="white">Using this tool is fairly
+					easy.<br><br>
+					<ol>
+						<li>Adjust settings as you see fit</li>
+						<li>Click "Update autoexec". You'll see text fill into the
+							text field below.</li>
+						<li>Manually add stuff you feel should be there (I've tried
+							gathering together most if not all of the most important settings
+							here)</li>
+						<li>Click "Download autoexec". Your browser should prompt for
+							save/run/open a file named autoexec.cfg</li>
+						<li>Place the file in your CS:GO cfg folder
+							(...\Steam\steamapps\common\Counter-Strike Global
+							Offensive\csgo\cfg)</li>
+					</ol>
+				</font>
+			</p>
+			<br><br>
 			<div class="tabs">
 				<ul>
 					<li id="tabHeader_1">Rates</li>
@@ -23,6 +43,7 @@
 					<li id="tabHeader_6">HUD</li>
 					<li id="tabHeader_7">Keybinds - buy</li>
 					<li id="tabHeader_8">Radar</li>
+					<li id="tabHeader_9">Crosshair</li>
 				</ul>
 			</div>
 			<div class="tabscontent">
@@ -76,7 +97,7 @@
 					</form>
 
 					<form>
-						<b>Lag compensation (serverside)</b> <input
+						<b>Lag compensation (serverside)</b><br> <input
 							id="cl_lagcompensation" name="cl_lagcompensation2"
 							value="your_value2" type="checkbox" checked><br>
 					</form>
@@ -98,7 +119,7 @@
 
 					<form>
 						<b>Voice Scale</b><br> <input id="voice_scale" type="range"
-							name="voice_scale" min="0.0" max="1.0" step="0.05" value="0.0"
+							name="voice_scale" min="0.0" max="1.0" step="0.05" value="1.0"
 							oninput="this.form.voice_scale_num.value=this.value" /> <input
 							type="number" name="voice_scale_num" min="0.0" max="1.0"
 							step="0.05" value="1.0"
@@ -487,7 +508,7 @@
 						<b>Show your FPS (unchecked = 0, checked = 1, manually set
 							this to 2, 3 or 4 if you really know what you are doing)</b><br>
 						<input id="cl_showfps" name="cl_showfps" value="your_value2"
-							type="checkbox" checked><br>
+							type="checkbox"><br>
 					</form>
 
 					<form>
@@ -735,88 +756,95 @@
 						<li>Desert Eagle (deagle)</li>
 						<li>Tec9 (tec9)</li>
 						<li>HKP2000 (hkp2000)</li>
-						<li>P250/CZ75-Auto (p250) <-- Yes, they both use p250 as name.</li>
+						<li>P250/CZ75-Auto (p250) <-- Yes, they both use p250 as
+							name.</li>
 					</ul>
 					<h2>Grenades &amp; Gear</h2>
-					<div>
-						<ul>
-							<li>Incendiary Grenade (incgrenade)</li>
-							<li>Flashbang (flashbang)</li>
-							<li>Smoke (smokegrenade)</li>
-							<li>HE Grenade (hegrenade)</li>
-							<li>Molotov (molotov)</li>
-							<li>Decoy (decoy)</li>
-							<li>Kevlar (kevlar)</li>
-							<li>Kevlar+Helmet (vesthelm)</li>
-							<li>Zeus x27 (taser)</li>
-							<li>Defuse Kit (defuser)</li>
-						</ul>
-					</div>
+					<ul>
+						<li>Incendiary Grenade (incgrenade)</li>
+						<li>Flashbang (flashbang)</li>
+						<li>Smoke (smokegrenade)</li>
+						<li>HE Grenade (hegrenade)</li>
+						<li>Molotov (molotov)</li>
+						<li>Decoy (decoy)</li>
+						<li>Kevlar (kevlar)</li>
+						<li>Kevlar+Helmet (vesthelm)</li>
+						<li>Zeus x27 (taser)</li>
+						<li>Defuse Kit (defuser)</li>
+					</ul>
+				</div>
 
-					<div class="tabpage" id="tabpage_8">
-						<h2>Radar</h2>
+				<div class="tabpage" id="tabpage_8">
+					<h2>Radar</h2>
 
-						<p>
-							CSGOhelp.com provides an excellent guide to setting your radar up
-							the way you want it. <a
-								href="http://csgohelp.com/autoexec/#radar" target="_blank">Here
-								is a link with pictures that explains the cvars you are about to
-								modify.</a>
-						</p>
+					<p>
+						CSGOhelp.com provides an excellent guide to setting your radar up
+						the way you want it. <a href="http://csgohelp.com/autoexec/#radar"
+							target="_blank">Here is a link with pictures that explains
+							the cvars you are about to modify.</a>
+					</p><br>
 
-						<form>
-							<b>Always Centered</b><br> <input
-								id="cl_radar_always_centered" name="cl_radar_always_centered"
-								value="your_value2" type="checkbox"><br>
-						</form>
+					<form>
+						<b>Always Centered</b><br> <input
+							id="cl_radar_always_centered" name="cl_radar_always_centered"
+							value="your_value2" type="checkbox"><br>
+					</form>
 
-						<form>
-							<b>Rotate</b><br> <input id="cl_radar_rotate"
-								name="cl_radar_rotate" value="your_value2" type="checkbox"
-								checked><br>
-						</form>
+					<form>
+						<b>Rotate</b><br> <input id="cl_radar_rotate"
+							name="cl_radar_rotate" value="your_value2" type="checkbox"
+							checked><br>
+					</form>
 
-						<form>
-							<b>Scale</b><br> <input id="cl_radar_scale" type="range"
-								name="cl_radar_scale" min="0.25" max="1.0" step="0.01"
-								value="0.38"
-								oninput="this.form.cl_radar_scale_num.value=this.value" /> <input
-								type="number" name="cl_radar_scale_num" min="0.25" max="1.0"
-								step="0.01" value="0.38"
-								oninput="this.form.cl_radar_scale.value=this.value" />
-						</form>
+					<form>
+						<b>Scale</b><br> <input id="cl_radar_scale" type="range"
+							name="cl_radar_scale" min="0.25" max="1.0" step="0.01"
+							value="0.38"
+							oninput="this.form.cl_radar_scale_num.value=this.value" /> <input
+							type="number" name="cl_radar_scale_num" min="0.25" max="1.0"
+							step="0.01" value="0.38"
+							oninput="this.form.cl_radar_scale.value=this.value" />
+					</form>
 
-						<form>
-							<b>Icon Scale (icons is your teammates, the bomb, etc)</b><br>
-							<input id="cl_radar_icon_scale_min" type="range"
-								name="cl_radar_icon_scale_min" min="0.4" max="1.0" step="0.01"
-								value="0.4"
-								oninput="this.form.cl_radar_icon_scale_min_num.value=this.value" />
-							<input type="number" name="cl_radar_icon_scale_min_num" min="0.4"
-								max="1.0" step="0.01" value="0.4"
-								oninput="this.form.cl_radar_icon_scale_min.value=this.value" />
-						</form>
-					</div>
+					<form>
+						<b>Icon Scale (icons is your teammates, the bomb, etc)</b><br>
+						<input id="cl_radar_icon_scale_min" type="range"
+							name="cl_radar_icon_scale_min" min="0.4" max="1.0" step="0.01"
+							value="0.4"
+							oninput="this.form.cl_radar_icon_scale_min_num.value=this.value" />
+						<input type="number" name="cl_radar_icon_scale_min_num" min="0.4"
+							max="1.0" step="0.01" value="0.4"
+							oninput="this.form.cl_radar_icon_scale_min.value=this.value" />
+					</form>
+				</div>
+				
+								<div class="tabpage" id="tabpage_9">
+					<h2>Crosshair</h2>
+
+					<p>	I'm not going to reinvent the wheel, the people over at krisskarbo.com has already made a awesome crosshair generator, check it out <a href="http://www.krisskarbo.com/csgocrosshair/"
+							target="_blank">over here (clicky clicky)</a>, and copy the settings that you enjoy into the text box below AFTER you have clicked "update" and finalized all your other settings.)
+					</p>
 				</div>
 			</div>
-
-			<br> <br> <input id="updateButton" type="button"
-				value="Update autoexec" /> <br> <br> <br> <br>
-
-
-			<form action="./" method="post">
-				<textarea id="finalConfig" name="finalConfig"
-					style="width: 100%; height: 400px;"></textarea>
-			</form>
-
-			<br> <br> <input id="downloadButton" type="button"
-				value="Download autoexec" /> <br> <br>
-			<script
-				src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
-			<script src="assets/js/jquery.generateFile.js"></script>
-			<script src="assets/js/script.js"></script>
-			<script src="assets/js/tabs.js"></script>
-
 		</div>
+
+		<br> <br> <input id="updateButton" type="button"
+			value="Update autoexec" /> <br> <br> <br> <br>
+
+
+		<form action="./" method="post">
+			<textarea id="finalConfig" name="finalConfig"
+				style="width: 100%; height: 400px;"></textarea>
+		</form>
+
+		<br> <br> <input id="downloadButton" type="button"
+			value="Download autoexec" /> <br> <br>
+		<script
+			src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+		<script src="assets/js/jquery.generateFile.js"></script>
+		<script src="assets/js/script.js"></script>
+		<script src="assets/js/tabs.js"></script>
+
+	</div>
 </body>
 </html>

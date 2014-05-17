@@ -192,6 +192,16 @@ $(document).ready(function(){
 		for ( var i = 0; i < radar.length; i = i + 1 ) {
 			$('#finalConfig').append(radar[ i ]+'\"\n');
 		}
+		
+		$('#finalConfig').append('\n\n');
+
+		var crosshair = [];
+
+		$('#finalConfig').append("//Crosshair \n");
+
+		for ( var i = 0; i < crosshair.length; i = i + 1 ) {
+			$('#finalConfig').append(crosshair[ i ]+'\"\n');
+		}
 
 		$('#finalConfig').append('\n\n');
 

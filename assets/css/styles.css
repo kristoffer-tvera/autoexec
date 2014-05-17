@@ -13,7 +13,7 @@ h2 {
 }
 
 #wrapper {
-	width: 720px;
+	width: 740px;
 	margin: 40px auto 0;
 }
 
@@ -24,20 +24,16 @@ h2 {
 }
 
 #wrapper a {
-	display: block;
-	font-size: 1.2em;
-	padding-top: 20px;
-	color: #FFF;
+	color: #333;
 	text-decoration: none;
-	text-align: center;
 }
 
 #tabContainer {
-	width: 700px;
-	padding: 15px;
+	width: 720px;
+	padding: 25px;
 	background-color: #2e2e2e;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
+	-moz-border-radius: 14px;
+	border-radius: 14px;
 }
 
 .tabs {
@@ -116,7 +112,7 @@ h2 {
 
 /***FIRST STYLE THE BUTTON***/
 input#updateButton {
-	width: 500px;
+	width: 100%;
 	background: #00FF7F; /*the colour of the button*/
 	padding: 8px 14px 10px; /*apply some padding inside the button*/
 	border: 1px solid #3e9cbf;
@@ -156,7 +152,7 @@ input#updateButton:hover,input#updateButton:focus {
 
 /***FIRST STYLE THE BUTTON***/
 input#downloadButton {
-	width: 500px;
+	width: 100%;
 	background: #3e9cbf; /*the colour of the button*/
 	padding: 8px 14px 10px; /*apply some padding inside the button*/
 	border: 1px solid #3e9cbf;
@@ -195,37 +191,35 @@ input#downloadButton:hover,input#downloadButton:focus {
 }
 
 .keypad {
-    margin: 10px auto;
-    padding: 0;
-    width: 300px; /* not actually a static size, % in real use */
+	margin: 10px auto;
+	padding: 0;
+	width: 300px; /* not actually a static size, % in real use */
 }
 
 .keypad .key-row {
-    width: 100%
+	width: 100%
 }
 
 .keypad .key-row .key-cell {
-    padding: 2px;
-    width: 25%;
+	padding: 2px;
+	width: 25%;
 }
 
 .keypad .key-row .key-cell textarea.key {
-    font-size: small;
-    
-    height: 70px;
-    width: 100%;
+	font-size: small;
+	height: 70px;
+	width: 100%;
 }
-
 
 .keypad .key-row .key-cell textarea.key.tall-key {
-    height: 154px;
+	height: 154px;
 }
 
-
 .keypad .key-row .key-cell textarea.key.wide-key {
+	
 }
 
 .keypad .key-row .key-cell textarea.key-alt-fn {
-    font-size: small;
-    font-weight: normal;
+	font-size: small;
+	font-weight: normal;
 }
