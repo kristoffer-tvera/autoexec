@@ -114,66 +114,118 @@ h2 {
 	color: #333;
 }
 
+/***FIRST STYLE THE BUTTON***/
+input#updateButton {
+	width: 500px;
+	background: #00FF7F; /*the colour of the button*/
+	padding: 8px 14px 10px; /*apply some padding inside the button*/
+	border: 1px solid #3e9cbf;
+	/*required or the default border for the browser will appear*/
+	cursor: crosshair;
+	/*style the text*/
+	font-size: 1.5em;
+	font-family: Oswald, sans-serif;
+	/*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
+	letter-spacing: .1em;
+	text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3);
+	/*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
+	color: #fff;
+	/*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
+	-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73,
+		0px 10px 5px #999;
+	-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px
+		10px 5px #999;
+	box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px
+		5px #999;
+	/*give the corners a small curve*/
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+/***SET THE BUTTON'S HOVER AND FOCUS STATES***/
+input#updateButton:hover,input#updateButton:focus {
+	color: #dfe7ea;
+	/*reduce the size of the shadow to give a pushed effect*/
+	-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73,
+		0px 2px 5px #999;
+	-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px
+		2px 5px #999;
+	box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px
+		5px #999;
+}
+
+/***FIRST STYLE THE BUTTON***/
+input#downloadButton {
+	width: 500px;
+	background: #3e9cbf; /*the colour of the button*/
+	padding: 8px 14px 10px; /*apply some padding inside the button*/
+	border: 1px solid #3e9cbf;
+	/*required or the default border for the browser will appear*/
+	cursor: crosshair;
+	/*style the text*/
+	font-size: 1.5em;
+	font-family: Oswald, sans-serif;
+	/*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
+	letter-spacing: .1em;
+	text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3);
+	/*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
+	color: #fff;
+	/*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
+	-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73,
+		0px 10px 5px #999;
+	-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px
+		10px 5px #999;
+	box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px
+		5px #999;
+	/*give the corners a small curve*/
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+/***SET THE BUTTON'S HOVER AND FOCUS STATES***/
+input#downloadButton:hover,input#downloadButton:focus {
+	color: #dfe7ea;
+	/*reduce the size of the shadow to give a pushed effect*/
+	-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73,
+		0px 2px 5px #999;
+	-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px
+		2px 5px #999;
+	box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px
+		5px #999;
+}
+
+.keypad {
+    margin: 10px auto;
+    padding: 0;
+    width: 300px; /* not actually a static size, % in real use */
+}
+
+.keypad .key-row {
+    width: 100%
+}
+
+.keypad .key-row .key-cell {
+    padding: 2px;
+    width: 25%;
+}
+
+.keypad .key-row .key-cell textarea.key {
+    font-size: small;
+    
+    height: 70px;
+    width: 100%;
+}
 
 
-    /***FIRST STYLE THE BUTTON***/
-    input#updateButton {
-    width:500px;
-    background: #00FF7F; /*the colour of the button*/
-    padding: 8px 14px 10px; /*apply some padding inside the button*/
-    border:1px solid #3e9cbf; /*required or the default border for the browser will appear*/
-    cursor:crosshair;
-    /*style the text*/
-    font-size:1.5em;
-    font-family:Oswald, sans-serif; /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
-    letter-spacing:.1em;
-    text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
-    color: #fff;
-    /*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
-    -webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
-    -moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
-    box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
-    /*give the corners a small curve*/
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    }
-    /***SET THE BUTTON'S HOVER AND FOCUS STATES***/
-    input#updateButton:hover, input#updateButton:focus {
-    color:#dfe7ea;
-    /*reduce the size of the shadow to give a pushed effect*/
-    -webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
-    -moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
-    box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
-    }
+.keypad .key-row .key-cell textarea.key.tall-key {
+    height: 154px;
+}
 
-    /***FIRST STYLE THE BUTTON***/
-    input#downloadButton {
-    width:500px;
-    background: #3e9cbf; /*the colour of the button*/
-    padding: 8px 14px 10px; /*apply some padding inside the button*/
-    border:1px solid #3e9cbf; /*required or the default border for the browser will appear*/
-    cursor:crosshair; 
-    /*style the text*/
-    font-size:1.5em;
-    font-family:Oswald, sans-serif; /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
-    letter-spacing:.1em;
-    text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
-    color: #fff;
-    /*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
-    -webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
-    -moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
-    box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
-    /*give the corners a small curve*/
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    }
-    /***SET THE BUTTON'S HOVER AND FOCUS STATES***/
-    input#downloadButton:hover, input#downloadButton:focus {
-    color:#dfe7ea;
-    /*reduce the size of the shadow to give a pushed effect*/
-    -webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
-    -moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
-    box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
-    }
+
+.keypad .key-row .key-cell textarea.key.wide-key {
+}
+
+.keypad .key-row .key-cell textarea.key-alt-fn {
+    font-size: small;
+    font-weight: normal;
+}

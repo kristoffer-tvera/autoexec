@@ -60,18 +60,18 @@
 
 					<form>
 						<b>Interp</b><br> <input id="cl_interp" type="range"
-							name="cl_interp" min="0.0" max="1.0" value="0.0"
+							name="cl_interp" min="0.0" max="0.5" value="0.0"
 							oninput="this.form.cl_interp_num.value=this.value" /> <input
-							type="number" name="cl_interp_num" min="0.0" max="1.0"
+							type="number" name="cl_interp_num" min="0.0" max="0.5"
 							value="0.0" oninput="this.form.cl_interp.value=this.value" />
 					</form>
 
 					<form>
 						<b>Interp Ratio</b><br> <input id="cl_interp_ratio"
-							type="range" name="cl_interp_ratio" min="0.0" max="2.0"
+							type="range" name="cl_interp_ratio" min="1.0" max="2.0"
 							value="1.0"
 							oninput="this.form.cl_interp_ratio_num.value=this.value" /> <input
-							type="number" name="cl_interp_ratio_num" min="0.0" max="2.0"
+							type="number" name="cl_interp_ratio_num" min="1.0" max="2.0"
 							value="1.0" oninput="this.form.cl_interp_ratio.value=this.value" />
 					</form>
 
@@ -207,17 +207,17 @@
 
 					<form>
 						<b>FPS max</b><br> <input id="fps_max" type="range"
-							name="fps_max" min="0" max="300" step="1" value="145"
+							name="fps_max" min="59" max="400" step="1" value="145"
 							oninput="this.form.fps_max_num.value=this.value" /> <input
-							type="number" name="fps_max_num" min="0" max="300" step="1"
+							type="number" name="fps_max_num" min="59" max="400" step="1"
 							value="145" oninput="this.form.fps_max.value=this.value" />
 					</form>
 
 					<form>
 						<b>FPS max in menus)</b><br> <input id="fps_max_menu"
-							type="range" name="fps_max_menu" min="0" max="300" step="1"
+							type="range" name="fps_max_menu" min="0" max="500" step="1"
 							value="145" oninput="this.form.fps_max_menu_num.value=this.value" />
-						<input type="number" name="fps_max_menu_num" min="0" max="300"
+						<input type="number" name="fps_max_menu_num" min="0" max="500"
 							step="1" value="145"
 							oninput="this.form.fps_max_menu.value=this.value" />
 					</form>
@@ -385,8 +385,8 @@
 					</form>
 
 					<form>
-						<b>Downloadfilter</b><br> <input id="cl_downloadfilter"
-							type="text" value="nosounds"><br>
+						<b>Downloadfilter (all / nosounds / none)</b><br> <input
+							id="cl_downloadfilter" type="text" value="nosounds"><br>
 					</form>
 
 					<form>
@@ -447,9 +447,9 @@
 
 					<form>
 						<b>HUD scale</b><br> <input id="hud_scaling" type="range"
-							name="hud_scaling" min="0.0" max="1.0" step="0.01" value="0.8"
+							name="hud_scaling" min="0.5" max="0.95" step="0.01" value="0.8"
 							oninput="this.form.hud_scaling_num.value=this.value" /> <input
-							type="number" name="hud_scaling_num" min="0.0" max="1.0"
+							type="number" name="hud_scaling_num" min="0.5" max="0.95"
 							step="0.01" value="0.8"
 							oninput="this.form.hud_scaling.value=this.value" />
 					</form>
@@ -461,7 +461,9 @@
 					</form>
 
 					<form>
-						<b>Remove most of the hud apart from death notices</b><br> <input
+						<b>Remove most of the hud apart from death notices (this is a
+							DEMO UI thing, i.e its effect is only visible when watching a
+							demo. You'll use this for cleaner recordings)</b><br> <input
 							id="cl_draw_only_deathnotices" name="cl_draw_only_deathnotices"
 							value="your_value2" type="checkbox"><br>
 					</form>
@@ -482,15 +484,17 @@
 					</form>
 
 					<form>
-						<b>Show your FPS (manually set this to 2, 3 or 4 if you really
-							know what you are doing)</b><br> <input id="cl_showfps"
-							name="cl_showfps" value="your_value2" type="checkbox" checked><br>
+						<b>Show your FPS (unchecked = 0, checked = 1, manually set
+							this to 2, 3 or 4 if you really know what you are doing)</b><br>
+						<input id="cl_showfps" name="cl_showfps" value="your_value2"
+							type="checkbox" checked><br>
 					</form>
 
 					<form>
-						<b>Net Graph (manually set this to 2, 3 or 4 if you really
-							know what you are doing)</b><br> <input id="net_graph"
-							name="net_graph" value="your_value2" type="checkbox" checked><br>
+						<b>Net Graph (unchecked = 0, checked = 1, manually set this to
+							2, 3 or 4 if you really know what you are doing)</b><br> <input
+							id="net_graph" name="net_graph" value="your_value2"
+							type="checkbox" checked><br>
 					</form>
 
 					<form>
@@ -514,99 +518,99 @@
 
 					<form>
 						<b>Field of View</b><br> <input id="viewmodel_fov"
-							type="range" name="viewmodel_fov" min="0" max="100" step="1"
+							type="range" name="viewmodel_fov" min="54" max="68" step="1"
 							value="65" oninput="this.form.viewmodel_fov_num.value=this.value" />
-						<input type="number" name="viewmodel_fov_num" min="0" max="100"
+						<input type="number" name="viewmodel_fov_num" min="54" max="68"
 							step="1" value="65"
 							oninput="this.form.viewmodel_fov.value=this.value" />
 					</form>
 
 					<form>
 						<b>Offset X</b><br> <input id="viewmodel_offset_x"
-							type="range" name="viewmodel_offset_x" min="-100" max="100"
-							step="1" value="2"
+							type="range" name="viewmodel_offset_x" min="-2.0" max="2.5"
+							step="0.1" value="2.0"
 							oninput="this.form.viewmodel_offset_x_num.value=this.value" /> <input
-							type="number" name="viewmodel_offset_x_num" min="-100" max="100"
-							step="1" value="2"
+							type="number" name="viewmodel_offset_x_num" min="-2.0" max="2.5"
+							step="0.1" value="2.0"
 							oninput="this.form.viewmodel_offset_x.value=this.value" />
 					</form>
 
 					<form>
 						<b>Offset Y</b><br> <input id="viewmodel_offset_y"
-							type="range" name="viewmodel_offset_y" min="-100" max="100"
-							step="1" value="2"
+							type="range" name="viewmodel_offset_y" min="-2.0" max="2.0"
+							step="0.1" value="2.0"
 							oninput="this.form.viewmodel_offset_y_num.value=this.value" /> <input
-							type="number" name="viewmodel_offset_y_num" min="-100" max="100"
-							step="1" value="2"
+							type="number" name="viewmodel_offset_y_num" min="-2.0" max="2.0"
+							step="0.1" value="2.0"
 							oninput="this.form.viewmodel_offset_y.value=this.value" />
 					</form>
 
 					<form>
 						<b>Offset Z</b><br> <input id="viewmodel_offset_z"
-							type="range" name="viewmodel_offset_z" min="-100" max="100"
-							step="1" value="-2"
+							type="range" name="viewmodel_offset_z" min="-2.0" max="2.0"
+							step="0.1" value="-2.0"
 							oninput="this.form.viewmodel_offset_z_num.value=this.value" /> <input
-							type="number" name="viewmodel_offset_z_num" min="-100" max="100"
-							step="1" value="-2"
+							type="number" name="viewmodel_offset_z_num" min="-2.0" max="2.0"
+							step="0.1" value="-2.0"
 							oninput="this.form.viewmodel_offset_z.value=this.value" />
 					</form>
 
 					<form>
-						<b>Gun wiggle when croucing left</b><br> <input
+						<b>When shooting, gun movement to left</b><br> <input
 							id="cl_viewmodel_shift_left_amt" type="range"
-							name="cl_viewmodel_shift_left_amt" min="0.0" max="1.0"
+							name="cl_viewmodel_shift_left_amt" min="0.5" max="2.0"
 							step="0.05" value="0.5"
 							oninput="this.form.cl_viewmodel_shift_left_amt_num.value=this.value" />
 						<input type="number" name="cl_viewmodel_shift_left_amt_num"
-							min="0.0" max="1.0" step="0.05" value="0.5"
+							min="0.5" max="2.0" step="0.05" value="0.5"
 							oninput="this.form.cl_viewmodel_shift_left_amt.value=this.value" />
 					</form>
 
 					<form>
-						<b>Gun wiggle when croucing right</b><br> <input
+						<b>When shooting, gun movement to right</b><br> <input
 							id="cl_viewmodel_shift_right_amt" type="range"
-							name="cl_viewmodel_shift_right_amt" min="0.0" max="1.0"
-							step="0.05" value="0.5"
+							name="cl_viewmodel_shift_right_amt" min="0.25" max="2.0"
+							step="0.05" value="0.25"
 							oninput="this.form.cl_viewmodel_shift_right_amt.value=this.value" />
 						<input type="number" name="cl_viewmodel_shift_right_amt_num"
-							min="0.0" max="1.0" step="0.05" value="0.5"
+							min="0.25" max="2.0" step="0.05" value="0.25"
 							oninput="this.form.cl_viewmodel_shift_right_amt.value=this.value" />
 					</form>
 
 					<form>
-						<b>Bobcycle (0.98 is enforced by ESL)</b><br> <input
-							id="cl_bobcycle" type="range" name="cl_bobcycle" min="0.0"
+						<b>Bobcycle (0.98 is enforced ALL MM servers, and all leagues)</b><br>
+						<input id="cl_bobcycle" type="range" name="cl_bobcycle" min="0.1"
 							max="2.0" step="0.01" value="0.98"
 							oninput="this.form.cl_bobcycle_num.value=this.value" /> <input
-							type="number" name="cl_bobcycle_num" min="0.0" max="2.0"
+							type="number" name="cl_bobcycle_num" min="0.1" max="2.0"
 							step="0.01" value="0.98"
 							oninput="this.form.cl_bobcycle.value=this.value" />
 					</form>
 
 					<form>
 						<b>Bob (lower limit)</b><br> <input id="cl_bob_lower_amt"
-							type="range" name="cl_bob_lower_amt" min="0" max="15" step="1"
+							type="range" name="cl_bob_lower_amt" min="5" max="30" step="1"
 							value="5"
 							oninput="this.form.cl_bob_lower_amt_num.value=this.value" /> <input
-							type="number" name="cl_bob_lower_amt_num" min="0" max="15"
+							type="number" name="cl_bob_lower_amt_num" min="5" max="30"
 							step="1" value="5"
 							oninput="this.form.cl_bob_lower_amt.value=this.value" />
 					</form>
 
 					<form>
 						<b>Bob - lat</b><br> <input id="cl_bobamt_lat" type="range"
-							name="cl_bobamt_lat" min="0.0" max="1.0" step="0.05" value="0.1"
+							name="cl_bobamt_lat" min="0.1" max="2.0" step="0.05" value="0.1"
 							oninput="this.form.cl_bobamt_lat_num.value=this.value" /> <input
-							type="number" name="cl_bobamt_lat_num" min="0.0" max="1.0"
+							type="number" name="cl_bobamt_lat_num" min="0.1" max="2.0"
 							step="0.05" value="0.1"
 							oninput="this.form.cl_bobamt_lat.value=this.value" />
 					</form>
 
 					<form>
 						<b>Bob - vert</b><br> <input id="cl_bobamt_vert" type="range"
-							name="cl_bobamt_vert" min="0.0" max="1.0" step="0.05" value="0.1"
+							name="cl_bobamt_vert" min="0.1" max="2.0" step="0.05" value="0.1"
 							oninput="this.form.cl_bobamt_vert_num.value=this.value" /> <input
-							type="number" name="cl_bobamt_vert_num" min="0.0" max="1.0"
+							type="number" name="cl_bobamt_vert_num" min="0.1" max="2.0"
 							step="0.05" value="0.1"
 							oninput="this.form.cl_bobamt_vert.value=this.value" />
 					</form>
@@ -614,64 +618,216 @@
 				</div>
 				<div class="tabpage" id="tabpage_7">
 					<h2>Keybinds</h2>
-					<p></p>
-				</div>
+					<p>For now I've only set up keybinding on the numpad, other
+						keybindings you'll have to do manually</p>
 
-				<div class="tabpage" id="tabpage_8">
-					<h2>Radar</h2>
-					<form>
-						<b>Always Centered</b><br> <input
-							id="cl_radar_always_centered" name="cl_radar_always_centered"
-							value="your_value2" type="checkbox"><br>
-					</form>
+					<table class="keypad">
+						<tr class="key-row">
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="numLock" name="numLock"
+									style="overflow: hidden; resize: none" disabled>NumLock</textarea>
+							</td>
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="kp_slash" name="finalconfig"
+									style="overflow: hidden; resize: none">buy p90</textarea></td>
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="kp_multiply" name="finalconfig"
+									style="overflow: hidden; resize: none">buy bizon</textarea></td>
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="kp_minus" name="finalconfig"
+									style="overflow: hidden; resize: none">buy sawedoff;buy mag7</textarea></td>
+						</tr>
+						<tr class="key-row">
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="kp_home" name="finalconfig"
+									style="overflow: hidden; resize: none">buy awp</textarea></td>
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="kp_uparrow" name="finalconfig"
+									style="overflow: hidden; resize: none">buy m4a1;buy ak47</textarea></td>
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="kp_pgup" name="finalconfig"
+									style="overflow: hidden; resize: none">buy famas;buy galilar</textarea></td>
+							<td class="key-cell" rowspan="2"><textarea
+									class="btn btn-default key tall-key" id="kp_plus"
+									name="finalconfig" style="overflow: hidden; resize: none">buy p250</textarea>
+							</td>
+						</tr>
+						<tr class="key-row">
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="kp_leftarrow" name="finalconfig"
+									style="overflow: hidden; resize: none">buy deagle</textarea>
+							</td>
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="kp_5" name="finalconfig"
+									style="overflow: hidden; resize: none">buy incgrenade;buy molotov</textarea></td>
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="kp_rightarrow" name="finalconfig"
+									style="overflow: hidden; resize: none">buy decoy</textarea>
+							</td>
+						</tr>
+						<tr class="key-row">
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="kp_end" name="finalconfig"
+									style="overflow: hidden; resize: none">buy hegrenade</textarea></td>
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="kp_downarrow" name="finalconfig"
+									style="overflow: hidden; resize: none">buy flashbang</textarea>
+							</td>
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="kp_pgdn" name="finalconfig"
+									style="overflow: hidden; resize: none">buy smokegrenade</textarea></td>
+							<td class="key-cell" rowspan="2"><textarea
+									class="btn btn-default key tall-key" id="kp_enter"
+									name="finalconfig" style="overflow: hidden; resize: none">buy defuser</textarea>
+							</td>
+						</tr>
+						<tr class="key-row">
+							<td class="key-cell" colspan="2"><textarea
+									class="btn btn-default key wide-key" id="kp_ins"
+									name="finalconfig" style="overflow: hidden; resize: none">buy vesthelm</textarea>
+							</td>
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="kp_del" name="finalconfig"
+									style="overflow: hidden; resize: none">buy vest</textarea></td>
+						</tr>
+					</table>
 
-					<form>
-						<b>Rotate</b><br> <input id="cl_radar_rotate"
-							name="cl_radar_rotate" value="your_value2" type="checkbox"
-							checked><br>
-					</form>
+					<p>Below is a list you can use for references (i.e if you want
+						to keybind buying the Scout, you need to use its "console name",
+						ssg08)</p>
+					<h2>Rifles</h2>
+					<ul>
+						<li>Scout (ssg08)</li>
+						<li>Galil (galilar)</li>
+						<li>Famas (famas)</li>
+						<li>SG550 (sg550)</li>
+						<li>AUG (aug)</li>
+						<li>M4 (m4a1)</li>
+						<li>AK47 (ak47)</li>
+						<li>T Auto Sniper (g3sg1)</li>
+						<li>CT Auto Sniper (scar20)</li>
+						<li>AWP (awp)</li>
+					</ul>
+					<h2>SMGs</h2>
+					<ul>
+						<li>Mac 10 (mac10)</li>
+						<li>UMP (ump45)</li>
+						<li>P90 (p90)</li>
+						<li>Bizon (bizon)</li>
+						<li>MP7 (mp7)</li>
+						<li>MP9 (mp9)</li>
+					</ul>
+					<h2>Heavy</h2>
+					<ul>
+						<li>Auto
+							<p>Shotgun (xm1014)</p>
+						</li>
+						<li>Mag7 (mag7)</li>
+						<li>Sawed Off Shotgun (sawedoff)</li>
+						<li>Nova Shotgun (nova)</li>
+						<li>M249 (m249)</li>
+						<li>Negev (negev)</li>
+					</ul>
+					<h2>Pistols</h2>
+					<ul>
+						<li>228 Compact (p228)</li>
+						<li>Glock (glock)</li>
+						<li>Dual Elites (elite)</li>
+						<li>Five Seven (fiveseven)</li>
+						<li>Desert Eagle (deagle)</li>
+						<li>Tec9 (tec9)</li>
+						<li>HKP2000 (hkp2000)</li>
+						<li>P250 (p250)</li>
+					</ul>
+					<h2>Grenades &amp; Gear</h2>
+					<div>
+						<ul>
+							<li>Incendiary Grenade (incgrenade)</li>
+							<li>Flashbang (flashbang)</li>
+							<li>Smoke (smokegrenade)</li>
+							<li>HE Grenade (hegrenade)</li>
+							<li>Molotov (molotov)</li>
+							<li>Decoy (decoy)</li>
+						</ul>
+						<div></div>
+						<ul>
+							<li>Kevlar (kevlar)</li>
+							<li>Kevlar+Helmet (vesthelm)</li>
+						</ul>
+						<div></div>
+						<ul>
+							<li>Zeus x27 (taser)</li>
+						</ul>
+						<div></div>
+						<ul>
+							<li>Defuse Kit (defuser)</li>
+						</ul>
+					</div>
 
-					<form>
-						<b>Scale</b><br> <input id="cl_radar_scale" type="range"
-							name="cl_radar_scale" min="0.25" max="1.0" step="0.01"
-							value="0.38"
-							oninput="this.form.cl_radar_scale_num.value=this.value" /> <input
-							type="number" name="cl_radar_scale_num" min="0.25" max="1.0"
-							step="0.01" value="0.38"
-							oninput="this.form.cl_radar_scale.value=this.value" />
-					</form>
+					<div class="tabpage" id="tabpage_8">
+						<h2>Radar</h2>
 
-					<form>
-						<b>Icon Scale (icons is your teammates, the bomb, etc)</b><br>
-						<input id="cl_radar_icon_scale_min" type="range"
-							name="cl_radar_icon_scale_min" min="0.4" max="1.0" step="0.01"
-							value="0.4"
-							oninput="this.form.cl_radar_icon_scale_min_num.value=this.value" />
-						<input type="number" name="cl_radar_icon_scale_min_num" min="0.4"
-							max="1.0" step="0.01" value="0.4"
-							oninput="this.form.cl_radar_icon_scale_min.value=this.value" />
-					</form>
+						<p>
+							CSGOhelp.com provides an excellent guide to setting your radar up
+							the way you want it. <a
+								href="http://csgohelp.com/autoexec/#radar" target="_blank">Here
+								is a link with pictures that explains the cvars you are about to
+								modify.</a>
+						</p>
+
+						<form>
+							<b>Always Centered</b><br> <input
+								id="cl_radar_always_centered" name="cl_radar_always_centered"
+								value="your_value2" type="checkbox"><br>
+						</form>
+
+						<form>
+							<b>Rotate</b><br> <input id="cl_radar_rotate"
+								name="cl_radar_rotate" value="your_value2" type="checkbox"
+								checked><br>
+						</form>
+
+						<form>
+							<b>Scale</b><br> <input id="cl_radar_scale" type="range"
+								name="cl_radar_scale" min="0.25" max="1.0" step="0.01"
+								value="0.38"
+								oninput="this.form.cl_radar_scale_num.value=this.value" /> <input
+								type="number" name="cl_radar_scale_num" min="0.25" max="1.0"
+								step="0.01" value="0.38"
+								oninput="this.form.cl_radar_scale.value=this.value" />
+						</form>
+
+						<form>
+							<b>Icon Scale (icons is your teammates, the bomb, etc)</b><br>
+							<input id="cl_radar_icon_scale_min" type="range"
+								name="cl_radar_icon_scale_min" min="0.4" max="1.0" step="0.01"
+								value="0.4"
+								oninput="this.form.cl_radar_icon_scale_min_num.value=this.value" />
+							<input type="number" name="cl_radar_icon_scale_min_num" min="0.4"
+								max="1.0" step="0.01" value="0.4"
+								oninput="this.form.cl_radar_icon_scale_min.value=this.value" />
+						</form>
+					</div>
 				</div>
 			</div>
+
+			<br> <br> <input id="updateButton" type="button"
+				value="Update autoexec" /> <br> <br> <br> <br>
+
+
+			<form action="./" method="post">
+				<textarea id="finalConfig" name="finalConfig"
+					style="width: 100%; height: 400px;"></textarea>
+			</form>
+
+			<br> <br> <input id="downloadButton" type="button"
+				value="Download autoexec" /> <br> <br>
+			<script
+				src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+			<script src="assets/js/jquery.generateFile.js"></script>
+			<script src="assets/js/script.js"></script>
+			<script src="assets/js/tabs.js"></script>
+
 		</div>
-
-		<br> <br> <input id="updateButton" type="button"
-			value="Update autoexec" /> <br> <br> <br> <br>
-
-
-		<form action="./" method="post">
-			<textarea id="finalConfig" name="finalConfig"
-				style="width: 100%; height: 400px;"></textarea>
-		</form>
-
-		<br> <br> <input id="downloadButton" type="button"
-			value="Download autoexec" /> <br> <br>
-		<script
-			src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
-		<script src="assets/js/jquery.generateFile.js"></script>
-		<script src="assets/js/script.js"></script>
-		<script src="assets/js/tabs.js"></script>
-
-	</div>
 </body>
 </html>

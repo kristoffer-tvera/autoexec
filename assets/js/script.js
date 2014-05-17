@@ -156,6 +156,23 @@ $(document).ready(function(){
 		var keybinds = [];
 
 		$('#finalConfig').append("//Keybinds\n");
+		
+		keybinds.push("bind kp_slash \""+$('#kp_slash').val());
+		keybinds.push("bind kp_multiply \""+$('#kp_multiply').val());
+		keybinds.push("bind kp_minus \""+$('#kp_minus').val());
+		keybinds.push("bind kp_home \""+$('#kp_home').val());
+		keybinds.push("bind kp_uparrow \""+$('#kp_uparrow').val());
+		keybinds.push("bind kp_pgup \""+$('#kp_pgup').val());
+		keybinds.push("bind kp_leftarrow \""+$('#kp_leftarrow').val());
+		keybinds.push("bind kp_5 \""+$('#kp_5').val());
+		keybinds.push("bind kp_rightarrow \""+$('#kp_rightarrow').val());
+		keybinds.push("bind kp_end \""+$('#kp_end').val());
+		keybinds.push("bind kp_downarrow \""+$('#kp_downarrow').val());
+		keybinds.push("bind kp_pgdn \""+$('#kp_pgdn').val());
+		keybinds.push("bind kp_ins \""+$('#kp_ins').val());
+		keybinds.push("bind kp_del \""+$('#kp_del').val());
+		keybinds.push("bind kp_plus \""+$('#kp_plus').val());
+		keybinds.push("bind kp_enter \""+$('#kp_enter').val());
 
 		for ( var i = 0; i < keybinds.length; i = i + 1 ) {
 			$('#finalConfig').append(keybinds[ i ]+'\"\n');
@@ -181,7 +198,7 @@ $(document).ready(function(){
 		$('#finalConfig').append('host_writeconfig\n');
 		$('#finalConfig').append('echo ""\n');
 		$('#finalConfig').append('echo ""\n');
-		$('#finalConfig').append('echo "autoexec.cfg loaded"\n');
+		$('#finalConfig').append('echo "autoexec.cfg loaded, GLHF"\n');
 		$('#finalConfig').append('echo ""\n');
 		$('#finalConfig').append('echo ""\n');
 
