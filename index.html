@@ -17,7 +17,7 @@
 				<h2>How to use this tool?</h2>
 				<ol>
 					<li>Adjust the settings.</li>
-					<li>Click "Update" below. You'll see text fill into the text field below.</li>
+					<li>Click "Update" below. You'll see a text field appear above.</li>
 					<li>Manually add any settings if you need.</li>
 					<li>Click "Download" below. Your browser will prompt to open/save autoexec.cfg.</li>
 					<li>Place the file in your CS:GO cfg folder - \Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg</li>
@@ -792,18 +792,17 @@
 				</div>
 			</div>
 		</div>
-
-		<br> <br> <input id="updateButton" type="button"
-			value="Update" /> <br> <br> <br> <br>
-
+        <div class="button-container">
+            <input id="updateButton" type="button" value="Update"/>
+            <input id="downloadButton" type="button" value="Download"/>
+        </div>
 
 		<form action="./" method="post">
 			<textarea id="finalConfig" name="finalConfig"
-				style="width: 100%; height: 400px;"></textarea>
+				style="width: 100%; height: 400px; display: none;"></textarea>
 		</form>
 
-		<br> <br> <input id="downloadButton" type="button"
-			value="Download" /> <br> <br>
+
 		<script
 			src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
 		<script src="assets/js/jquery.generateFile.js"></script>
