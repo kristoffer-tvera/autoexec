@@ -108,6 +108,7 @@ $(document).ready(function(){
 		misc.push("cl_disablefreezecam \""+($("#cl_disablefreezecam").prop("checked") ? "1" : "0"));
 		//misc.push("cl_dm_buyrandomweapons \""+$('#cl_dm_buyrandomweapons').val());
 		misc.push("cl_teammate_colors_show \""+($("#cl_teammate_colors_show").prop("checked") ? "1" : "0"));
+		misc.push("cl_loadout_colorweaponnames \""+($("#cl_loadout_colorweaponnames").prop("checked") ? "1" : "0"));
 		misc.push("cl_autowepswitch \""+($("#cl_autowepswitch").prop("checked") ? "1" : "0"));
 		misc.push("cl_use_opens_buy_menu \""+($("#cl_use_opens_buy_menu").prop("checked") ? "1" : "0"));
 		misc.push("closeonbuy \""+($("#closeonbuy").prop("checked") ? "1" : "0"));
