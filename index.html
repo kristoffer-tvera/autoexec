@@ -1,37 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8" />
-<title>CS:GO Autoexec creator</title>
-<!-- CSS stylesheet file -->
-<link rel="stylesheet" href="assets/css/styles.css" />
-
-<!--[if lt IE 9]>
-          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+	<meta charset="utf-8" />
+	<title>CS:GO Autoexec creator</title>
+	<link rel="stylesheet" href="assets/css/styles.css"/>
+	<link rel="icon" href="assets/images/icon.png"/>
+	<!--[if lt IE 9]>
+			  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 </head>
 <body>
 	<div id="wrapper">
 		<div id="tabContainer">
 
-			<p>
-				<font color="white">Using this tool is fairly
-					easy.<br><br>
-					<ol>
-						<li>Adjust settings as you see fit</li>
-						<li>Click "Update autoexec". You'll see text fill into the
-							text field below.</li>
-						<li>Manually add stuff you feel should be there (I've tried
-							gathering together most if not all of the most important settings
-							here)</li>
-						<li>Click "Download autoexec". Your browser should prompt for
-							save/run/open a file named autoexec.cfg</li>
-						<li>Place the file in your CS:GO cfg folder
-							(...\Steam\steamapps\common\Counter-Strike Global
-							Offensive\csgo\cfg)</li>
-					</ol>
-				</font>
-			</p>
+			<div id="tutorial">
+				<h2>How to use this tool?</h2>
+				<ol>
+					<li>Adjust the settings.</li>
+					<li>Click "Update" below. You'll see text fill into the text field below.</li>
+					<li>Manually add any settings if you need.</li>
+					<li>Click "Download" below. Your browser will prompt to open/save autoexec.cfg.</li>
+					<li>Place the file in your CS:GO cfg folder - \Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg</li>
+				</ol>
+
+			</div>
 			<br><br>
 			<div class="tabs">
 				<ul>
@@ -48,15 +40,11 @@
 			</div>
 			<div class="tabscontent">
 				<div class="tabpage" id="tabpage_1">
-					<h2>Below is "default" rates. Use them as a guideline, and
-						modify as you see fit.</h2>
-					<p>Remember, matchmaking servers are 64 tick, so if you play
-						soley on MM, this is not going to have a major impact on your
-						gameplay. It makes sense to have the best possible configurations
-						as default for the times when you do decide to play on high-end
-						servers.</p>
+					<h2>Do not change these unless you know what you are doing.</h2>
+					<p>Remember, these settings are client-side so if the server is 64tick it will set you to 64tick.</p>
+					<br>
 					<form>
-						<b>Rate</b><br> <input id="rate" type="range" name="rate"
+						<b>Rate <abbr title="Maximum download bandwidth in bytes per second.">?</abbr></b><br> <input id="rate" type="range" name="rate"
 							min="500" max="128000" value="128000"
 							oninput="this.form.rate_num.value=this.value" /> <input
 							type="number" name="rate_num" min="500" max="128000"
@@ -64,7 +52,7 @@
 					</form>
 
 					<form>
-						<b>CMD rate</b><br> <input id="cl_cmdrate" type="range"
+						<b>CMD Rate <abbr title="Maximum command packets per second sending to the server.">?</abbr></b><br> <input id="cl_cmdrate" type="range"
 							name="cl_cmdrate" min="10" max="128" value="128"
 							oninput="this.form.cl_cmdrate_num.value=this.value" /> <input
 							type="number" name="cl_cmdrate_num" min="10" max="128"
@@ -72,7 +60,7 @@
 					</form>
 
 					<form>
-						<b>Update Rate</b><br> <input id="cl_updaterate" type="range"
+						<b>Update Rate <abbr title="Maximum number of update packets received from the server per second">?</abbr></b><br> <input id="cl_updaterate" type="range"
 							name="cl_updaterate" min="10" max="128" value="128"
 							oninput="this.form.cl_updaterate_num.value=this.value" /> <input
 							type="number" name="cl_updaterate_num" min="10" max="128"
@@ -80,7 +68,7 @@
 					</form>
 
 					<form>
-						<b>Interp</b><br> <input id="cl_interp" type="range"
+						<b>Interp <abbr title="Do not set higher than 0, affects packed receiving delay.">?</abbr></b><br> <input id="cl_interp" type="range"
 							name="cl_interp" min="0.0" max="0.5" step="0.01" value="0.0"
 							oninput="this.form.cl_interp_num.value=this.value" /> <input
 							type="number" name="cl_interp_num" min="0.0" max="0.5" step="0.01" 
@@ -88,7 +76,7 @@
 					</form>
 
 					<form>
-						<b>Interp Ratio</b><br> <input id="cl_interp_ratio"
+						<b>Interp Ratio <abbr title="Do not set lower than 1, affects received packets.">?</abbr></b><br> <input id="cl_interp_ratio"
 							type="range" name="cl_interp_ratio" min="1.0" max="2.0" step="0.01"
 							value="1.0"
 							oninput="this.form.cl_interp_ratio_num.value=this.value" /> <input
@@ -97,7 +85,7 @@
 					</form>
 
 					<form>
-						<b>Lag compensation (serverside)</b><br> <input
+						<b>Lag Compensation <abbr title="Serverside.">?</abbr></b><br> <input
 							id="cl_lagcompensation" name="cl_lagcompensation2"
 							value="your_value2" type="checkbox" checked><br>
 					</form>
@@ -107,7 +95,7 @@
 					<h2>Audio</h2>
 
 					<form>
-						<b>Volume</b><br> <input id="volume" type="range"
+						<b>Volume  <abbr title="In %s.">?</abbr></b><br> <input id="volume" type="range"
 							name="volume" min="0.0" max="1.0" step="0.01" value="1.0"
 							oninput="this.form.volume_num.value=this.value" /> <input
 							type="number" name="volume_num" min="0.0" max="1.0" step="0.01"
@@ -792,8 +780,7 @@
 
 					<form>
 						<b>Rotate</b><br> <input id="cl_radar_rotate"
-							name="cl_radar_rotate" value="your_value2" type="checkbox"
-							checked><br>
+							name="cl_radar_rotate" value="your_value2" type="checkbox"><br>
 					</form>
 
 					<form>
@@ -821,15 +808,15 @@
 								<div class="tabpage" id="tabpage_9">
 					<h2>Crosshair</h2>
 
-					<p>	I'm not going to reinvent the wheel, the people over at krisskarbo.com has already made a awesome crosshair generator, check it out <a href="http://www.krisskarbo.com/csgocrosshair/"
-							target="_blank">over here (clicky clicky)</a>, and copy the settings that you enjoy into the text box below AFTER you have clicked "update" and finalized all your other settings.)
+					<p>	I'm not going to reinvent the wheel, the people over at krisskarbo.com had already made a awesome crosshair generator, check it out <a href="http://www.crackhat.us/xhair"
+							target="_blank">over here</a>, and copy the settings that you enjoy into the text box below <b>after</b> you have clicked "Update" and finished all your other settings.
 					</p>
 				</div>
 			</div>
 		</div>
 
 		<br> <br> <input id="updateButton" type="button"
-			value="Update autoexec" /> <br> <br> <br> <br>
+			value="Update" /> <br> <br> <br> <br>
 
 
 		<form action="./" method="post">
@@ -838,7 +825,7 @@
 		</form>
 
 		<br> <br> <input id="downloadButton" type="button"
-			value="Download autoexec" /> <br> <br>
+			value="Download" /> <br> <br>
 		<script
 			src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
 		<script src="assets/js/jquery.generateFile.js"></script>

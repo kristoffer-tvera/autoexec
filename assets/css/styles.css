@@ -12,6 +12,10 @@ h2 {
 	margin-bottom: 10px;
 }
 
+abbr {
+	cursor:pointer;
+}
+
 #wrapper {
 	width: 740px;
 	margin: 40px auto 0;
@@ -34,6 +38,10 @@ h2 {
 	background-color: #2e2e2e;
 	-moz-border-radius: 14px;
 	border-radius: 14px;
+}
+
+#tutorial {
+	color:white;
 }
 
 .tabs {
