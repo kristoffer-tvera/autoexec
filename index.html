@@ -493,6 +493,48 @@
 							id="net_graphproportionalfont" name="net_graphproportionalfont"
 							value="your_value2" type="checkbox" checked><br>
 					</form>
+					
+					<form>
+						<b>Remove Health/Ammo bar (if you check, there will only be a number there) </b><br> <input
+							id="cl_hud_healthammo_style" name="cl_hud_healthammo_style"
+							value="your_value2" type="checkbox"><br>
+					</form>
+					
+					<form>
+						<b>Level of shadow on the HUD (0 = no shadow, 1=max shadow)</b><br> <input id="cl_hud_background_alpha" 
+							type="range" name="cl_hud_background_alpha" min="0.0" max="1.0" step="0.05"
+							value="0.5" oninput="this.form.cl_hud_background_alpha_num.value=this.value" /> 
+							<input type="number" name="cl_hud_background_alpha_num" min="0.0" max="1.0" 
+							step="0.05" value="0.5" oninput="this.form.cl_hud_background_alpha.value=this.value" />
+					</form>
+					
+					<form>
+						<b>HUD color</b><br> 
+						0 = default<br> 
+						1 = light blue<br> 
+						2 = orange<br> 
+						3 = green<br> 
+						4 = purple<br> 
+						5 = white<br> 
+						
+						<input id="cl_hud_color" type="range" name="cl_hud_color" min="0" max="5" step="1"
+							value="0" oninput="this.form.cl_hud_color_num.value=this.value" />
+						<input id="cl_hud_color_num" type="number" name="cl_hud_color_num" min="0" 
+							max="5" step="1" value="0"
+							oninput="this.form.cl_hud_color.value=this.value" />
+					</form>
+					
+					<form>
+						<b>Show the amount of players left, instead of one avatar for each</b><br> 
+							<input id="cl_hud_playercount_showcount" name="cl_hud_playercount_showcount"
+							value="your_value2" type="checkbox"><br>
+					</form>
+					
+					<form>
+						<b>Move the playercount box to the bottom</b><br> <input
+							id="cl_hud_playercount_pos" name="cl_hud_playercount_pos"
+							value="your_value2" type="checkbox"><br>
+					</form>
 
 					<h2>Gun Position On Your Screen</h2>
 
@@ -727,7 +769,7 @@
 						<li>228 Compact (p228)</li>
 						<li>Glock (glock)</li>
 						<li>Dual Elites (elite)</li>
-						<li>Five Seven (fiveseven)</li>
+						<li>Five Seven (fn57)</li>
 						<li>Desert Eagle (deagle)</li>
 						<li>Tec9 (tec9)</li>
 						<li>HKP2000 (hkp2000)</li>

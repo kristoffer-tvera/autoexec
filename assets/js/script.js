@@ -132,6 +132,14 @@ $(document).ready(function(){
 		hud.push("cl_showfps \""+($("#cl_showfps").prop("checked") ? "1" : "0"));
 		hud.push("net_graph \""+($("#net_graph").prop("checked") ? "1" : "0"));
 		hud.push("net_graphproportionalfont \""+($("#net_graphproportionalfont").prop("checked") ? "1" : "0"));
+		
+		hud.push("cl_hud_healthammo_style \""+($("#cl_hud_healthammo_style").prop("checked") ? "1" : "0"));
+		hud.push("cl_hud_background_alpha \""+$("#cl_hud_background_alpha").val());
+		hud.push("cl_hud_color \""+$("#cl_hud_color").val());
+		hud.push("cl_hud_playercount_showcount \""+($("#cl_hud_playercount_showcount").prop("checked") ? "1" : "0"));
+		hud.push("cl_hud_playercount_pos \""+($("#cl_hud_playercount_pos").prop("checked") ? "1" : "0"));
+		
+		
 		hud.push("viewmodel_presetpos \""+$('#viewmodel_presetpos').val());
 		if($('#viewmodel_presetpos').val() == 0){
 			hud.push("viewmodel_fov \""+$('#viewmodel_fov').val());
