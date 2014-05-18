@@ -286,36 +286,36 @@
 					</form>
 
 					<form>
-						<br> <b>Raw input</b><br> <input id="m_rawinput"
+						<br> <b>Use Raw Input for mouse input.</b><br> <input id="m_rawinput"
 							name="m_rawinput" value="your_value2" type="checkbox" checked><br>
 					</form>
 
 					<form>
-						<b>Custom acceleration X</b><br> <input id="m_customaccel"
-							type="range" name="m_customaccel" min="0.0" max="1.0" step="0.05"
+						<b>Custom mouse acceleration:</b><br> <input id="m_customaccel"
+							type="range" name="m_customaccel" min="0.0" max="10.0" step="0.05"
 							value="0.0"
 							oninput="this.form.m_customaccel_num.value=this.value" /> <input
-							type="number" name="m_customaccel_num" min="0.0" max="1.0"
+							type="number" name="m_customaccel_num" min="0.0" max="10.0"
 							step="0.05" value="0.0"
 							oninput="this.form.m_customaccel.value=this.value" />
 					</form>
 
 					<form>
-						<b>Custom acceleration Y</b><br> <input id="m_mouseaccel1"
-							type="range" name="m_mouseaccel1" min="0.0" max="1.0" step="0.05"
+						<b>Windows mouse acceleration initial threshold (2x movement).</b><br> <input id="m_mouseaccel1"
+							type="range" name="m_mouseaccel1" min="0.0" max="10.0" step="0.05"
 							value="0.0"
 							oninput="this.form.m_mouseaccel1_num.value=this.value" /> <input
-							type="number" name="m_mouseaccel1_num" min="0.0" max="1.0"
+							type="number" name="m_mouseaccel1_num" min="0.0" max="10.0"
 							step="0.05" value="0.0"
 							oninput="this.form.m_mouseaccel1.value=this.value" />
 					</form>
 
 					<form>
-						<b>Custom acceleration Z</b><br> <input id="m_mouseaccel2"
-							type="range" name="m_mouseaccel2" min="0.0" max="1.0" step="0.05"
+						<b>Windows mouse acceleration secondary threshold (4x movement).</b><br> <input id="m_mouseaccel2"
+							type="range" name="m_mouseaccel2" min="0.0" max="10.0" step="0.05"
 							value="0.0"
 							oninput="this.form.m_mouseaccel2_num.value=this.value" /> <input
-							type="number" name="m_mouseaccel2_num" min="0.0" max="1.0"
+							type="number" name="m_mouseaccel2_num" min="0.0" max="10.0"
 							step="0.05" value="0.0"
 							oninput="this.form.m_mouseaccel2.value=this.value" />
 					</form>
@@ -330,7 +330,7 @@
 					</form>
 
 					<form>
-						<b>Ingame Console overlay</b><br> <input id="con_enable"
+						<b>Ingame Console</b><br> <input id="con_enable"
 							name="con_enable" value="your_value2" type="checkbox" checked><br>
 					</form>
 
@@ -379,7 +379,7 @@
 					</form>
 
 					<form>
-						<b>Force matchmaking from these servers:</b><br> <input
+						<b>Comma delimited list of ip:port of servers used to search for dedicated servers: (leave empty for gods sake, unless you know what you are doing)</b><br> <input
 							id="mm_dedicated_force_servers" type="text" value=""><br>
 					</form>
 
@@ -400,7 +400,7 @@
 					</form>
 
 					<form>
-						<b>Force Preload</b><br> <input id="cl_forcepreload"
+						<b>Whether we should force preloading.</b><br> <input id="cl_forcepreload"
 							name="cl_forcepreload" value="your_value2" type="checkbox"
 							checked><br>
 					</form>
@@ -519,7 +519,7 @@
 					</form>
 
 					<form>
-						<b>Small net graph font size</b><br> <input
+						<b>Scale Net Graph font size with the size of your net graph</b><br> <input
 							id="net_graphproportionalfont" name="net_graphproportionalfont"
 							value="your_value2" type="checkbox" checked><br>
 					</form>
