@@ -497,14 +497,22 @@
 					<h2>Gun Position On Your Screen</h2>
 
 					<form>
-						<b>Starting position </b><br> <input id="viewmodel_presetpos"
-							type="range" name="viewmodel_presetpos" min="0" max="100"
+						<b>Preset positions</b><br> 
+						0 = Customize using the sliders below (FoV, X, Y, Z)<br> 
+						1 = "Desktop"<br> 
+						2 = Couch<br> 
+						3 = Classic<br> 
+						
+						<input id="viewmodel_presetpos"
+							type="range" name="viewmodel_presetpos" min="0" max="3"
 							step="1" value="0"
 							oninput="this.form.viewmodel_presetpos_num.value=this.value" />
 						<input type="number" name="viewmodel_presetpos_num" min="0"
-							max="100" step="1" value="0"
+							max="3" step="1" value="0"
 							oninput="this.form.viewmodel_presetpos.value=this.value" />
 					</form>
+
+					<p> If you decide to go with Preset Position 0 (custom), use the slinders below.</p>
 
 					<form>
 						<b>Field Of View</b><br> <input id="viewmodel_fov"
