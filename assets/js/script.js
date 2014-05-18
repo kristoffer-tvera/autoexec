@@ -228,3 +228,16 @@ $(document).ready(function(){
 
 
 });
+
+function updateViewModel(obj) {
+    var cvm = document.getElementsByClassName("customViewModel");
+    if(obj.value < 1){
+        for (var i = 0; i < cvm.length; i++) {
+            cvm[i].disabled = false;   
+        }
+    } else if (obj.value > 0){
+        for (var i = 0; i < cvm.length; i++) {
+            cvm[i].disabled = true;   
+        }        
+    }        
+}
