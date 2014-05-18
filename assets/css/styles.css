@@ -2,12 +2,17 @@
 	margin: 0;
 	padding: 0;
 }
-
+html {
+    background: url(../../assets/images/background.jpg) no-repeat center center fixed #000000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 body {
-	background: url(../../assets/images/background.jpg) top left;
-	background-size: cover;
-	background-repeat: no-repeat;
 	font: .8em "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
 h2 {
@@ -23,8 +28,8 @@ li {
 }
 
 #wrapper {
-	width: 740px;
-	margin: 40px auto 0;
+	width: 770px;
+	margin: 40px auto;
 }
 
 #wrapper h1 {
@@ -123,11 +128,15 @@ li {
 	margin: 0;
 	color: #333;
 }
-
 /***FIRST STYLE THE BUTTON***/
-input#updateButton {
-	width: 100%;
-	background: #00FF7F; /*the colour of the button*/
+input#updateButton, input#downloadButton {
+    float: left;
+	width: 380px;
+    background: #C9C9C9; /* old browsers */
+    background: -moz-linear-gradient(top, #0C91EC 0%, #257AB6 100%);
+    /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0C91EC),
+    color-stop(100%, #257AB6)); /* webkit */
 	padding: 8px 14px 10px; /*apply some padding inside the button*/
 	border: 1px solid #3e9cbf;
 	/*required or the default border for the browser will appear*/
@@ -136,72 +145,28 @@ input#updateButton {
 	font-size: 1.5em;
 	font-family: Oswald, sans-serif;
 	/*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
-	letter-spacing: .1em;
 	text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3);
 	/*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
 	color: #fff;
 	/*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
-	-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73,
-		0px 10px 5px #999;
-	-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px
-		10px 5px #999;
-	box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px
-		5px #999;
 	/*give the corners a small curve*/
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
-	border-radius: 10px;
+	border-radius: 5px;
+    margin: 10px 0;
 }
-/***SET THE BUTTON'S HOVER AND FOCUS STATES***/
-input#updateButton:hover,input#updateButton:focus {
-	color: #dfe7ea;
-	/*reduce the size of the shadow to give a pushed effect*/
-	-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73,
-		0px 2px 5px #999;
-	-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px
-		2px 5px #999;
-	box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px
-		5px #999;
-}
-
-/***FIRST STYLE THE BUTTON***/
 input#downloadButton {
-	width: 100%;
-	background: #3e9cbf; /*the colour of the button*/
-	padding: 8px 14px 10px; /*apply some padding inside the button*/
-	border: 1px solid #3e9cbf;
-	/*required or the default border for the browser will appear*/
-	cursor: pointer;
-	/*style the text*/
-	font-size: 1.5em;
-	font-family: Oswald, sans-serif;
-	/*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
-	letter-spacing: .1em;
-	text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3);
-	/*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
-	color: #fff;
-	/*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
-	-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73,
-		0px 10px 5px #999;
-	-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px
-		10px 5px #999;
-	box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px
-		5px #999;
-	/*give the corners a small curve*/
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
+    margin-left: 10px;
 }
-/***SET THE BUTTON'S HOVER AND FOCUS STATES***/
-input#downloadButton:hover,input#downloadButton:focus {
-	color: #dfe7ea;
-	/*reduce the size of the shadow to give a pushed effect*/
-	-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73,
-		0px 2px 5px #999;
-	-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px
-		2px 5px #999;
-	box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px
-		5px #999;
+input#updateButton:hover, input#updateButton:focus, input#downloadButton:hover, input#downloadButton:focus {
+    background: #a8a8a8; /* old browsers */
+    background: -moz-linear-gradient(top, #257AB6 0%, #0C91EC 100%);
+    /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #257AB6),
+    color-stop(100%, #0C91EC)); /* webkit */
+}
+.button-container {
+    overflow: auto;
 }
 
 .keypad {
