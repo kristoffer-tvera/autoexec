@@ -1,37 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8" />
-<title>CS:GO Autoexec creator</title>
-<!-- CSS stylesheet file -->
-<link rel="stylesheet" href="assets/css/styles.css" />
-
-<!--[if lt IE 9]>
-          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+	<meta charset="utf-8" />
+	<title>CS:GO Autoexec Creator</title>
+	<link rel="stylesheet" href="assets/css/styles.css"/>
+	<link rel="icon" href="assets/images/icon.png"/>
+	<!--[if lt IE 9]>
+			  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 </head>
 <body>
 	<div id="wrapper">
 		<div id="tabContainer">
 
-			<p>
-				<font color="white">Using this tool is fairly
-					easy.<br><br>
-					<ol>
-						<li>Adjust settings as you see fit</li>
-						<li>Click "Update autoexec". You'll see text fill into the
-							text field below.</li>
-						<li>Manually add stuff you feel should be there (I've tried
-							gathering together most if not all of the most important settings
-							here)</li>
-						<li>Click "Download autoexec". Your browser should prompt for
-							save/run/open a file named autoexec.cfg</li>
-						<li>Place the file in your CS:GO cfg folder
-							(...\Steam\steamapps\common\Counter-Strike Global
-							Offensive\csgo\cfg)</li>
-					</ol>
-				</font>
-			</p>
+			<div id="tutorial">
+				<h2>How to use this tool?</h2>
+				<ol>
+					<li>Adjust the settings.</li>
+					<li>Click "Update" below. You'll see text fill into the text field below.</li>
+					<li>Manually add any settings if you need.</li>
+					<li>Click "Download" below. Your browser will prompt to open/save autoexec.cfg.</li>
+					<li>Place the file in your CS:GO cfg folder - \Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg</li>
+				</ol>
+
+			</div>
 			<br><br>
 			<div class="tabs">
 				<ul>
@@ -41,22 +33,18 @@
 					<li id="tabHeader_4">Mouse</li>
 					<li id="tabHeader_5">Misc</li>
 					<li id="tabHeader_6">HUD</li>
-					<li id="tabHeader_7">Keybinds - buy</li>
+					<li id="tabHeader_7">Buy Binds</li>
 					<li id="tabHeader_8">Radar</li>
 					<li id="tabHeader_9">Crosshair</li>
 				</ul>
 			</div>
 			<div class="tabscontent">
 				<div class="tabpage" id="tabpage_1">
-					<h2>Below is "default" rates. Use them as a guideline, and
-						modify as you see fit.</h2>
-					<p>Remember, matchmaking servers are 64 tick, so if you play
-						soley on MM, this is not going to have a major impact on your
-						gameplay. It makes sense to have the best possible configurations
-						as default for the times when you do decide to play on high-end
-						servers.</p>
+					<h2>Do not change these unless you know what you are doing.</h2>
+					<p>Remember, these settings are client-side so if the server is 64tick it will set you to 64tick.</p>
+					<br>
 					<form>
-						<b>Rate</b><br> <input id="rate" type="range" name="rate"
+						<b>Rate <abbr title="Maximum download bandwidth in bytes per second.">?</abbr></b><br> <input id="rate" type="range" name="rate"
 							min="500" max="128000" value="128000"
 							oninput="this.form.rate_num.value=this.value" /> <input
 							type="number" name="rate_num" min="500" max="128000"
@@ -64,7 +52,7 @@
 					</form>
 
 					<form>
-						<b>CMD rate</b><br> <input id="cl_cmdrate" type="range"
+						<b>CMD Rate <abbr title="Maximum command packets per second sending to the server.">?</abbr></b><br> <input id="cl_cmdrate" type="range"
 							name="cl_cmdrate" min="10" max="128" value="128"
 							oninput="this.form.cl_cmdrate_num.value=this.value" /> <input
 							type="number" name="cl_cmdrate_num" min="10" max="128"
@@ -72,7 +60,7 @@
 					</form>
 
 					<form>
-						<b>Update Rate</b><br> <input id="cl_updaterate" type="range"
+						<b>Update Rate <abbr title="Maximum number of update packets received from the server per second">?</abbr></b><br> <input id="cl_updaterate" type="range"
 							name="cl_updaterate" min="10" max="128" value="128"
 							oninput="this.form.cl_updaterate_num.value=this.value" /> <input
 							type="number" name="cl_updaterate_num" min="10" max="128"
@@ -80,7 +68,7 @@
 					</form>
 
 					<form>
-						<b>Interp</b><br> <input id="cl_interp" type="range"
+						<b>Interp <abbr title="Do not set higher than 0, affects packed receiving delay.">?</abbr></b><br> <input id="cl_interp" type="range"
 							name="cl_interp" min="0.0" max="0.5" step="0.01" value="0.0"
 							oninput="this.form.cl_interp_num.value=this.value" /> <input
 							type="number" name="cl_interp_num" min="0.0" max="0.5" step="0.01" 
@@ -88,7 +76,7 @@
 					</form>
 
 					<form>
-						<b>Interp Ratio</b><br> <input id="cl_interp_ratio"
+						<b>Interp Ratio <abbr title="Do not set lower than 1, affects received packets.">?</abbr></b><br> <input id="cl_interp_ratio"
 							type="range" name="cl_interp_ratio" min="1.0" max="2.0" step="0.01"
 							value="1.0"
 							oninput="this.form.cl_interp_ratio_num.value=this.value" /> <input
@@ -97,7 +85,7 @@
 					</form>
 
 					<form>
-						<b>Lag compensation (serverside)</b><br> <input
+						<b>Lag Compensation <abbr title="Serverside.">?</abbr></b><br> <input
 							id="cl_lagcompensation" name="cl_lagcompensation2"
 							value="your_value2" type="checkbox" checked><br>
 					</form>
@@ -107,11 +95,11 @@
 					<h2>Audio</h2>
 
 					<form>
-						<b>Volume</b><br> <input id="volume" type="range"
+						<b>Volume  <abbr title="In %s.">?</abbr></b><br> <input id="volume" type="range"
 							name="volume" min="0.0" max="1.0" step="0.01" value="1.0"
 							oninput="this.form.volume_num.value=this.value" /> <input
 							type="number" name="volume_num" min="0.0" max="1.0" step="0.01"
-							value="1.0" oninput="this.form.volume.value=this.value" />
+							value="0.4" oninput="this.form.volume.value=this.value" />
 					</form>
 
 					<b>Voice Enable</b><br> <input id="voice_enable"
@@ -127,9 +115,13 @@
 					</form>
 
 					<form>
-						<b>Windows Speaker Config</b><br> -1 = automatically pick
-						best<br> 1 = headset<br> 2 = #yolo dunno<br> 3 =
-						4xSpeakers<br> 4 = stereo speakers<br> 6 = 5.1 sound<br>
+						<b>Speaker Config</b><br> 
+						-1 = Automatically pick best<br> 
+						1 = Headset<br> 
+						2 = ???<br> 
+						3 = 4 Speakers<br> 
+						4 = Stereo Speakers<br> 
+						6 = 5.1 Surround<br>
 						<input id="windows_speaker_config" type="range"
 							name="windows_speaker_config" min="-1" max="6" step="1" value="1"
 							oninput="this.form.windows_speaker_config_num.value=this.value" />
@@ -158,7 +150,7 @@
 					</form>
 
 					<form>
-						<b>Headphone pan exponent</b><br> <input
+						<b>Headphone Pan Exponent <abbr title="2 is optimal for clear sound source.">?</abbr></b><br> <input
 							id="snd_headphone_pan_exponent" type="range"
 							name="snd_headphone_pan_exponent" min="0" max="100" step="1"
 							value="2"
@@ -169,7 +161,7 @@
 					</form>
 
 					<form>
-						<b>Headphone pan radial</b><br> <input
+						<b>Headphone Pan Radial Weight <abbr title="2 is optimal for clear sound source.">?</abbr></b><br> <input
 							id="snd_headphone_pan_radial_weight" type="range"
 							name="snd_headphone_pan_radial_weight" min="0" max="100" step="1"
 							value="2"
@@ -180,18 +172,18 @@
 					</form>
 
 					<form>
-						<b>Legacy surround</b><br> <input id="snd_legacy_surround"
+						<b>Legacy Surround <abbr title="Sometimes helps fix 3D sound issues.">?</abbr></b><br> <input id="snd_legacy_surround"
 							name="snd_legacy_surround" value="your_value2" type="checkbox"><br>
 					</form>
 
 					<form>
-						<b>Mute game when in windows</b><br> <input
+						<b>Mute Game While Alt-tabbed</b><br> <input
 							id="snd_mute_losefocus" name="snd_mute_losefocus"
 							value="your_value2" type="checkbox" checked><br>
 					</form>
 
 					<form>
-						<b>Voice chat in lobby</b><br> <input
+						<b>Voice Chat In Lobby</b><br> <input
 							id="lobby_voice_chat_enabled" name="lobby_voice_chat_enabled"
 							value="your_value2" type="checkbox"><br>
 					</form>
@@ -211,8 +203,7 @@
 					</form>
 
 					<form>
-						<b>Video processing queue mode (multi core rendering, leave on
-							-1 unless you know what you are doing)</b><br> <input
+						<b>Video Processing Queue Mode <abbr title="If you are having problems set to 0. Don't change if you don't know what it does.">?</abbr></b><br> <input
 							id="mat_queue_mode" type="range" name="mat_queue_mode" min="-1"
 							max="16" step="1" value="-1"
 							oninput="this.form.mat_queue_mode_num.value=this.value" /> <input
@@ -227,7 +218,7 @@
 					</form>
 
 					<form>
-						<b>FPS max</b><br> <input id="fps_max" type="range"
+						<b>Max FPS</b><br> <input id="fps_max" type="range"
 							name="fps_max" min="59" max="400" step="1" value="145"
 							oninput="this.form.fps_max_num.value=this.value" /> <input
 							type="number" name="fps_max_num" min="59" max="400" step="1"
@@ -235,29 +226,24 @@
 					</form>
 
 					<form>
-						<b>FPS max in menus)</b><br> <input id="fps_max_menu"
+						<b>Max FPS (In Menu)</b><br> <input id="fps_max_menu"
 							type="range" name="fps_max_menu" min="0" max="500" step="1"
-							value="145" oninput="this.form.fps_max_menu_num.value=this.value" />
+							value="60" oninput="this.form.fps_max_menu_num.value=this.value" />
 						<input type="number" name="fps_max_menu_num" min="0" max="500"
-							step="1" value="145"
+							step="1" value="60"
 							oninput="this.form.fps_max_menu.value=this.value" />
 					</form>
 
 					<form>
-						<b>Dynamic</b><br> <input id="r_dynamic" name="r_dynamic"
+						<b>Dynamic Shadows</b><br> <input id="r_dynamic" name="r_dynamic"
 							value="your_value2" type="checkbox"><br>
 
 					</form>
 
 					<form>
-						<b>Draw Tracers in first person mode</b><br> <input
+						<b>Draw Tracers In First Person Mode <abbr title="Leave unchecked for less confusing shooting through smoke.">?</abbr></b><br> <input
 							id="r_drawtracers_firstperson" name="r_drawtracers_firstperson"
 							value="your_value2" type="checkbox"><br>
-					</form>
-
-					<form>
-						<b>Draw particles</b><br> <input id="r_drawparticles"
-							name="r_drawparticles" value="your_value2" type="checkbox"><br>
 					</form>
 
 				</div>
@@ -266,19 +252,18 @@
 
 					<form>
 						<b>Sensitivity</b><br> <input id="sensitivity" type="range"
-							name="sensitivity" min="0.01" max="10.0" value="2.0" step="0.01"
+							name="sensitivity" min="0" max="10.0" value="3" step="0.05"
 							oninput="this.form.sensitivity_num.value=this.value" /> <input
-							type="number" name="sensitivity_num" min="0.01" max="10.0"
-							value="2.0" step="0.01"
+							type="number" name="sensitivity_num" min="0." max="10.0"
+							value="3" step="0.05"
 							oninput="this.form.sensitivity.value=this.value" />
 					</form>
 
 					<form>
-						<b>Zoom sensitivity (the amount your sense is amplified when
-							zooming in with awp/scout)</b><br> <input
+						<b>Zoom Sensitivity <abbr title="When you zoom = Zoom Sensitivity x Mouse Sensitivity">?</abbr></b><br> <input
 							id="zoom_sensitivity_ratio_mouse" type="range"
 							name="zoom_sensitivity_ratio_mouse" min="0.01" max="10.0"
-							value="1.0" step="0.01"
+							value="1.0" step="0.05"
 							oninput="this.form.zoom_sensitivity_ratio_mouse_num.value=this.value" />
 						<input type="number" name="zoom_sensitivity_ratio_mouse_num"
 							min="0.01" max="10.0" value="1.0" step="0.01"
@@ -286,12 +271,12 @@
 					</form>
 
 					<form>
-						<br> <b>Use Raw Input for mouse input.</b><br> <input id="m_rawinput"
+						<br> <b>Mouse Raw Input <abbr="Ignores windows mouse sensitivity.">?</abbr></b><br> <input id="m_rawinput"
 							name="m_rawinput" value="your_value2" type="checkbox" checked><br>
 					</form>
 
 					<form>
-						<b>Custom mouse acceleration:</b><br> <input id="m_customaccel"
+						<b>Mouse Acceleration:</b><br> <input id="m_customaccel"
 							type="range" name="m_customaccel" min="0.0" max="10.0" step="0.05"
 							value="0.0"
 							oninput="this.form.m_customaccel_num.value=this.value" /> <input
@@ -300,42 +285,23 @@
 							oninput="this.form.m_customaccel.value=this.value" />
 					</form>
 
-					<form>
-						<b>Windows mouse acceleration initial threshold (2x movement).</b><br> <input id="m_mouseaccel1"
-							type="range" name="m_mouseaccel1" min="0.0" max="10.0" step="0.05"
-							value="0.0"
-							oninput="this.form.m_mouseaccel1_num.value=this.value" /> <input
-							type="number" name="m_mouseaccel1_num" min="0.0" max="10.0"
-							step="0.05" value="0.0"
-							oninput="this.form.m_mouseaccel1.value=this.value" />
-					</form>
-
-					<form>
-						<b>Windows mouse acceleration secondary threshold (4x movement).</b><br> <input id="m_mouseaccel2"
-							type="range" name="m_mouseaccel2" min="0.0" max="10.0" step="0.05"
-							value="0.0"
-							oninput="this.form.m_mouseaccel2_num.value=this.value" /> <input
-							type="number" name="m_mouseaccel2_num" min="0.0" max="10.0"
-							step="0.05" value="0.0"
-							oninput="this.form.m_mouseaccel2.value=this.value" />
-					</form>
-
 				</div>
 				<div class="tabpage" id="tabpage_5">
 					<h2>Misc</h2>
 					<form>
-						<b>Developer (must be enabled to get effect from a few of the
-							commands below)</b><br> <input id="developer" name="developer"
+						<b>Developer <abbr title="Must be enabled for some commands below to work">?</abbr></b><br> <input id="developer" name="developer"
 							value="your_value2" type="checkbox" checked><br>
 					</form>
 
 					<form>
-						<b>Ingame Console</b><br> <input id="con_enable"
+						<b>Enable Console</b><br> <input id="con_enable"
 							name="con_enable" value="your_value2" type="checkbox" checked><br>
 					</form>
 
 					<form>
-						<b>Filter effect. 1 removes EVERYTHING apart from what is caught by the filter. 2 Highlights the stuff caught by the filter, and keeps everything else as is.</b><br> <input
+						<b>Filter Effect</b><br>
+						1 = Removes EVERYTHING apart from what is caught by the filter.<br>
+						2 = Highlights the stuff caught by the filter and keeps everything else as is.</b><br> <input
 							id="con_filter_enable" type="range" name="con_filter_enable"
 							min="1" max="2" step="1" value="2"
 							oninput="this.form.con_filter_enable_num.value=this.value" /> <input
@@ -354,21 +320,23 @@
 							type="text" value="Player:"><br>
 					</form>
 
+					<br>
+					
 					<form>
-						<b>Steam notifications position (bottom/top + right/left)</b><br>
+						<b>Steam Notifications Position <abbr title="bottom/top + right/left">?</abbr></b><br>
 						<input id="ui_steam_overlay_notification_position" type="text"
 							value="bottomright"><br>
 					</form>
 
 					<form>
-						<b>Dont show community server messages</b><br> <input
+						<b>Disable Community Server Message</abbr></b><br> <input
 							id="player_nevershow_communityservermessage"
 							name="player_nevershow_communityservermessage"
 							value="your_value2" type="checkbox" checked><br>
 					</form>
 
 					<form>
-						<b>Max ping when looking for matchmaking server</b><br> <input
+						<b>Max Ping Allowed For MM Server</b><br> <input
 							id="mm_dedicated_search_maxping" type="range"
 							name="mm_dedicated_search_maxping" min="50" max="1000" step="1"
 							value="100"
@@ -379,61 +347,56 @@
 					</form>
 
 					<form>
-						<b>Comma delimited list of ip:port of servers used to search for dedicated servers: (leave empty for gods sake, unless you know what you are doing)</b><br> <input
-							id="mm_dedicated_force_servers" type="text" value=""><br>
-					</form>
-
-					<form>
-						<b>Basic game instructions</b><br> <input
+						<b>Basic Game Instructions</b><br> <input
 							id="gameinstructor_enable" name="gameinstructor_enable"
 							value="your_value2" type="checkbox"><br>
 					</form>
 
 					<form>
-						<b>Toggle duck?</b><br> <input id="option_duck_method"
+						<b>Toggle Duck</b><br> <input id="option_duck_method"
 							name="option_duck_method" value="your_value2" type="checkbox"><br>
 					</form>
 
 					<form>
-						<b>Toggle walk?</b><br> <input id="option_speed_method"
+						<b>Toggle Walk</b><br> <input id="option_speed_method"
 							name="option_speed_method" value="your_value2" type="checkbox"><br>
 					</form>
 
 					<form>
-						<b>Whether we should force preloading.</b><br> <input id="cl_forcepreload"
+						<b>Force Map Preload <abbr="If you crash or lag during game enable this">?</abbr></b><br> <input id="cl_forcepreload"
 							name="cl_forcepreload" value="your_value2" type="checkbox"
 							checked><br>
 					</form>
 
 					<form>
-						<b>Downloadfilter (all / nosounds / none)</b><br> <input
-							id="cl_downloadfilter" type="text" value="nosounds"><br>
+						<b>Download Filter <abbr title="all / nosounds / none">?</abbr></b><br> <input
+							id="cl_downloadfilter" type="text" value="none"><br>
 					</form>
 
 					<form>
-						<b>Disable HTML Message-of-the-Day</b><br> <input
+						<b>Disable HTML <abbr title="Message Of The Day">MOTD</abbr></b><br> <input
 							id="cl_disablehtmlmotd" name="cl_disablehtmlmotd"
 							value="your_value2" type="checkbox" checked><br>
 					</form>
 
 					<form>
-						<b>Automatic help</b><br> <input id="cl_autohelp"
+						<b>Automatic Help</b><br> <input id="cl_autohelp"
 							name="cl_autohelp" value="your_value2" type="checkbox"><br>
 					</form>
 
 					<form>
-						<b>Show help</b><br> <input id="cl_showhelp"
+						<b>Show Help</b><br> <input id="cl_showhelp"
 							name="cl_showhelp" value="your_value2" type="checkbox"><br>
 					</form>
 
 					<form>
-						<b>Disable freeze cam</b><br> <input id="cl_disablefreezecam"
+						<b>Disable Freeze Cam</b><br> <input id="cl_disablefreezecam"
 							name="cl_disablefreezecam" value="your_value2" type="checkbox"
 							checked><br>
 					</form>
 
 					<form>
-						<b>Show teammates color</b><br> <input
+						<b>Show Teammate Colors</b><br> <input
 							id="cl_teammate_colors_show" name="cl_teammate_colors_show"
 							value="your_value2" type="checkbox" checked><br>
 					</form>
@@ -445,19 +408,19 @@
 					</form>
 
 					<form>
-						<b>"E" opens buy menu</b><br> <input
+						<b>"E" Opens Buy Menu</b><br> <input
 							id="cl_use_opens_buy_menu" name="cl_use_opens_buy_menu"
 							value="your_value2" type="checkbox"><br>
 					</form>
 
 					<form>
-						<b>Close buymenu every time you purchase something</b><br> <input
+						<b>Close Buy Menu Every Purchase</b><br> <input
 							id="closeonbuy" name="closeonbuy" value="your_value2"
 							type="checkbox"><br>
 					</form>
 
 					<form>
-						<b>Take a screenshot of scoreboard after every game</b><br> <input
+						<b>Take Screenshot Of Scoreboard At The End Of The Game</b><br> <input
 							id="hud_takesshots" name="hud_takesshots" value="your_value2"
 							type="checkbox"><br>
 					</form>
@@ -467,65 +430,60 @@
 					<h2>HUD</h2>
 
 					<form>
-						<b>HUD scale</b><br> <input id="hud_scaling" type="range"
-							name="hud_scaling" min="0.5" max="0.95" step="0.01" value="0.8"
+						<b>HUD Scale</b><br> <input id="hud_scaling" type="range"
+							name="hud_scaling" min="0.5" max="0.95" step="0.01" value="0.9"
 							oninput="this.form.hud_scaling_num.value=this.value" /> <input
 							type="number" name="hud_scaling_num" min="0.5" max="0.95"
-							step="0.01" value="0.8"
+							step="0.01" value="0.9"
 							oninput="this.form.hud_scaling.value=this.value" />
 					</form>
 
 					<form>
-						<b>Show target ID</b><br> <input id="hud_showtargetid"
+						<b>Show Target ID</b><br> <input id="hud_showtargetid"
 							name="hud_showtargetid" value="your_value2" type="checkbox"
 							checked><br>
 					</form>
 
 					<form>
-						<b>Remove most of the hud apart from death notices (this is a
-							DEMO UI thing, i.e its effect is only visible when watching a
-							demo. You'll use this for cleaner recordings)</b><br> <input
+						<b>Remove Most Of The Hud<abbr title="Except recent kills, great for recording">?</abbr></b><br> <input
 							id="cl_draw_only_deathnotices" name="cl_draw_only_deathnotices"
 							value="your_value2" type="checkbox"><br>
 					</form>
 
 					<form>
-						<b>Righthanded?</b><br> <input id="cl_righthand"
+						<b>Right Hand</b><br> <input id="cl_righthand"
 							name="cl_righthand" value="your_value2" type="checkbox" checked><br>
 					</form>
 
 					<form>
-						<b>Show loadout</b><br> <input id="cl_showloadout"
+						<b>Show Loadout</b><br> <input id="cl_showloadout"
 							name="cl_showloadout" value="your_value2" type="checkbox" checked><br>
 					</form>
 
 					<form>
-						<b>Show detailed information about your postion (coordinates) and velocity</b><br> <input id="cl_showpos"
+						<b>Show Your Speed And Detailed Position</b><br> <input id="cl_showpos"
 							name="cl_showpos" value="your_value2" type="checkbox"><br>
 					</form>
 
 					<form>
-						<b>Show your FPS (unchecked = 0, checked = 1, manually set
-							this to 2, 3 or 4 if you really know what you are doing)</b><br>
+						<b>Show Your FPS</b><br>
 						<input id="cl_showfps" name="cl_showfps" value="your_value2"
 							type="checkbox"><br>
 					</form>
 
 					<form>
-						<b>Net Graph (unchecked = 0, checked = 1, manually set this to
-							2, 3 or 4 if you really know what you are doing)</b><br> <input
+						<b>Net Graph</b><br> <input
 							id="net_graph" name="net_graph" value="your_value2"
 							type="checkbox" checked><br>
 					</form>
 
 					<form>
-						<b>Scale Net Graph font size with the size of your net graph</b><br> <input
+						<b>Scale Net Graph Font Size</b><br> <input
 							id="net_graphproportionalfont" name="net_graphproportionalfont"
 							value="your_value2" type="checkbox" checked><br>
 					</form>
 
-					<h2>The following settings relate to what your gun looks like
-						to you (i.e how big it is on YOUR screen)</h2>
+					<h2>Gun Position On Your Screen</h2>
 
 					<form>
 						<b>Starting position </b><br> <input id="viewmodel_presetpos"
@@ -538,46 +496,46 @@
 					</form>
 
 					<form>
-						<b>Field of View</b><br> <input id="viewmodel_fov"
+						<b>Field Of View</b><br> <input id="viewmodel_fov"
 							type="range" name="viewmodel_fov" min="54" max="68" step="1"
-							value="65" oninput="this.form.viewmodel_fov_num.value=this.value" />
+							value="68" oninput="this.form.viewmodel_fov_num.value=this.value" />
 						<input type="number" name="viewmodel_fov_num" min="54" max="68"
-							step="1" value="65"
+							step="1" value="68"
 							oninput="this.form.viewmodel_fov.value=this.value" />
 					</form>
 
 					<form>
 						<b>Offset X</b><br> <input id="viewmodel_offset_x"
 							type="range" name="viewmodel_offset_x" min="-2.0" max="2.5"
-							step="0.1" value="2.0"
+							step="0.1" value="3.0"
 							oninput="this.form.viewmodel_offset_x_num.value=this.value" /> <input
 							type="number" name="viewmodel_offset_x_num" min="-2.0" max="2.5"
-							step="0.1" value="2.0"
+							step="0.1" value="3.0"
 							oninput="this.form.viewmodel_offset_x.value=this.value" />
 					</form>
 
 					<form>
 						<b>Offset Y</b><br> <input id="viewmodel_offset_y"
 							type="range" name="viewmodel_offset_y" min="-2.0" max="2.0"
-							step="0.1" value="2.0"
+							step="0.1" value="3.0"
 							oninput="this.form.viewmodel_offset_y_num.value=this.value" /> <input
 							type="number" name="viewmodel_offset_y_num" min="-2.0" max="2.0"
-							step="0.1" value="2.0"
+							step="0.1" value="3.0"
 							oninput="this.form.viewmodel_offset_y.value=this.value" />
 					</form>
 
 					<form>
 						<b>Offset Z</b><br> <input id="viewmodel_offset_z"
 							type="range" name="viewmodel_offset_z" min="-2.0" max="2.0"
-							step="0.1" value="-2.0"
+							step="0.1" value="-3.0"
 							oninput="this.form.viewmodel_offset_z_num.value=this.value" /> <input
 							type="number" name="viewmodel_offset_z_num" min="-2.0" max="2.0"
-							step="0.1" value="-2.0"
+							step="0.1" value="-3.0"
 							oninput="this.form.viewmodel_offset_z.value=this.value" />
 					</form>
 
 					<form>
-						<b>When shooting, gun movement to left</b><br> <input
+						<b>Shooting Movement Left</b><br> <input
 							id="cl_viewmodel_shift_left_amt" type="range"
 							name="cl_viewmodel_shift_left_amt" min="0.5" max="2.0"
 							step="0.05" value="0.5"
@@ -588,7 +546,7 @@
 					</form>
 
 					<form>
-						<b>When shooting, gun movement to right</b><br> <input
+						<b>Shooting Movement Right</b><br> <input
 							id="cl_viewmodel_shift_right_amt" type="range"
 							name="cl_viewmodel_shift_right_amt" min="0.25" max="2.0"
 							step="0.05" value="0.25"
@@ -599,7 +557,7 @@
 					</form>
 
 					<form>
-						<b>Bobcycle (0.98 is enforced ALL MM servers, and all leagues)</b><br>
+						<b>Bobcycle <abbr title="0.98 enforced on all MM servers and leagues.">?</abbr></b><br>
 						<input id="cl_bobcycle" type="range" name="cl_bobcycle" min="0.1"
 							max="2.0" step="0.01" value="0.98"
 							oninput="this.form.cl_bobcycle_num.value=this.value" /> <input
@@ -609,17 +567,17 @@
 					</form>
 
 					<form>
-						<b>Bob (lower limit)</b><br> <input id="cl_bob_lower_amt"
+						<b>Bob (Lower Limit)</b><br> <input id="cl_bob_lower_amt"
 							type="range" name="cl_bob_lower_amt" min="5" max="30" step="1"
 							value="5"
 							oninput="this.form.cl_bob_lower_amt_num.value=this.value" /> <input
 							type="number" name="cl_bob_lower_amt_num" min="5" max="30"
-							step="1" value="5"
+							step="1" value="10"
 							oninput="this.form.cl_bob_lower_amt.value=this.value" />
 					</form>
 
 					<form>
-						<b>Bob - lat</b><br> <input id="cl_bobamt_lat" type="range"
+						<b>Bob Lat</b><br> <input id="cl_bobamt_lat" type="range"
 							name="cl_bobamt_lat" min="0.1" max="2.0" step="0.05" value="0.1"
 							oninput="this.form.cl_bobamt_lat_num.value=this.value" /> <input
 							type="number" name="cl_bobamt_lat_num" min="0.1" max="2.0"
@@ -628,7 +586,7 @@
 					</form>
 
 					<form>
-						<b>Bob - vert</b><br> <input id="cl_bobamt_vert" type="range"
+						<b>Bob Vertical</b><br> <input id="cl_bobamt_vert" type="range"
 							name="cl_bobamt_vert" min="0.1" max="2.0" step="0.05" value="0.1"
 							oninput="this.form.cl_bobamt_vert_num.value=this.value" /> <input
 							type="number" name="cl_bobamt_vert_num" min="0.1" max="2.0"
@@ -638,83 +596,78 @@
 
 				</div>
 				<div class="tabpage" id="tabpage_7">
-					<h2>Keybinds</h2>
-					<p>For now I've only set up keybinding on the numpad, other
-						keybindings you'll have to do manually</p>
+					<h2>Numpad Buy Binds</h2>
 
 					<table class="keypad">
 						<tr class="key-row">
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="numLock" name="numLock"
-									style="overflow: hidden; resize: none" disabled>NumLock</textarea>
+									style="overflow: hidden; resize: none" disabled>Num Lock</textarea>
 							</td>
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="kp_slash" name="finalconfig"
-									style="overflow: hidden; resize: none">buy p90</textarea></td>
+									style="overflow: hidden; resize: none">buy incgrenade;buy molotov</textarea></td>
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="kp_multiply" name="finalconfig"
-									style="overflow: hidden; resize: none">buy bizon</textarea></td>
+									style="overflow: hidden; resize: none">buy smokegrenade</textarea></td>
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="kp_minus" name="finalconfig"
-									style="overflow: hidden; resize: none">buy sawedoff;buy mag7</textarea></td>
+									style="overflow: hidden; resize: none">buy flashbang</textarea></td>
 						</tr>
 						<tr class="key-row">
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="kp_home" name="finalconfig"
-									style="overflow: hidden; resize: none">buy awp</textarea></td>
+									style="overflow: hidden; resize: none">buy ssg08</textarea></td>
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="kp_uparrow" name="finalconfig"
-									style="overflow: hidden; resize: none">buy m4a1;buy ak47</textarea></td>
+									style="overflow: hidden; resize: none">buy awp</textarea></td>
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="kp_pgup" name="finalconfig"
-									style="overflow: hidden; resize: none">buy famas;buy galilar</textarea></td>
+									style="overflow: hidden; resize: none">buy g3s1; buy scar20</textarea></td>
 							<td class="key-cell" rowspan="2"><textarea
 									class="btn btn-default key tall-key" id="kp_plus"
-									name="finalconfig" style="overflow: hidden; resize: none">buy p250</textarea>
+									name="finalconfig" style="overflow: hidden; resize: none">buy hegrenade</textarea>
 							</td>
 						</tr>
 						<tr class="key-row">
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="kp_leftarrow" name="finalconfig"
-									style="overflow: hidden; resize: none">buy deagle</textarea></td>
+									style="overflow: hidden; resize: none">buy galilar;buy famas</textarea></td>
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="kp_5" name="finalconfig"
-									style="overflow: hidden; resize: none">buy incgrenade;buy molotov</textarea></td>
+									style="overflow: hidden; resize: none">buy ak47;buy m4a1</textarea></td>
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="kp_rightarrow" name="finalconfig"
-									style="overflow: hidden; resize: none">buy decoy</textarea></td>
+									style="overflow: hidden; resize: none">buy aug;buy sg550</textarea></td>
 						</tr>
 						<tr class="key-row">
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="kp_end" name="finalconfig"
-									style="overflow: hidden; resize: none">buy hegrenade</textarea></td>
+									style="overflow: hidden; resize: none">buy nova</textarea></td>
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="kp_downarrow" name="finalconfig"
-									style="overflow: hidden; resize: none">buy flashbang</textarea>
+									style="overflow: hidden; resize: none">buy xm1014</textarea>
 							</td>
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="kp_pgdn" name="finalconfig"
-									style="overflow: hidden; resize: none">buy smokegrenade</textarea></td>
+									style="overflow: hidden; resize: none">buy mac10; buy mp9</textarea></td>
 							<td class="key-cell" rowspan="2"><textarea
 									class="btn btn-default key tall-key" id="kp_enter"
-									name="finalconfig" style="overflow: hidden; resize: none">buy defuser</textarea>
+									name="finalconfig" style="overflow: hidden; resize: none">buy vesthelm; buy vest; buy defuser</textarea>
 							</td>
 						</tr>
 						<tr class="key-row">
 							<td class="key-cell" colspan="2"><textarea
 									class="btn btn-default key wide-key" id="kp_ins"
-									name="finalconfig" style="overflow: hidden; resize: none">buy vesthelm</textarea>
+									name="finalconfig" style="overflow: hidden; resize: none">buy p250</textarea>
 							</td>
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="kp_del" name="finalconfig"
-									style="overflow: hidden; resize: none">buy vest</textarea></td>
+									style="overflow: hidden; resize: none">buy p90</textarea></td>
 						</tr>
 					</table>
 
-					<p>Below is a list you can use for references (i.e if you want
-						to keybind buying the Scout, you need to use its "console name",
-						ssg08)</p>
-					<h2>Rifles</h2>
+					<h3>Rifles</h3>
 					<ul>
 						<li>Scout (ssg08)</li>
 						<li>Galil (galilar)</li>
@@ -727,7 +680,8 @@
 						<li>CT Auto Sniper (scar20)</li>
 						<li>AWP (awp)</li>
 					</ul>
-					<h2>SMGs</h2>
+					<br>
+					<h3>SMGs</h3>
 					<ul>
 						<li>Mac 10 (mac10)</li>
 						<li>UMP (ump45)</li>
@@ -736,18 +690,18 @@
 						<li>MP7 (mp7)</li>
 						<li>MP9 (mp9)</li>
 					</ul>
-					<h2>Heavy</h2>
+					<br>
+					<h3>Heavy</h3>
 					<ul>
-						<li>Auto
-							<p>Shotgun (xm1014)</p>
-						</li>
+						<li>AutoShotgun (xm1014)</li>
 						<li>Mag7 (mag7)</li>
 						<li>Sawed Off Shotgun (sawedoff)</li>
 						<li>Nova Shotgun (nova)</li>
 						<li>M249 (m249)</li>
 						<li>Negev (negev)</li>
 					</ul>
-					<h2>Pistols</h2>
+					<br>
+					<h3>Pistols</h3>
 					<ul>
 						<li>228 Compact (p228)</li>
 						<li>Glock (glock)</li>
@@ -756,10 +710,10 @@
 						<li>Desert Eagle (deagle)</li>
 						<li>Tec9 (tec9)</li>
 						<li>HKP2000 (hkp2000)</li>
-						<li>P250/CZ75-Auto (p250) <-- Yes, they both use p250 as
-							name.</li>
+						<li>P250/CZ75-Auto (p250)</li>
 					</ul>
-					<h2>Grenades &amp; Gear</h2>
+					<br>
+					<h3>Grenades &amp; Gear</h3>
 					<ul>
 						<li>Incendiary Grenade (incgrenade)</li>
 						<li>Flashbang (flashbang)</li>
@@ -777,23 +731,15 @@
 				<div class="tabpage" id="tabpage_8">
 					<h2>Radar</h2>
 
-					<p>
-						CSGOhelp.com provides an excellent guide to setting your radar up
-						the way you want it. <a href="http://csgohelp.com/autoexec/#radar"
-							target="_blank">Here is a link with pictures that explains
-							the cvars you are about to modify.</a>
-					</p><br>
-
 					<form>
-						<b>Always Centered</b><br> <input
+						<b>Always Centered <abbr title="You are always in the center">?</abbr></b><br> <input
 							id="cl_radar_always_centered" name="cl_radar_always_centered"
-							value="your_value2" type="checkbox"><br>
+							value="your_value2" type="checkbox" checked><br>
 					</form>
 
 					<form>
-						<b>Rotate</b><br> <input id="cl_radar_rotate"
-							name="cl_radar_rotate" value="your_value2" type="checkbox"
-							checked><br>
+						<b>Rotate <abbr title="Rotate with your look">?</abbr></b><br> <input id="cl_radar_rotate"
+							name="cl_radar_rotate" value="your_value2" type="checkbox"><br>
 					</form>
 
 					<form>
@@ -807,7 +753,7 @@
 					</form>
 
 					<form>
-						<b>Icon Scale (icons is your teammates, the bomb, etc)</b><br>
+						<b>Icon Scale <abbr title="Teammates, bomb, etc.">?</abbr></b><br>
 						<input id="cl_radar_icon_scale_min" type="range"
 							name="cl_radar_icon_scale_min" min="0.4" max="1.0" step="0.01"
 							value="0.4"
@@ -821,15 +767,15 @@
 								<div class="tabpage" id="tabpage_9">
 					<h2>Crosshair</h2>
 
-					<p>	I'm not going to reinvent the wheel, the people over at krisskarbo.com has already made a awesome crosshair generator, check it out <a href="http://www.krisskarbo.com/csgocrosshair/"
-							target="_blank">over here (clicky clicky)</a>, and copy the settings that you enjoy into the text box below AFTER you have clicked "update" and finalized all your other settings.)
+					<p>	I'm not going to reinvent the wheel, the people over at krisskarbo.com had already made a awesome crosshair generator, check it out <a href="http://www.crackhat.us/xhair"
+							target="_blank">over here</a>, and copy the settings that you enjoy into the text box below <b>after</b> you have clicked "Update" and finished all your other settings.
 					</p>
 				</div>
 			</div>
 		</div>
 
 		<br> <br> <input id="updateButton" type="button"
-			value="Update autoexec" /> <br> <br> <br> <br>
+			value="Update" /> <br> <br> <br> <br>
 
 
 		<form action="./" method="post">
@@ -838,7 +784,7 @@
 		</form>
 
 		<br> <br> <input id="downloadButton" type="button"
-			value="Download autoexec" /> <br> <br>
+			value="Download" /> <br> <br>
 		<script
 			src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
 		<script src="assets/js/jquery.generateFile.js"></script>

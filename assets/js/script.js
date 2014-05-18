@@ -64,7 +64,6 @@ $(document).ready(function(){
 		video.push("fps_max_menu \""+$('#fps_max_menu').val());
 		video.push("r_dynamic \""+($("#r_dynamic").prop("checked") ? "1" : "0"));
 		video.push("r_drawtracers_firstperson \""+($("#r_drawtracers_firstperson").prop("checked") ? "1" : "0"));
-		video.push("r_drawparticles \""+($("#r_drawparticles").prop("checked") ? "1" : "0"));
 		video.push("mat_savechanges //write settings to registry");
 
 		for ( var i = 0; i < video.length; i = i + 1 ) {
@@ -80,8 +79,6 @@ $(document).ready(function(){
 		mouse.push("zoom_sensitivity_ratio_mouse \""+$('#zoom_sensitivity_ratio_mouse').val());
 		mouse.push("m_rawinput \""+($("#m_rawinput").prop("checked") ? "1" : "0"));
 		mouse.push("m_customaccel \""+$('#m_customaccel').val());
-		mouse.push("m_mouseaccel1 \""+$('#m_mouseaccel1').val());
-		mouse.push("m_mouseaccel2 \""+$('#m_mouseaccel2').val());
 
 		for ( var i = 0; i < mouse.length; i = i + 1 ) {
 			$('#finalConfig').append(mouse[ i ]+'\"\n');
@@ -100,7 +97,6 @@ $(document).ready(function(){
 		misc.push("ui_steam_overlay_notification_position \""+$('#ui_steam_overlay_notification_position').val());
 		misc.push("player_nevershow_communityservermessage \""+($("#player_nevershow_communityservermessage").prop("checked") ? "1" : "0"));
 		misc.push("mm_dedicated_search_maxping \""+$('#mm_dedicated_search_maxping').val());
-		misc.push("mm_dedicated_force_servers \""+$('#mm_dedicated_force_servers').val());
 		misc.push("gameinstructor_enable \""+($("#gameinstructor_enable").prop("checked") ? "1" : "0"));
 		misc.push("option_duck_method \""+($("#option_duck_method").prop("checked") ? "1" : "0"));
 		misc.push("option_speed_method \""+($("#option_speed_method").prop("checked") ? "1" : "0"));
@@ -213,8 +209,6 @@ $(document).ready(function(){
 		$('#finalConfig').append('echo ""\n');
 
 		// <-- magic number needs to be fixed
-
-		$('#finalConfig').height(1700);
 
 		e.preventDefault();
 	});

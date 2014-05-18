@@ -12,6 +12,14 @@ h2 {
 	margin-bottom: 10px;
 }
 
+abbr {
+	cursor:pointer;
+}
+
+li {
+	margin-left:20px;
+}
+
 #wrapper {
 	width: 740px;
 	margin: 40px auto 0;
@@ -34,6 +42,10 @@ h2 {
 	background-color: #2e2e2e;
 	-moz-border-radius: 14px;
 	border-radius: 14px;
+}
+
+#tutorial {
+	color:white;
 }
 
 .tabs {
@@ -117,7 +129,7 @@ input#updateButton {
 	padding: 8px 14px 10px; /*apply some padding inside the button*/
 	border: 1px solid #3e9cbf;
 	/*required or the default border for the browser will appear*/
-	cursor: crosshair;
+	cursor: pointer;
 	/*style the text*/
 	font-size: 1.5em;
 	font-family: Oswald, sans-serif;
@@ -157,7 +169,7 @@ input#downloadButton {
 	padding: 8px 14px 10px; /*apply some padding inside the button*/
 	border: 1px solid #3e9cbf;
 	/*required or the default border for the browser will appear*/
-	cursor: crosshair;
+	cursor: pointer;
 	/*style the text*/
 	font-size: 1.5em;
 	font-family: Oswald, sans-serif;
