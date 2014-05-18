@@ -272,7 +272,6 @@ $(document).ready(function(){
 	$("#viewmodel_presetpos").change(function () {
 		sliderValue = $(this).val();
 		
-		console.log(sliderValue);
         if (sliderValue == 0){
         	$("#viewmodel_fov").prop('disabled', false);
         	$("#viewmodel_offset_x").prop('disabled', false);
