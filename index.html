@@ -335,11 +335,11 @@
 					</form>
 
 					<form>
-						<b>Position of ingame console</b><br> <input
+						<b>Filter effect. 1 removes EVERYTHING apart from what is caught by the filter. 2 Highlights the stuff caught by the filter, and keeps everything else as is.</b><br> <input
 							id="con_filter_enable" type="range" name="con_filter_enable"
-							min="0" max="4" step="1" value="2"
+							min="1" max="2" step="1" value="2"
 							oninput="this.form.con_filter_enable_num.value=this.value" /> <input
-							type="number" name="con_filter_enable_num" min="0" max="4"
+							type="number" name="con_filter_enable_num" min="1" max="2"
 							step="1" value="2"
 							oninput="this.form.con_filter_enable.value=this.value" />
 					</form>
