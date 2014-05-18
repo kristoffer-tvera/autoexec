@@ -133,10 +133,12 @@ $(document).ready(function(){
 		hud.push("net_graph \""+($("#net_graph").prop("checked") ? "1" : "0"));
 		hud.push("net_graphproportionalfont \""+($("#net_graphproportionalfont").prop("checked") ? "1" : "0"));
 		hud.push("viewmodel_presetpos \""+$('#viewmodel_presetpos').val());
-		hud.push("viewmodel_fov \""+$('#viewmodel_fov').val());
-		hud.push("viewmodel_offset_x \""+$('#viewmodel_offset_x').val());
-		hud.push("viewmodel_offset_y \""+$('#viewmodel_offset_y').val());
-		hud.push("viewmodel_offset_z \""+$('#viewmodel_offset_z').val());
+		if($('#viewmodel_presetpos').val() == 0){
+			hud.push("viewmodel_fov \""+$('#viewmodel_fov').val());
+			hud.push("viewmodel_offset_x \""+$('#viewmodel_offset_x').val());
+			hud.push("viewmodel_offset_y \""+$('#viewmodel_offset_y').val());
+			hud.push("viewmodel_offset_z \""+$('#viewmodel_offset_z').val());
+		}
 		hud.push("cl_viewmodel_shift_left_amt \""+$('#cl_viewmodel_shift_left_amt').val());
 		hud.push("cl_viewmodel_shift_right_amt \""+$('#cl_viewmodel_shift_right_amt').val());
 		hud.push("cl_bobcycle \""+$('#cl_bobcycle').val());
