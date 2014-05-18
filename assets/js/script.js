@@ -155,7 +155,7 @@ $(document).ready(function(){
 		var keybinds = [];
 
 		$('#finalConfig').append("//Keybinds\n");
-		
+
 		keybinds.push("bind kp_slash \""+$('#kp_slash').val());
 		keybinds.push("bind kp_multiply \""+$('#kp_multiply').val());
 		keybinds.push("bind kp_minus \""+$('#kp_minus').val());
@@ -191,7 +191,7 @@ $(document).ready(function(){
 		for ( var i = 0; i < radar.length; i = i + 1 ) {
 			$('#finalConfig').append(radar[ i ]+'\"\n');
 		}
-		
+
 		$('#finalConfig').append('\n\n');
 
 		var crosshair = [];
@@ -211,33 +211,114 @@ $(document).ready(function(){
 		$('#finalConfig').append('echo ""\n');
 		$('#finalConfig').append('echo ""\n');
 
-        $("#finalConfig").show();
-
-        // <-- magic number needs to be fixed
+		$("#finalConfig").show();
 
 		e.preventDefault();
 	});
 
-	$('#testButton').click(function(e){
-
-		var value = $('#rate').val();
-		alert(value);
-
-		e.preventDefault();
-	});
-
-
-});
-
-function updateViewModel(obj) {
-    var cvm = document.getElementsByClassName("customViewModel");
-    if(obj.value < 1){
-        for (var i = 0; i < cvm.length; i++) {
-            cvm[i].disabled = false;   
+	
+	$("#viewmodel_presetpos").change(function () {
+		sliderValue = $(this).val();
+		
+        if (sliderValue == 0){
+        	$("#previewPresetPos").attr("src", "");
+        	$("#previewPresetPos").attr("width", "0%");
+        	$("#previewPresetPos").attr("height", "0%");
+        } 
+        if (sliderValue == 1){
+        	$("#previewPresetPos").attr("src", "http://i.imgur.com/KNtKR5W.jpg");
+        	$("#previewPresetPos").attr("width", "100%");
+        	$("#previewPresetPos").attr("height", "100%");
+        } 
+        if (sliderValue == 2){
+        	$("#previewPresetPos").attr("src", "http://i.imgur.com/LsMToLi.jpg");
+        	$("#previewPresetPos").attr("width", "100%");
+        	$("#previewPresetPos").attr("height", "100%");
+        } 
+        if (sliderValue == 3){
+        	$("#previewPresetPos").attr("src", "http://i.imgur.com/J0xSB1n.jpg");
+        	$("#previewPresetPos").attr("width", "100%");
+        	$("#previewPresetPos").attr("height", "100%");
         }
-    } else if (obj.value > 0){
-        for (var i = 0; i < cvm.length; i++) {
-            cvm[i].disabled = true;   
-        }        
-    }        
-}
+            
+    });
+	
+	$("#viewmodel_presetpos_num").change(function () {
+		sliderValue = $(this).val();
+		
+        if (sliderValue == 0){
+        	$("#previewPresetPos").attr("src", "");
+        	$("#previewPresetPos").attr("width", "0%");
+        	$("#previewPresetPos").attr("height", "0%");
+        } 
+        if (sliderValue == 1){
+        	$("#previewPresetPos").attr("src", "http://i.imgur.com/KNtKR5W.jpg");
+        	$("#previewPresetPos").attr("width", "100%");
+        	$("#previewPresetPos").attr("height", "100%");
+        } 
+        if (sliderValue == 2){
+        	$("#previewPresetPos").attr("src", "http://i.imgur.com/LsMToLi.jpg");
+        	$("#previewPresetPos").attr("width", "100%");
+        	$("#previewPresetPos").attr("height", "100%");
+        } 
+        if (sliderValue == 3){
+        	$("#previewPresetPos").attr("src", "http://i.imgur.com/J0xSB1n.jpg");
+        	$("#previewPresetPos").attr("width", "100%");
+        	$("#previewPresetPos").attr("height", "100%");
+        }
+            
+    });
+	
+	$("#viewmodel_presetpos").change(function () {
+		sliderValue = $(this).val();
+		
+		console.log(sliderValue);
+        if (sliderValue == 0){
+        	$("#viewmodel_fov").prop('disabled', false);
+        	$("#viewmodel_offset_x").prop('disabled', false);
+        	$("#viewmodel_offset_y").prop('disabled', false);
+        	$("#viewmodel_offset_z").prop('disabled', false);
+        	$("#viewmodel_fov_num").prop('disabled', false);
+        	$("#viewmodel_offset_x_num").prop('disabled', false);
+        	$("#viewmodel_offset_y_num").prop('disabled', false);
+        	$("#viewmodel_offset_z_num").prop('disabled', false);
+        } 
+        if (sliderValue != 0){
+        	$("#viewmodel_fov").prop('disabled', true);
+        	$("#viewmodel_offset_x").prop('disabled', true);
+        	$("#viewmodel_offset_y").prop('disabled', true);
+        	$("#viewmodel_offset_z").prop('disabled', true);
+        	$("#viewmodel_fov_num").prop('disabled', true);
+        	$("#viewmodel_offset_x_num").prop('disabled', true);
+        	$("#viewmodel_offset_y_num").prop('disabled', true);
+        	$("#viewmodel_offset_z_num").prop('disabled', true);
+        } 
+            
+    });
+	
+	$("#viewmodel_presetpos_num").change(function () {
+		sliderValue = $(this).val();
+		
+        if (sliderValue == 0){
+        	$("#viewmodel_fov").prop('disabled', false);
+        	$("#viewmodel_offset_x").prop('disabled', false);
+        	$("#viewmodel_offset_y").prop('disabled', false);
+        	$("#viewmodel_offset_z").prop('disabled', false);
+        	$("#viewmodel_fov_num").prop('disabled', false);
+        	$("#viewmodel_offset_x_num").prop('disabled', false);
+        	$("#viewmodel_offset_y_num").prop('disabled', false);
+        	$("#viewmodel_offset_z_num").prop('disabled', false);
+        } 
+        if (sliderValue != 0){
+        	$("#viewmodel_fov").prop('disabled', true);
+        	$("#viewmodel_offset_x").prop('disabled', true);
+        	$("#viewmodel_offset_y").prop('disabled', true);
+        	$("#viewmodel_offset_z").prop('disabled', true);
+        	$("#viewmodel_fov_num").prop('disabled', true);
+        	$("#viewmodel_offset_x_num").prop('disabled', true);
+        	$("#viewmodel_offset_y_num").prop('disabled', true);
+        	$("#viewmodel_offset_z_num").prop('disabled', true);
+        } 
+            
+    });
+});

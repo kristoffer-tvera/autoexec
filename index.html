@@ -497,59 +497,61 @@
 					<h2>Gun Position On Your Screen</h2>
 
 					<form>
-						<b>Preset positions</b><br> 
+						<b>Preset positions (preview below if you drag the slider)</b><br> 
 						0 = Customize using the sliders below (FoV, X, Y, Z)<br> 
-						<a href="http://i.imgur.com/KNtKR5W.jpg" target="_blank">1 = Desktop</a><br> 
-						<a href="http://i.imgur.com/LsMToLi.jpg" target="_blank">2 = Couch</a><br> 
-						<a href="http://i.imgur.com/J0xSB1n.jpg" target="_blank">3 = Classic</a><br> 
+						1 = Desktop<br> 
+						2 = Couch<br> 
+						3 = Classic<br> 
 						
 						<input id="viewmodel_presetpos"
 							type="range" name="viewmodel_presetpos" min="0" max="3"
 							step="1" value="0"
-							oninput="this.form.viewmodel_presetpos_num.value=this.value; updateViewModel(this)" />
-						<input type="number" name="viewmodel_presetpos_num" min="0"
+							oninput="this.form.viewmodel_presetpos_num.value=this.value" />
+						<input id="viewmodel_presetpos_num" type="number" name="viewmodel_presetpos_num" min="0"
 							max="3" step="1" value="0"
-							oninput="this.form.viewmodel_presetpos.value=this.value; updateViewModel(this)" />
+							oninput="this.form.viewmodel_presetpos.value=this.value" />
 					</form>
+					
+					<img id="previewPresetPos" src="" width="0%" height="0%" />
 
 					<p> If you decide to go with Preset Position 0 (custom), use the slinders below.</p>
 
 					<form>
-						<b>Field Of View</b><br> <input id="viewmodel_fov" class="customViewModel"
+						<b>Field Of View</b><br> <input id="viewmodel_fov"
 							type="range" name="viewmodel_fov" min="54" max="68" step="1"
 							value="68" oninput="this.form.viewmodel_fov_num.value=this.value" />
-						<input class="customViewModel" type="number" name="viewmodel_fov_num" min="54" 
+						<input id="viewmodel_fov_num" type="number" name="viewmodel_fov_num" min="54" 
 							max="68" step="1" value="68"
 							oninput="this.form.viewmodel_fov.value=this.value" />
 					</form>
 
 					<form>
-						<b>Offset X</b><br> <input id="viewmodel_offset_x" class="customViewModel"
+						<b>Offset X</b><br> <input id="viewmodel_offset_x"
 							type="range" name="viewmodel_offset_x" min="-2.0" max="2.5"
 							step="0.1" value="2.5"
 							oninput="this.form.viewmodel_offset_x_num.value=this.value" /> <input
 							type="number" name="viewmodel_offset_x_num" min="-2.0" max="2.5"
-							step="0.1" value="2.5" class="customViewModel"
+							step="0.1" value="2.5" id="viewmodel_offset_x_num"
 							oninput="this.form.viewmodel_offset_x.value=this.value" />
 					</form>
 
 					<form>
-						<b>Offset Y</b><br> <input id="viewmodel_offset_y" class="customViewModel"
+						<b>Offset Y</b><br> <input id="viewmodel_offset_y"
 							type="range" name="viewmodel_offset_y" min="-2.0" max="2.5"
 							step="0.1" value="2.5"
 							oninput="this.form.viewmodel_offset_y_num.value=this.value" /> <input
 							type="number" name="viewmodel_offset_y_num" min="-2.0" max="2.5"
-							step="0.1" value="2.5" class="customViewModel"
+							step="0.1" value="2.5" id="viewmodel_offset_y_num"
 							oninput="this.form.viewmodel_offset_y.value=this.value" />
 					</form>
 
 					<form>
-						<b>Offset Z</b><br> <input id="viewmodel_offset_z" class="customViewModel"
+						<b>Offset Z</b><br> <input id="viewmodel_offset_z"
 							type="range" name="viewmodel_offset_z" min="-2.0" max="2.5"
 							step="0.1" value="-2.0"
 							oninput="this.form.viewmodel_offset_z_num.value=this.value" /> <input
 							type="number" name="viewmodel_offset_z_num" min="-2.0" max="2.5"
-							step="0.1" value="-2.0" class="customViewModel"
+							step="0.1" value="-2.0" id="viewmodel_offset_z_num"
 							oninput="this.form.viewmodel_offset_z.value=this.value" />
 					</form>
 
@@ -804,7 +806,7 @@
 
 
 		<script
-			src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+			src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script src="assets/js/jquery.generateFile.js"></script>
 		<script src="assets/js/script.js"></script>
 		<script src="assets/js/tabs.js"></script>
