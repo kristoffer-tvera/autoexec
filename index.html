@@ -81,18 +81,18 @@
 
 					<form>
 						<b>Interp</b><br> <input id="cl_interp" type="range"
-							name="cl_interp" min="0.0" max="0.5" value="0.0"
+							name="cl_interp" min="0.0" max="0.5" step="0.01" value="0.0"
 							oninput="this.form.cl_interp_num.value=this.value" /> <input
-							type="number" name="cl_interp_num" min="0.0" max="0.5"
+							type="number" name="cl_interp_num" min="0.0" max="0.5" step="0.01" 
 							value="0.0" oninput="this.form.cl_interp.value=this.value" />
 					</form>
 
 					<form>
 						<b>Interp Ratio</b><br> <input id="cl_interp_ratio"
-							type="range" name="cl_interp_ratio" min="1.0" max="2.0"
+							type="range" name="cl_interp_ratio" min="1.0" max="2.0" step="0.01"
 							value="1.0"
 							oninput="this.form.cl_interp_ratio_num.value=this.value" /> <input
-							type="number" name="cl_interp_ratio_num" min="1.0" max="2.0"
+							type="number" name="cl_interp_ratio_num" min="1.0" max="2.0" step="0.01"
 							value="1.0" oninput="this.form.cl_interp_ratio.value=this.value" />
 					</form>
 
@@ -164,7 +164,7 @@
 							value="2"
 							oninput="this.form.snd_headphone_pan_exponent_num.value=this.value" />
 						<input type="number" name="snd_headphone_pan_exponent_num" min="0"
-							max="2" step="1" value="100"
+							max="100" step="1" value="2"
 							oninput="this.form.snd_headphone_pan_exponent.value=this.value" />
 					</form>
 
@@ -175,7 +175,7 @@
 							value="2"
 							oninput="this.form.snd_headphone_pan_radial_weight_num.value=this.value" />
 						<input type="number" name="snd_headphone_pan_radial_weight_num"
-							min="0" max="2" step="1" value="100"
+							min="0" max="100" step="1" value="2"
 							oninput="this.form.snd_headphone_pan_radial_weight.value=this.value" />
 					</form>
 
