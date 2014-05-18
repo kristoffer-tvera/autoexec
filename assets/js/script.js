@@ -91,6 +91,7 @@ $(document).ready(function(){
 		$('#finalConfig').append("//Misc\n");
 		misc.push("developer \""+($("#developer").prop("checked") ? "1" : "0"));
 		misc.push("con_enable \""+($("#con_enable").prop("checked") ? "1" : "0"));
+		misc.push("cl_showfps \""+($("#cl_showfps").prop("checked") ? "1" : "0"));
 		misc.push("con_filter_enable \""+$('#con_filter_enable').val());
 		misc.push("con_filter_text \""+$('#con_filter_text').val());
 		misc.push("con_filter_text_out \""+$('#con_filter_text_out').val());
