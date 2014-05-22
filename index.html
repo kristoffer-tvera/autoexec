@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8" />
-	<title>CS:GO Autoexec Creator</title>
-	<link rel="stylesheet" href="assets/css/styles.css"/>
-	<link rel="icon" href="assets/images/icon.png"/>
-	<!--[if lt IE 9]>
+<meta charset="utf-8" />
+<title>CS:GO Autoexec Creator</title>
+<link rel="stylesheet" href="assets/css/styles.css" />
+<link rel="icon" href="assets/images/icon.png" />
+<!--[if lt IE 9]>
 			  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 </head>
@@ -17,14 +17,17 @@
 				<h2>How to use this tool?</h2>
 				<ol>
 					<li>Adjust the settings.</li>
-					<li>Click "Update" below. You'll see a text field appear below.</li>
+					<li>Click "Update" below. You'll see a text field appear
+						below.</li>
 					<li>Manually add any settings if you need.</li>
-					<li>Click "Download" below. Your browser will prompt to open/save autoexec.cfg.</li>
-					<li>Place the file in your CS:GO cfg folder - \Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg</li>
+					<li>Click "Download" below. Your browser will prompt to
+						open/save autoexec.cfg.</li>
+					<li>Place the file in your CS:GO cfg folder -
+						\Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg</li>
 				</ol>
 
 			</div>
-			<br><br>
+			<br> <br>
 			<div class="tabs">
 				<ul>
 					<li id="tabHeader_1">Rates</li>
@@ -33,7 +36,7 @@
 					<li id="tabHeader_4">Mouse</li>
 					<li id="tabHeader_5">Misc</li>
 					<li id="tabHeader_6">HUD</li>
-					<li id="tabHeader_7">Buy Binds</li>
+					<li id="tabHeader_7">Keybindings</li>
 					<li id="tabHeader_8">Radar</li>
 					<li id="tabHeader_9">Crosshair</li>
 				</ul>
@@ -41,52 +44,65 @@
 			<div class="tabscontent">
 				<div class="tabpage" id="tabpage_1">
 					<h2>Do not change these unless you know what you are doing.</h2>
-					<p>Remember, these settings are client-side so if the server is 64tick it will set you to 64tick.</p>
+					<p>Remember, these settings are client-side so if the server is
+						64tick it will set you to 64tick. Because some servers are 128
+						tick, it makes sense to have the best possible settings, so that
+						you can take full advantage of these kind of servers.</p>
 					<br>
 					<form>
-						<b>Rate <abbr title="Maximum download bandwidth in bytes per second.">?</abbr></b><br> <input id="rate" type="range" name="rate"
-							min="500" max="128000" value="128000"
-							oninput="this.form.rate_num.value=this.value" /> <input
-							type="number" name="rate_num" min="500" max="128000"
+						<b>Rate <abbr
+							title="Maximum download bandwidth in bytes per second.">?</abbr></b><br>
+						<input id="rate" type="range" name="rate" min="500" max="128000"
+							value="128000" oninput="this.form.rate_num.value=this.value" />
+						<input type="number" name="rate_num" min="500" max="128000"
 							value="128000" oninput="this.form.rate.value=this.value" />
 					</form>
 
 					<form>
-						<b>CMD Rate <abbr title="Maximum command packets per second sending to the server.">?</abbr></b><br> <input id="cl_cmdrate" type="range"
-							name="cl_cmdrate" min="10" max="128" value="128"
+						<b>CMD Rate <abbr
+							title="Maximum command packets per second sending to the server.">?</abbr></b><br>
+						<input id="cl_cmdrate" type="range" name="cl_cmdrate" min="10"
+							max="128" value="128"
 							oninput="this.form.cl_cmdrate_num.value=this.value" /> <input
 							type="number" name="cl_cmdrate_num" min="10" max="128"
 							value="128" oninput="this.form.cl_cmdrate.value=this.value" />
 					</form>
 
 					<form>
-						<b>Update Rate <abbr title="Maximum number of update packets received from the server per second">?</abbr></b><br> <input id="cl_updaterate" type="range"
-							name="cl_updaterate" min="10" max="128" value="128"
+						<b>Update Rate <abbr
+							title="Maximum number of update packets received from the server per second">?</abbr></b><br>
+						<input id="cl_updaterate" type="range" name="cl_updaterate"
+							min="10" max="128" value="128"
 							oninput="this.form.cl_updaterate_num.value=this.value" /> <input
 							type="number" name="cl_updaterate_num" min="10" max="128"
 							value="128" oninput="this.form.cl_updaterate.value=this.value" />
 					</form>
 
 					<form>
-						<b>Interp <abbr title="Do not set higher than 0, affects packed receiving delay.">?</abbr></b><br> <input id="cl_interp" type="range"
-							name="cl_interp" min="0.0" max="0.5" step="0.01" value="0.0"
+						<b>Interp <abbr
+							title="Do not set higher than 0, affects packed receiving delay.">?</abbr></b><br>
+						<input id="cl_interp" type="range" name="cl_interp" min="0.0"
+							max="0.5" step="0.01" value="0.0"
 							oninput="this.form.cl_interp_num.value=this.value" /> <input
-							type="number" name="cl_interp_num" min="0.0" max="0.5" step="0.01" 
-							value="0.0" oninput="this.form.cl_interp.value=this.value" />
+							type="number" name="cl_interp_num" min="0.0" max="0.5"
+							step="0.01" value="0.0"
+							oninput="this.form.cl_interp.value=this.value" />
 					</form>
 
 					<form>
-						<b>Interp Ratio <abbr title="Do not set lower than 1, affects received packets.">?</abbr></b><br> <input id="cl_interp_ratio"
-							type="range" name="cl_interp_ratio" min="1.0" max="2.0" step="0.01"
-							value="1.0"
+						<b>Interp Ratio <abbr
+							title="Do not set lower than 1, affects received packets.">?</abbr></b><br>
+						<input id="cl_interp_ratio" type="range" name="cl_interp_ratio"
+							min="1.0" max="2.0" step="0.01" value="1.0"
 							oninput="this.form.cl_interp_ratio_num.value=this.value" /> <input
-							type="number" name="cl_interp_ratio_num" min="1.0" max="2.0" step="0.01"
-							value="1.0" oninput="this.form.cl_interp_ratio.value=this.value" />
+							type="number" name="cl_interp_ratio_num" min="1.0" max="2.0"
+							step="0.01" value="1.0"
+							oninput="this.form.cl_interp_ratio.value=this.value" />
 					</form>
 
 					<form>
-						<b>Lag Compensation <abbr title="Serverside.">?</abbr></b><br> <input
-							id="cl_lagcompensation" name="cl_lagcompensation2"
+						<b>Lag Compensation <abbr title="Serverside.">?</abbr></b><br>
+						<input id="cl_lagcompensation" name="cl_lagcompensation2"
 							value="your_value2" type="checkbox" checked><br>
 					</form>
 
@@ -95,19 +111,24 @@
 					<h2>Audio</h2>
 
 					<form>
-						<b>Volume  <abbr title="In %s.">?</abbr></b><br> <input id="volume" type="range"
-							name="volume" min="0.0" max="1.0" step="0.01" value="1.0"
+						<b>Volume <abbr title="In %. 0.0 = mute, 1.0 = full sound.">?</abbr></b><br>
+						<input id="volume" type="range" name="volume" min="0.0" max="1.0"
+							step="0.01" value="1.0"
 							oninput="this.form.volume_num.value=this.value" /> <input
 							type="number" name="volume_num" min="0.0" max="1.0" step="0.01"
 							value="0.4" oninput="this.form.volume.value=this.value" />
 					</form>
 
-					<b>Voice Enable</b><br> <input id="voice_enable"
-						name="voice_enable" value="your_value2" type="checkbox" checked><br>
+					<b>Voice Enable <abbr
+						title="Toggle voice chat on or off. If you only play public games, and feel like voice chatting is an unncessesary compliment to your game, you can turn it off. If you play matchmaking / PuG's, you will most definitivly want to have voice chat enabled.">?</abbr></b><br>
+					<input id="voice_enable" name="voice_enable" value="your_value2"
+						type="checkbox" checked><br>
 
 					<form>
-						<b>Voice Scale</b><br> <input id="voice_scale" type="range"
-							name="voice_scale" min="0.0" max="1.0" step="0.05" value="1.0"
+						<b>Voice Scale <abbr
+							title="If you do decide to leave voice enable turned on, this will adjust the volume of voice chat. 0.0 is basically mute, 1.0 is full volume">?</abbr></b><br>
+						<input id="voice_scale" type="range" name="voice_scale" min="0.0"
+							max="1.0" step="0.05" value="1.0"
 							oninput="this.form.voice_scale_num.value=this.value" /> <input
 							type="number" name="voice_scale_num" min="0.0" max="1.0"
 							step="0.05" value="1.0"
@@ -115,14 +136,12 @@
 					</form>
 
 					<form>
-						<b>Speaker Config</b><br> 
-						-1 = Automatically pick best<br> 
-						1 = Headset<br> 
-						2 = ???<br> 
-						3 = 4 Speakers<br> 
-						4 = Stereo Speakers<br> 
-						6 = 5.1 Surround<br>
-						<input id="windows_speaker_config" type="range"
+						<b>Speaker Config <abbr
+							title="This one seems a bit strange. It is intentional that half of the settings falls back to 2 speakers. Because #valveLogic. Btw did anyone else notice that there are THREE 2 speaker settings? Halflife 3 confirmed.">?</abbr></b><br>
+						-1 = Automatically pick best<br> 1 = Headset<br> 2 = 2
+						speakers<br> 3 = 4 Speakers<br> 4 = 2 speakers<br>
+						5 = 2 speakers<br> 6 = 5.1 Surround<br> <input
+							id="windows_speaker_config" type="range"
 							name="windows_speaker_config" min="-1" max="6" step="1" value="1"
 							oninput="this.form.windows_speaker_config_num.value=this.value" />
 						<input type="number" name="windows_speaker_config_num" min="-1"
@@ -131,9 +150,10 @@
 					</form>
 
 					<form>
-						<b>Music Volume</b><br> <input id="snd_musicvolume"
-							type="range" name="snd_musicvolume" min="0.0" max="1.0"
-							step="0.01" value="0.0"
+						<b>Music Volume <abbr
+							title="This will rarely ever affect you, but some public servers has music streaming, and this is how you control the volume. Set it to 0.0 f you prefer to listen to your own music.">?</abbr></b><br>
+						<input id="snd_musicvolume" type="range" name="snd_musicvolume"
+							min="0.0" max="1.0" step="0.01" value="0.0"
 							oninput="this.form.snd_musicvolume_num.value=this.value" /> <input
 							type="number" name="snd_musicvolume_num" min="0.0" max="1.0"
 							step="0.01" value="0.0"
@@ -141,8 +161,10 @@
 					</form>
 
 					<form>
-						<b>Sound Delay</b><br> <input id="snd_mixahead" type="range"
-							name="snd_mixahead" min="0.0" max="1.0" step="0.05" value="0.05"
+						<b>Sound Delay <abbr
+							title="This is the delay from when an sound even happens in the game, to when it is pushed out to your headphones. If this is VERY low, the game will constantly push sound to your sound system. While this initially seem like a good idea, it can end up eating cpu/ram, so the default safe setting we have come to find is 0.05. Valves default is 0.10, but stick to our setting">?</abbr></b><br>
+						<input id="snd_mixahead" type="range" name="snd_mixahead"
+							min="0.0" max="1.0" step="0.05" value="0.05"
 							oninput="this.form.snd_mixahead_num.value=this.value" /> <input
 							type="number" name="snd_mixahead_num" min="0.0" max="1.0"
 							step="0.05" value="0.05"
@@ -150,8 +172,9 @@
 					</form>
 
 					<form>
-						<b>Headphone Pan Exponent <abbr title="2 is optimal for clear sound source.">?</abbr></b><br> <input
-							id="snd_headphone_pan_exponent" type="range"
+						<b>Headphone Pan Exponent <abbr
+							title="2 is optimal for clear sound source. The effect of this is vague, but the general consensus seems to be that 2 is the optimal value.">?</abbr></b><br>
+						<input id="snd_headphone_pan_exponent" type="range"
 							name="snd_headphone_pan_exponent" min="0" max="100" step="1"
 							value="2"
 							oninput="this.form.snd_headphone_pan_exponent_num.value=this.value" />
@@ -161,8 +184,9 @@
 					</form>
 
 					<form>
-						<b>Headphone Pan Radial Weight <abbr title="2 is optimal for clear sound source.">?</abbr></b><br> <input
-							id="snd_headphone_pan_radial_weight" type="range"
+						<b>Headphone Pan Radial Weight <abbr
+							title="2 is optimal for clear sound source. The effect of this is vague, but the general consensus seems to be that 2 is the optimal value.">?</abbr></b><br>
+						<input id="snd_headphone_pan_radial_weight" type="range"
 							name="snd_headphone_pan_radial_weight" min="0" max="100" step="1"
 							value="2"
 							oninput="this.form.snd_headphone_pan_radial_weight_num.value=this.value" />
@@ -172,20 +196,24 @@
 					</form>
 
 					<form>
-						<b>Legacy Surround <abbr title="Sometimes helps fix 3D sound issues.">?</abbr></b><br> <input id="snd_legacy_surround"
-							name="snd_legacy_surround" value="your_value2" type="checkbox"><br>
+						<b>Legacy Surround <abbr
+							title="Sometimes helps fix 3D sound issues. If you dont have a current issue with 3D sound, leave it unchecked">?</abbr></b><br>
+						<input id="snd_legacy_surround" name="snd_legacy_surround"
+							value="your_value2" type="checkbox"><br>
 					</form>
 
 					<form>
-						<b>Mute Game While Alt-tabbed</b><br> <input
+						<b>Mute The Game While Alt-tabbed </b><br> <input
 							id="snd_mute_losefocus" name="snd_mute_losefocus"
 							value="your_value2" type="checkbox" checked><br>
 					</form>
 
 					<form>
-						<b>Voice Chat In Lobby</b><br> <input
-							id="lobby_voice_chat_enabled" name="lobby_voice_chat_enabled"
-							value="your_value2" type="checkbox"><br>
+						<b>Voice Chat In Lobby <abbr
+							title="Voice chat in lobby can be a blessing or a burden. Most of us use other forms of communication, and dont want cs:go's voice chat enabled in the lobby.">?</abbr></b><br>
+						<input id="lobby_voice_chat_enabled"
+							name="lobby_voice_chat_enabled" value="your_value2"
+							type="checkbox"><br>
 					</form>
 				</div>
 
@@ -193,9 +221,9 @@
 					<h2>Video</h2>
 
 					<form>
-						<b>Monitor Gamma</b><br> <input id="mat_monitorgamma"
-							type="range" name="mat_monitorgamma" min="0.0" max="5.0"
-							step="0.1" value="2.1"
+						<b>Brightness (/Gamma) <abbr title="The screen brightness ">?</abbr></b><br>
+						<input id="mat_monitorgamma" type="range" name="mat_monitorgamma"
+							min="0.0" max="5.0" step="0.1" value="2.1"
 							oninput="this.form.mat_monitorgamma_num.value=this.value" /> <input
 							type="number" name="mat_monitorgamma_num" min="0.0" max="5.0"
 							step="0.1" value="2.1"
@@ -203,18 +231,17 @@
 					</form>
 
 					<form>
-						<b>Video Processing Queue Mode <abbr title="If you are having problems set to 0. Don't change if you don't know what it does.">?</abbr></b><br> <input
-							id="mat_queue_mode" type="range" name="mat_queue_mode" min="-1"
-							max="16" step="1" value="-1"
-							oninput="this.form.mat_queue_mode_num.value=this.value" /> <input
-							type="number" name="mat_queue_mode_num" min="-1" max="16"
-							step="1" value="-1"
-							oninput="this.form.mat_queue_mode.value=this.value" />
+						<b>Multicore Rendering <abbr
+							title="Enable multicore rendering mode. This allows the game to properly utilize all your CPU processors, if you have multiple.">?</abbr></b><br>
+						<input id="mat_queue_mode" value="your_value2" type="checkbox"
+							checked><br>
 					</form>
 
 					<form>
-						<b>Vertical Sync</b><br> <input id="mat_vsync"
-							name="mat_vsync" value="your_value2" type="checkbox"><br>
+						<b>Vertical Sync <abbr
+							title="Enabling will make your computer check images before they are sent to your screen. This comes at a cost of CPU power, so it will slightly reduce framerate. If you can play without it, thats great, but some people experience tearing in the image when they play without it. Enable if you experience tearing, keep it disabled otherwise.">?</abbr></b><br>
+						<input id="mat_vsync" name="mat_vsync" value="your_value2"
+							type="checkbox"><br>
 					</form>
 
 					<form>
@@ -235,15 +262,17 @@
 					</form>
 
 					<form>
-						<b>Dynamic Shadows</b><br> <input id="r_dynamic" name="r_dynamic"
-							value="your_value2" type="checkbox"><br>
+						<b>Dynamic Shadows</b><br> <input id="r_dynamic"
+							name="r_dynamic" value="your_value2" type="checkbox"><br>
 
 					</form>
 
 					<form>
-						<b>Draw Tracers In First Person Mode <abbr title="Leave unchecked for less confusing shooting through smoke.">?</abbr></b><br> <input
-							id="r_drawtracers_firstperson" name="r_drawtracers_firstperson"
-							value="your_value2" type="checkbox"><br>
+						<b>Draw Tracers In First Person Mode <abbr
+							title="Leave unchecked for less confusing shooting through smoke.">?</abbr></b><br>
+						<input id="r_drawtracers_firstperson"
+							name="r_drawtracers_firstperson" value="your_value2"
+							type="checkbox"><br>
 					</form>
 
 				</div>
@@ -260,8 +289,9 @@
 					</form>
 
 					<form>
-						<b>Zoom Sensitivity <abbr title="When you zoom = Zoom Sensitivity x Mouse Sensitivity">?</abbr></b><br> <input
-							id="zoom_sensitivity_ratio_mouse" type="range"
+						<b>Zoom Sensitivity <abbr
+							title="When you zoom = Zoom Sensitivity x Mouse Sensitivity">?</abbr></b><br>
+						<input id="zoom_sensitivity_ratio_mouse" type="range"
 							name="zoom_sensitivity_ratio_mouse" min="0.01" max="10.0"
 							value="1.0" step="0.05"
 							oninput="this.form.zoom_sensitivity_ratio_mouse_num.value=this.value" />
@@ -271,14 +301,17 @@
 					</form>
 
 					<form>
-						<br> <b>Mouse Raw Input <abbr title="Ignores windows mouse sensitivity.">?</abbr></b><br> <input id="m_rawinput"
-							name="m_rawinput" value="your_value2" type="checkbox" checked><br>
+						<br> <b>Mouse Raw Input <abbr
+							title="Ignores windows mouse sensitivity.">?</abbr></b><br> <input
+							id="m_rawinput" name="m_rawinput" value="your_value2"
+							type="checkbox" checked><br>
 					</form>
 
 					<form>
-						<b>Mouse Acceleration:</b><br> <input id="m_customaccel"
-							type="range" name="m_customaccel" min="0.0" max="10.0" step="0.05"
-							value="0.0"
+						<b>Mouse Acceleration: <abbr
+							title="If you do play with mouse acceleration, you can customize how quicly its effect will ramp up. A low accel will make your mouse go more or less same speed all the time. A high accel will propel your mouse to formula 1 speeds after having just moved it a tiny bit. Most players prefer not to interact with mouse acceleration">?</abbr></b><br>
+						<input id="m_customaccel" type="range" name="m_customaccel"
+							min="0.0" max="10.0" step="0.05" value="0.0"
 							oninput="this.form.m_customaccel_num.value=this.value" /> <input
 							type="number" name="m_customaccel_num" min="0.0" max="10.0"
 							step="0.05" value="0.0"
@@ -289,28 +322,29 @@
 				<div class="tabpage" id="tabpage_5">
 					<h2>Misc</h2>
 					<form>
-						<b>Developer <abbr title="Must be enabled for some commands below to work">?</abbr></b><br> <input id="developer" name="developer"
+						<b>Developer <abbr
+							title="Must be enabled for some commands below to work">?</abbr></b><br>
+						<input id="developer" name="developer" value="your_value2"
+							type="checkbox" checked><br>
+					</form>
+
+					<form>
+						<b>Enable Console <abbr
+							title="The console is a powerful tool if you know what you are doing. You will most probably want to keep it enabled, as it has simpler means of adjusting a lot of settings on the fly.">?</abbr>
+						</b><br> <input id="con_enable" name="con_enable"
 							value="your_value2" type="checkbox" checked><br>
 					</form>
 
-					<form>
-						<b>Enable Console</b><br> <input id="con_enable"
-							name="con_enable" value="your_value2" type="checkbox" checked><br>
-					</form>
-					
-					<form>
-						<b>Show FPS (top left corner)</b><br> <input id="cl_showfps"
-							name="cl_showfps" value="your_value2" type="checkbox" checked><br>
-					</form>
 
 					<form>
-						<b>Filter Effect</b><br>
-						1 = Removes EVERYTHING apart from what is caught by the filter.<br>
-						2 = Highlights the stuff caught by the filter and keeps everything else as is.<br> <input
+						<b>Console filtering</b><br> 0 = No filtering of the console.
+						<br> 1 = Removes EVERYTHING apart from what is caught by the
+						filter.<br> 2 = Highlights the stuff caught by the filter and
+						keeps everything else as is.<br> <input
 							id="con_filter_enable" type="range" name="con_filter_enable"
-							min="1" max="2" step="1" value="2"
+							min="0" max="2" step="1" value="2"
 							oninput="this.form.con_filter_enable_num.value=this.value" /> <input
-							type="number" name="con_filter_enable_num" min="1" max="2"
+							type="number" name="con_filter_enable_num" min="0" max="2"
 							step="1" value="2"
 							oninput="this.form.con_filter_enable.value=this.value" />
 					</form>
@@ -326,10 +360,11 @@
 					</form>
 
 					<br>
-					
+
 					<form>
-						<b>Steam Notifications Position <abbr title="bottom/top + right/left">?</abbr></b><br>
-						<input id="ui_steam_overlay_notification_position" type="text"
+						<b>Steam Notifications Position <abbr
+							title="bottom/top + right/left">?</abbr></b><br> <input
+							id="ui_steam_overlay_notification_position" type="text"
 							value="bottomright"><br>
 					</form>
 
@@ -346,14 +381,15 @@
 							name="mm_dedicated_search_maxping" min="50" max="1000" step="1"
 							value="100"
 							oninput="this.form.mm_dedicated_search_maxping_num.value=this.value" />
-						<input type="number" name="mm_dedicated_search_maxping_num" min="50"
-							max="1000" step="1" value="100"
+						<input type="number" name="mm_dedicated_search_maxping_num"
+							min="50" max="1000" step="1" value="100"
 							oninput="this.form.mm_dedicated_search_maxping.value=this.value" />
 					</form>
 
 					<form>
-						<b>Basic Game Instructions</b><br> <input
-							id="gameinstructor_enable" name="gameinstructor_enable"
+						<b>Basic Game Instructions<abbr
+							title="Basic game instructions is great for new player, but not so much for experienced player. This enables/disables the boxes telling you that you are a terrorist and that your goal is to plant a bomb somewhere for instance.">?</abbr></b><br>
+						<input id="gameinstructor_enable" name="gameinstructor_enable"
 							value="your_value2" type="checkbox"><br>
 					</form>
 
@@ -368,72 +404,81 @@
 					</form>
 
 					<form>
-						<b>Force Map Preload <abbr title="If you crash or lag during game enable this">?</abbr></b><br> <input id="cl_forcepreload"
-							name="cl_forcepreload" value="your_value2" type="checkbox"
-							checked><br>
-					</form>
-
-					<form>
-						<b>Download Filter <abbr title="all / nosounds / mapsonly / none">?</abbr></b><br> <input
-							id="cl_downloadfilter" type="text" value="none"><br>
-					</form>
-
-					<form>
-						<b>Disable HTML <abbr title="Message Of The Day">MOTD</abbr></b><br> <input
-							id="cl_disablehtmlmotd" name="cl_disablehtmlmotd"
+						<b>Force Map Preload <abbr
+							title="CS:GO lets you play on servers with audio/maps/mods before you have fully downloaded their content. The experience is buggy, so by forcing preload you will have to wait until all the content has been downloaded until you can actually play, but your game will run much more smooth">?</abbr></b><br>
+						<input id="cl_forcepreload" name="cl_forcepreload"
 							value="your_value2" type="checkbox" checked><br>
 					</form>
 
 					<form>
-						<b>Automatic Help</b><br> <input id="cl_autohelp"
-							name="cl_autohelp" value="your_value2" type="checkbox"><br>
+						<b>Download Filter <abbr
+							title="Valid options are: all / nosounds / mapsonly / none">?</abbr></b><br>
+						<input id="cl_downloadfilter" type="text" value="none"><br>
 					</form>
 
 					<form>
-						<b>Show Help</b><br> <input id="cl_showhelp"
+						<b>Disable HTML greetings<abbr
+							title="When you connect to a server you will be greeted by a message-of-the-day. This can include HTML, annoying advertisements, and the likes. Disabling this appears to be the preferred way.">MOTD</abbr></b><br>
+						<input id="cl_disablehtmlmotd" name="cl_disablehtmlmotd"
+							value="your_value2" type="checkbox" checked><br>
+					</form>
+
+					<form>
+						<b>Helpful tooltips <abbr
+							title="Show helpful stuff like when you are switching firemode, do you want a box in the middle of the screen telling you what firemode you have enabled? Normally enabled, but disabling can clear up some clutter">?</abbr></b><br>
+						<input id="cl_autohelp" name="cl_autohelp" value="your_value2"
+							type="checkbox"><br>
+					</form>
+
+					<form>
+						<b>Show Hints</b><br> <input id="cl_showhelp"
 							name="cl_showhelp" value="your_value2" type="checkbox"><br>
 					</form>
 
 					<form>
-						<b>Disable Freeze Cam</b><br> <input id="cl_disablefreezecam"
-							name="cl_disablefreezecam" value="your_value2" type="checkbox"
-							checked><br>
+						<b>Disable Freeze Cam <abbr
+							title="Removes that who-killed-me popup when you die">?</abbr></b><br>
+						<input id="cl_disablefreezecam" name="cl_disablefreezecam"
+							value="your_value2" type="checkbox" checked><br>
 					</form>
 
 					<form>
-						<b>Show Teammate Colors</b><br> <input
+						<b>Show Teammate Colors <abbr
+							title="Displays teammates color ">?</abbr></b><br> <input
 							id="cl_teammate_colors_show" name="cl_teammate_colors_show"
 							value="your_value2" type="checkbox" checked><br>
 					</form>
-					
+
 					<form>
 						<b>Colored font on weapon name in HUD</b><br> <input
-							id="cl_loadout_colorweaponnames" name="cl_loadout_colorweaponnames"
-							value="your_value2" type="checkbox" checked><br>
+							id="cl_loadout_colorweaponnames"
+							name="cl_loadout_colorweaponnames" value="your_value2"
+							type="checkbox" checked><br>
 					</form>
 
 					<form>
-						<b>Automatically switch to better weapon if picked up</b><br>
+						<b>Automatically switch to better weapon if picked up <abbr
+							title="If you are using a pistol, and run over a rifle, you will pick it up and automatically switch weapon to that rifle by default. Disabling this can be a lifesaver, as it gives you more control of what is happening with your character.">?</abbr></b><br>
 						<input id="cl_autowepswitch" name="cl_autowepswitch"
 							value="your_value2" type="checkbox"><br>
 					</form>
 
 					<form>
-						<b>"E" Opens Buy Menu</b><br> <input
+						<b>"Use"-key Opens Buy Menu</b><br> <input
 							id="cl_use_opens_buy_menu" name="cl_use_opens_buy_menu"
 							value="your_value2" type="checkbox"><br>
 					</form>
 
 					<form>
-						<b>Close Buy Menu Every Purchase</b><br> <input
+						<b>Close Buy Menu On Every Purchase</b><br> <input
 							id="closeonbuy" name="closeonbuy" value="your_value2"
 							type="checkbox"><br>
 					</form>
 
 					<form>
-						<b>Take Screenshot Of Scoreboard At The End Of The Game</b><br> <input
-							id="hud_takesshots" name="hud_takesshots" value="your_value2"
-							type="checkbox"><br>
+						<b>Take Screenshot Of Scoreboard At The End Of The Game</b><br>
+						<input id="hud_takesshots" name="hud_takesshots"
+							value="your_value2" type="checkbox"><br>
 					</form>
 
 				</div>
@@ -450,41 +495,51 @@
 					</form>
 
 					<form>
-						<b>Show Target ID</b><br> <input id="hud_showtargetid"
-							name="hud_showtargetid" value="your_value2" type="checkbox"
-							checked><br>
+						<b>Show Target ID <abbr
+							title="Show a box when you hoover over someone. The box will indicate if it is a friend or a foe">?</abbr></b><br>
+						<input id="hud_showtargetid" name="hud_showtargetid"
+							value="your_value2" type="checkbox" checked><br>
 					</form>
 
 					<form>
-						<b>Remove Most Of The Hud<abbr title="Except recent kills, great for recording">?</abbr></b><br> <input
-							id="cl_draw_only_deathnotices" name="cl_draw_only_deathnotices"
-							value="your_value2" type="checkbox"><br>
+						<b>Remove Most Of The Hud in DEMO-mode<abbr
+							title="Except recent kills, great for recording">?</abbr></b><br>
+						<input id="cl_draw_only_deathnotices"
+							name="cl_draw_only_deathnotices" value="your_value2"
+							type="checkbox"><br>
 					</form>
 
 					<form>
-						<b>Right Hand</b><br> <input id="cl_righthand"
-							name="cl_righthand" value="your_value2" type="checkbox" checked><br>
+						<b>Right Hand (disable for left hand)</b><br> <input
+							id="cl_righthand" name="cl_righthand" value="your_value2"
+							type="checkbox" checked><br>
 					</form>
 
 					<form>
-						<b>Show Loadout</b><br> <input id="cl_showloadout"
-							name="cl_showloadout" value="your_value2" type="checkbox" checked><br>
+						<b>Show Loadout <abbr
+							title="Show your loadout on the right side of your screen.">?</abbr></b><br>
+						<input id="cl_showloadout" name="cl_showloadout"
+							value="your_value2" type="checkbox" checked><br>
 					</form>
 
 					<form>
-						<b>Show Your Speed And Detailed Position</b><br> <input id="cl_showpos"
-							name="cl_showpos" value="your_value2" type="checkbox"><br>
+						<b>Show Your Speed And Detailed Position <abbr
+							title="Usually not important unless you are practising a jump or something of that order.">?</abbr></b><br>
+						<input id="cl_showpos" name="cl_showpos" value="your_value2"
+							type="checkbox"><br>
 					</form>
 
 					<form>
-						<b>Show Your FPS</b><br>
+						<b>Show Your FPS <abbr
+							title="A box in the top left corner of your screen with your FPS">?</abbr></b><br>
 						<input id="cl_showfps" name="cl_showfps" value="your_value2"
 							type="checkbox"><br>
 					</form>
 
 					<form>
-						<b>Net Graph</b><br> <input
-							id="net_graph" name="net_graph" value="your_value2"
+						<b>Net Graph <abbr
+							title="A box in the bottom right corner of your screen with detailed information about your connection to the server">?</abbr></b><br>
+						<input id="net_graph" name="net_graph" value="your_value2"
 							type="checkbox" checked><br>
 					</form>
 
@@ -493,43 +548,43 @@
 							id="net_graphproportionalfont" name="net_graphproportionalfont"
 							value="your_value2" type="checkbox" checked><br>
 					</form>
-					
+
 					<form>
-						<b>Remove Health/Ammo bar (if you check, there will only be a number there) </b><br> <input
-							id="cl_hud_healthammo_style" name="cl_hud_healthammo_style"
-							value="your_value2" type="checkbox"><br>
+						<b>Remove Health/Ammo bar (if you check, there will only be a
+							number there) </b><br> <input id="cl_hud_healthammo_style"
+							name="cl_hud_healthammo_style" value="your_value2"
+							type="checkbox"><br>
 					</form>
-					
+
 					<form>
-						<b>Level of shadow on the HUD (0 = no shadow, 1=max shadow)</b><br> <input id="cl_hud_background_alpha" 
-							type="range" name="cl_hud_background_alpha" min="0.0" max="1.0" step="0.05"
-							value="0.5" oninput="this.form.cl_hud_background_alpha_num.value=this.value" /> 
-							<input type="number" name="cl_hud_background_alpha_num" min="0.0" max="1.0" 
-							step="0.05" value="0.5" oninput="this.form.cl_hud_background_alpha.value=this.value" />
+						<b>Level of shadow on the HUD (0 = no shadow, 1=max shadow)</b><br>
+						<input id="cl_hud_background_alpha" type="range"
+							name="cl_hud_background_alpha" min="0.0" max="1.0" step="0.05"
+							value="0.5"
+							oninput="this.form.cl_hud_background_alpha_num.value=this.value" />
+						<input type="number" name="cl_hud_background_alpha_num" min="0.0"
+							max="1.0" step="0.05" value="0.5"
+							oninput="this.form.cl_hud_background_alpha.value=this.value" />
 					</form>
-					
+
 					<form>
-						<b>HUD color</b><br> 
-						0 = default<br> 
-						1 = light blue<br> 
-						2 = orange<br> 
-						3 = green<br> 
-						4 = purple<br> 
-						5 = white<br> 
-						
-						<input id="cl_hud_color" type="range" name="cl_hud_color" min="0" max="5" step="1"
-							value="0" oninput="this.form.cl_hud_color_num.value=this.value" />
-						<input id="cl_hud_color_num" type="number" name="cl_hud_color_num" min="0" 
-							max="5" step="1" value="0"
+						<b>HUD color</b><br> 0 = default<br> 1 = light blue<br>
+						2 = orange<br> 3 = green<br> 4 = purple<br> 5 =
+						white<br> <input id="cl_hud_color" type="range"
+							name="cl_hud_color" min="0" max="5" step="1" value="0"
+							oninput="this.form.cl_hud_color_num.value=this.value" /> <input
+							id="cl_hud_color_num" type="number" name="cl_hud_color_num"
+							min="0" max="5" step="1" value="0"
 							oninput="this.form.cl_hud_color.value=this.value" />
 					</form>
-					
+
 					<form>
-						<b>Show the amount of players left, instead of one avatar for each</b><br> 
-							<input id="cl_hud_playercount_showcount" name="cl_hud_playercount_showcount"
-							value="your_value2" type="checkbox"><br>
+						<b>Show the number of remaining players left, instead of one
+							avatar for each</b><br> <input id="cl_hud_playercount_showcount"
+							name="cl_hud_playercount_showcount" value="your_value2"
+							type="checkbox"><br>
 					</form>
-					
+
 					<form>
 						<b>Move the playercount box to the bottom</b><br> <input
 							id="cl_hud_playercount_pos" name="cl_hud_playercount_pos"
@@ -539,31 +594,28 @@
 					<h2>Gun Position On Your Screen</h2>
 
 					<form>
-						<b>Preset positions (preview below if you drag the slider)</b><br> 
-						0 = Customize using the sliders below (FoV, X, Y, Z)<br> 
-						1 = Desktop<br> 
-						2 = Couch<br> 
-						3 = Classic<br> 
-						
-						<input id="viewmodel_presetpos"
-							type="range" name="viewmodel_presetpos" min="0" max="3"
-							step="1" value="0"
+						<b>Preset positions (preview below if you drag the slider)</b><br>
+						0 = Customize using the sliders below (FoV, X, Y, Z)<br> 1 =
+						Desktop<br> 2 = Couch<br> 3 = Classic<br> <input
+							id="viewmodel_presetpos" type="range" name="viewmodel_presetpos"
+							min="0" max="3" step="1" value="0"
 							oninput="this.form.viewmodel_presetpos_num.value=this.value" />
-						<input id="viewmodel_presetpos_num" type="number" name="viewmodel_presetpos_num" min="0"
-							max="3" step="1" value="0"
+						<input id="viewmodel_presetpos_num" type="number"
+							name="viewmodel_presetpos_num" min="0" max="3" step="1" value="0"
 							oninput="this.form.viewmodel_presetpos.value=this.value" />
 					</form>
-					
+
 					<img id="previewPresetPos" src="" width="0%" height="0%" />
 
-					<p> If you decide to go with Preset Position 0 (custom), use the sliders below.</p>
+					<p>If you decide to go with Preset Position 0 (custom), use the
+						sliders below.</p>
 
 					<form>
 						<b>Field Of View</b><br> <input id="viewmodel_fov"
 							type="range" name="viewmodel_fov" min="54" max="68" step="1"
 							value="68" oninput="this.form.viewmodel_fov_num.value=this.value" />
-						<input id="viewmodel_fov_num" type="number" name="viewmodel_fov_num" min="54" 
-							max="68" step="1" value="68"
+						<input id="viewmodel_fov_num" type="number"
+							name="viewmodel_fov_num" min="54" max="68" step="1" value="68"
 							oninput="this.form.viewmodel_fov.value=this.value" />
 					</form>
 
@@ -596,10 +648,17 @@
 							step="0.1" value="-2.0" id="viewmodel_offset_z_num"
 							oninput="this.form.viewmodel_offset_z.value=this.value" />
 					</form>
+<br>
+					<p>The commands below has little to no effect on your game.
+						They primarily relate to how much of your screen is covered with
+						your own weapon/arm. Keep them all at the lowest settings
+						possible, as there is no good reason to display more of your gun.
+						By default they should all be set to their lowest.</p>
+<br>
 
 					<form>
-						<b>Shooting Movement Left</b><br> <input
-							id="cl_viewmodel_shift_left_amt" type="range"
+						<b>Shooting Movement Left <abbr title="S">?</abbr>
+						</b><br> <input id="cl_viewmodel_shift_left_amt" type="range"
 							name="cl_viewmodel_shift_left_amt" min="0.5" max="2.0"
 							step="0.05" value="0.5"
 							oninput="this.form.cl_viewmodel_shift_left_amt_num.value=this.value" />
@@ -620,7 +679,8 @@
 					</form>
 
 					<form>
-						<b>Bobcycle <abbr title="0.98 enforced on all MM servers and leagues.">?</abbr></b><br>
+						<b>Bobcycle <abbr
+							title="0.98 enforced on all MM servers and leagues.">?</abbr></b><br>
 						<input id="cl_bobcycle" type="range" name="cl_bobcycle" min="0.1"
 							max="2.0" step="0.01" value="0.98"
 							oninput="this.form.cl_bobcycle_num.value=this.value" /> <input
@@ -649,8 +709,9 @@
 					</form>
 
 					<form>
-						<b>Bob Vertical</b><br> <input id="cl_bobamt_vert" type="range"
-							name="cl_bobamt_vert" min="0.1" max="2.0" step="0.05" value="0.1"
+						<b>Bob Vertical</b><br> <input id="cl_bobamt_vert"
+							type="range" name="cl_bobamt_vert" min="0.1" max="2.0"
+							step="0.05" value="0.1"
 							oninput="this.form.cl_bobamt_vert_num.value=this.value" /> <input
 							type="number" name="cl_bobamt_vert_num" min="0.1" max="2.0"
 							step="0.05" value="0.1"
@@ -659,6 +720,18 @@
 
 				</div>
 				<div class="tabpage" id="tabpage_7">
+					<h2>Keybindings</h2>
+					<p>Your autoexec is a good place to include keybindings if you
+						have a handful of go-to keybindings you always use. Right now you
+						currently have the possibility to bind the entire numpad, function
+						keys from F1 to F8, the four arrow keys, and up to 6 custom keys.
+						If you dont wish to bind something, or have already bound it in
+						your game, leave the fields relating to it blank. This will not
+						touch your existing keybinding. On the bottom of the page you will
+						find some suggested bindings, along with a list of weapon names,
+						should you find yourself interested in keybiding weapons
+						purchases, which is a very common thing to do.</p>
+
 					<h2>Numpad Buy Binds</h2>
 
 					<table class="keypad">
@@ -709,8 +782,7 @@
 									style="overflow: hidden; resize: none">buy nova</textarea></td>
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="kp_downarrow" name="finalconfig"
-									style="overflow: hidden; resize: none">buy xm1014</textarea>
-							</td>
+									style="overflow: hidden; resize: none">buy xm1014</textarea></td>
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="kp_pgdn" name="finalconfig"
 									style="overflow: hidden; resize: none">buy mac10; buy mp9</textarea></td>
@@ -730,7 +802,139 @@
 						</tr>
 					</table>
 
-					<h3>Rifles</h3>
+					<h2>
+						Function keys <br> F1, F2, F3 and F4
+					</h2>
+
+					<table class="functionKeys">
+						<tr class="function_bracket1">
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="f1" name="f1" style="overflow: hidden; resize: none;"
+									placeholder="F1"></textarea></td>
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="f2" name="f2" style="overflow: hidden; resize: none;"
+									placeholder="F2"></textarea></td>
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="f3" name="f3" style="overflow: hidden; resize: none;"
+									placeholder="F3"></textarea></td>
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="f4" name="f4" style="overflow: hidden; resize: none;"
+									placeholder="F4"></textarea></td>
+						</tr>
+					</table>
+					<h2>F5, F6, F7 and F8</h2>
+					<table class="functionKeys">
+						<tr class="function_bracket2">
+
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="f5" name="f5" style="overflow: hidden; resize: none;"
+									placeholder="F5"></textarea></td>
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="f6" name="f6" style="overflow: hidden; resize: none;"
+									placeholder="F6"></textarea></td>
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="f7" name="f7" style="overflow: hidden; resize: none;"
+									placeholder="F7"></textarea></td>
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="f8" name="f8" style="overflow: hidden; resize: none;"
+									placeholder="F8"></textarea></td>
+
+						</tr>
+					</table>
+
+					<h2>Arrow keys</h2>
+
+					<table class="keypad">
+						<tr class="key-row">
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="unused1" name="unused1"
+									style="overflow: hidden; resize: none; border: none; background: transparent"
+									disabled></textarea></td>
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="uparrow" name="uparrow" placeholder="Arrow up"
+									style="overflow: hidden; resize: none"></textarea></td>
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="unused1" name="unused1"
+									style="overflow: hidden; resize: none; border: none; background: transparent"
+									disabled></textarea></td>
+						</tr>
+						<tr class="key-row">
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="leftarrow" name="leftarrow" placeholder="Arrow Left"
+									style="overflow: hidden; resize: none"></textarea></td>
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="downarrow" name="downarrow" placeholder="Arrow Down"
+									style="overflow: hidden; resize: none"></textarea></td>
+							<td class="key-cell"><textarea class="btn btn-default key"
+									id="rightarrow" name=""rightarrow"" placeholder="Arrow Right"
+									style="overflow: hidden; resize: none"></textarea></td>
+						</tr>
+					</table>
+
+					<h2>Custom</h2>
+					<p>We've made room for 6 custom keybindings. Leave fields blank
+						if you dont wish to keybind a button, or already have a binding
+						you dont want to brake.</p>
+
+					<b> First custom</b> <br> Key:
+					<textarea id="customKeybind1_button" rows="1" cols="8"
+						style="overflow: hidden; resize: none"></textarea>
+					Command:
+					<textarea id="customKeybind1" rows="1" cols="50"
+						style="overflow: hidden; resize: none"></textarea>
+					<br> <br> <b> Second custom</b> <br> Key:
+					<textarea id="customKeybind2_button" rows="1" cols="8"
+						style="overflow: hidden; resize: none"></textarea>
+					Command:
+					<textarea id="customKeybind2" rows="1" cols="50"
+						style="overflow: hidden; resize: none"></textarea>
+					<br> <br> <b> Third custom</b> <br> Key:
+					<textarea id="customKeybind3_button" rows="1" cols="8"
+						style="overflow: hidden; resize: none"></textarea>
+					Command:
+					<textarea id="customKeybind3" rows="1" cols="50"
+						style="overflow: hidden; resize: none"></textarea>
+					<br> <br> <b> Fourth custom</b> <br> Key:
+					<textarea id="customKeybind4_button" rows="1" cols="8"
+						style="overflow: hidden; resize: none"></textarea>
+					Command:
+					<textarea id="customKeybind4" rows="1" cols="50"
+						style="overflow: hidden; resize: none"></textarea>
+					<br> <br> <b> Fifth custom</b> <br> Key:
+					<textarea id="customKeybind5_button" rows="1" cols="8"
+						style="overflow: hidden; resize: none"></textarea>
+					Command:
+					<textarea id="customKeybind5" rows="1" cols="50"
+						style="overflow: hidden; resize: none"></textarea>
+					<br> <br> <b> Sixth custom</b> <br> Key:
+					<textarea id="customKeybind6_button" rows="1" cols="8"
+						style="overflow: hidden; resize: none"></textarea>
+					Command:
+					<textarea id="customKeybind6" rows="1" cols="50"
+						style="overflow: hidden; resize: none"></textarea>
+					<br> <br>
+
+					<h3>Suggested keybinds</h3>
+					<p>
+						If you find yourself 1v1, and your teammates are distracting you
+						in the voice chat, binding <b>"toggle voice_enable 0 1" </b>to one
+						of the custom keys (for instance V) might be a lifesaver.
+					</p>
+					<br>
+					<p>
+						You might find that you ALWAYS pick up a small set of items,
+						regardless of how your rounds are going. Keybinding these might
+						simplify some of your gameplay. Consider for instance binding one
+						of the function keys, like, say, F1, to buying these items. The
+						command <b>"buy defuser; buy vesthelm; buy vest; buy
+							flashbang" </b> will buy a defuser, a vest (with helmet if you can
+						afford it) and a flashbang. An excellent package that can yield
+						you a kill or two.
+					</p>
+					<br>
+
+
+					<h3>Weapon names</h3>
 					<ul>
 						<li>Scout (ssg08)</li>
 						<li>Galil (galilar)</li>
@@ -795,14 +999,16 @@
 					<h2>Radar</h2>
 
 					<form>
-						<b>Always Centered <abbr title="You are always in the center">?</abbr></b><br> <input
-							id="cl_radar_always_centered" name="cl_radar_always_centered"
-							value="your_value2" type="checkbox" checked><br>
+						<b>Always Centered <abbr title="You are always in the center">?</abbr></b><br>
+						<input id="cl_radar_always_centered"
+							name="cl_radar_always_centered" value="your_value2"
+							type="checkbox" checked><br>
 					</form>
 
 					<form>
-						<b>Rotate <abbr title="Rotate with your look">?</abbr></b><br> <input id="cl_radar_rotate"
-							name="cl_radar_rotate" value="your_value2" type="checkbox"><br>
+						<b>Rotate <abbr title="Rotate with your look">?</abbr></b><br>
+						<input id="cl_radar_rotate" name="cl_radar_rotate"
+							value="your_value2" type="checkbox"><br>
 					</form>
 
 					<form>
@@ -826,20 +1032,25 @@
 							oninput="this.form.cl_radar_icon_scale_min.value=this.value" />
 					</form>
 				</div>
-				
-								<div class="tabpage" id="tabpage_9">
+
+				<div class="tabpage" id="tabpage_9">
 					<h2>Crosshair</h2>
 
-					<p>	I'm not going to reinvent the wheel, the people over at krisskarbo.com had already made a awesome crosshair generator, check it out <a href="http://www.crackhat.us/xhair"
-							target="_blank">over here</a>, and copy the settings that you enjoy into the text box below <b>after</b> you have clicked "Update" and finished all your other settings.
+					<p>
+						I'm not going to reinvent the wheel, the people over at
+						krisskarbo.com had already made a awesome crosshair generator,
+						check it out <a href="http://www.crackhat.us/xhair"
+							target="_blank">over here</a>, and copy the settings that you
+						enjoy into the text box below <b>after</b> you have clicked
+						"Update" and finished all your other settings.
 					</p>
 				</div>
 			</div>
 		</div>
-        <div class="button-container">
-            <input id="updateButton" type="button" value="Update"/>
-            <input id="downloadButton" type="button" value="Download"/>
-        </div>
+		<div class="button-container">
+			<input id="updateButton" type="button" value="Update" /> <input
+				id="downloadButton" type="button" value="Download" />
+		</div>
 
 		<form action="./" method="post">
 			<textarea id="finalConfig" name="finalConfig"

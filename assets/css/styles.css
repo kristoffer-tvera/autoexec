@@ -202,3 +202,17 @@ input#updateButton:hover, input#updateButton:focus, input#downloadButton:hover, 
 	font-size: small;
 	font-weight: normal;
 }
+
+.functionKeys {
+	margin: 10px auto;
+	padding: 0;
+	width: 600px; /* not actually a static size, % in real use */
+}
+
+.functionKeys .function_bracket1 {
+	width: 40%
+}
+
+.functionKeys .function_bracket2 {
+	width: 40%
+}

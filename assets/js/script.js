@@ -17,15 +17,15 @@ $(document).ready(function(){
 		var rates = [];
 
 		$('#finalConfig').append("//Rates\n");
-		rates.push("rate \""+$('#rate').val());
-		rates.push("cl_cmdrate \""+$('#cl_cmdrate').val());
-		rates.push("cl_updaterate \""+$('#cl_updaterate').val());
-		rates.push("cl_interp \""+$('#cl_interp').val());
-		rates.push("cl_interp_ratio \""+$('#cl_interp_ratio').val());
+		rates.push("rate \""+$('#rate').val()+"\"");
+		rates.push("cl_cmdrate \""+$('#cl_cmdrate').val()+"\"");
+		rates.push("cl_updaterate \""+$('#cl_updaterate').val()+"\"");
+		rates.push("cl_interp \""+$('#cl_interp').val()+"\"");
+		rates.push("cl_interp_ratio \""+$('#cl_interp_ratio').val()+"\"");
 		rates.push("cl_lagcompensation \""+($("#cl_lagcompensation").prop("checked") ? "1" : "0"));
 
 		for ( var i = 0; i < rates.length; i = i + 1 ) {
-			$('#finalConfig').append(rates[ i ]+'\"\n');
+			$('#finalConfig').append(rates[ i ]+'\n');
 		}
 
 		$('#finalConfig').append('\n\n');
@@ -34,20 +34,20 @@ $(document).ready(function(){
 
 		$('#finalConfig').append("//Audio\n");
 
-		audio.push("volume \""+$('#volume').val());
+		audio.push("volume \""+$('#volume').val()+"\"");
 		audio.push("voice_enable \""+($("#voice_enable").prop("checked") ? "1" : "0"));
-		audio.push("voice_scale \""+$('#voice_scale').val());
-		audio.push("windows_speaker_config \""+$('#windows_speaker_config').val());
-		audio.push("snd_musicvolume \""+$('#snd_musicvolume').val());
-		audio.push("snd_mixahead \""+$('#snd_mixahead').val());
-		audio.push("snd_headphone_pan_exponent \""+$('#snd_headphone_pan_exponent').val());
-		audio.push("snd_headphone_pan_radial_weight \""+$('#snd_headphone_pan_radial_weight').val());
+		audio.push("voice_scale \""+$('#voice_scale').val()+"\"");
+		audio.push("windows_speaker_config \""+$('#windows_speaker_config').val()+"\"");
+		audio.push("snd_musicvolume \""+$('#snd_musicvolume').val()+"\"");
+		audio.push("snd_mixahead \""+$('#snd_mixahead').val()+"\"");
+		audio.push("snd_headphone_pan_exponent \""+$('#snd_headphone_pan_exponent').val()+"\"");
+		audio.push("snd_headphone_pan_radial_weight \""+$('#snd_headphone_pan_radial_weight').val()+"\"");
 		audio.push("snd_legacy_surround \""+($("#snd_legacy_surround").prop("checked") ? "1" : "0"));
 		audio.push("snd_mute_losefocus \""+($("#snd_mute_losefocus").prop("checked") ? "1" : "0"));
 		audio.push("lobby_voice_chat_enabled \""+($("#lobby_voice_chat_enabled").prop("checked") ? "1" : "0"));
 
 		for ( var i = 0; i < audio.length; i = i + 1 ) {
-			$('#finalConfig').append(audio[ i ]+'\"\n');
+			$('#finalConfig').append(audio[ i ]+'\n');
 		}
 
 		$('#finalConfig').append('\n\n');
@@ -55,18 +55,18 @@ $(document).ready(function(){
 		var video = [];
 
 		$('#finalConfig').append("//Video\n");
-		//video.push("mat_setvideomode \""+$('#mat_setvideomode').val());
-		video.push("mat_monitorgamma \""+$('#mat_monitorgamma').val());
-		video.push("mat_queue_mode \""+$('#mat_queue_mode').val());
+		//video.push("mat_setvideomode \""+$('#mat_setvideomode').val()+"\"");
+		video.push("mat_monitorgamma \""+$('#mat_monitorgamma').val()+"\"");
+		video.push("mat_queue_mode \""+($('#mat_queue_mode').prop("checked") ? "-1" : "0")); //intentionally -1, wierd valvelogic.
 		video.push("mat_vsync \""+($("#mat_vsync").prop("checked") ? "1" : "0"));
-		video.push("fps_max \""+$('#fps_max').val());
-		video.push("fps_max_menu \""+$('#fps_max_menu').val());
+		video.push("fps_max \""+$('#fps_max').val()+"\"");
+		video.push("fps_max_menu \""+$('#fps_max_menu').val()+"\"");
 		video.push("r_dynamic \""+($("#r_dynamic").prop("checked") ? "1" : "0"));
 		video.push("r_drawtracers_firstperson \""+($("#r_drawtracers_firstperson").prop("checked") ? "1" : "0"));
 		video.push("mat_savechanges //write settings to registry");
 
 		for ( var i = 0; i < video.length; i = i + 1 ) {
-			$('#finalConfig').append(video[ i ]+'\"\n');
+			$('#finalConfig').append(video[ i ]+'\n');
 		}
 
 		$('#finalConfig').append('\n\n');
@@ -74,13 +74,13 @@ $(document).ready(function(){
 		var mouse = [];
 
 		$('#finalConfig').append("//Mouse\n");
-		mouse.push("sensitivity \""+$('#sensitivity').val());
-		mouse.push("zoom_sensitivity_ratio_mouse \""+$('#zoom_sensitivity_ratio_mouse').val());
+		mouse.push("sensitivity \""+$('#sensitivity').val()+"\"");
+		mouse.push("zoom_sensitivity_ratio_mouse \""+$('#zoom_sensitivity_ratio_mouse').val()+"\"");
 		mouse.push("m_rawinput \""+($("#m_rawinput").prop("checked") ? "1" : "0"));
-		mouse.push("m_customaccel \""+$('#m_customaccel').val());
+		mouse.push("m_customaccel \""+$('#m_customaccel').val()+"\"");
 
 		for ( var i = 0; i < mouse.length; i = i + 1 ) {
-			$('#finalConfig').append(mouse[ i ]+'\"\n');
+			$('#finalConfig').append(mouse[ i ]+'\n');
 		}
 
 		$('#finalConfig').append('\n\n');
@@ -90,23 +90,22 @@ $(document).ready(function(){
 		$('#finalConfig').append("//Misc\n");
 		misc.push("developer \""+($("#developer").prop("checked") ? "1" : "0"));
 		misc.push("con_enable \""+($("#con_enable").prop("checked") ? "1" : "0"));
-		misc.push("cl_showfps \""+($("#cl_showfps").prop("checked") ? "1" : "0"));
-		misc.push("con_filter_enable \""+$('#con_filter_enable').val());
-		misc.push("con_filter_text \""+$('#con_filter_text').val());
-		misc.push("con_filter_text_out \""+$('#con_filter_text_out').val());
-		misc.push("ui_steam_overlay_notification_position \""+$('#ui_steam_overlay_notification_position').val());
+		misc.push("con_filter_enable \""+$('#con_filter_enable').val()+"\"");
+		misc.push("con_filter_text \""+$('#con_filter_text').val()+"\"");
+		misc.push("con_filter_text_out \""+$('#con_filter_text_out').val()+"\"");
+		misc.push("ui_steam_overlay_notification_position \""+$('#ui_steam_overlay_notification_position').val()+"\"");
 		misc.push("player_nevershow_communityservermessage \""+($("#player_nevershow_communityservermessage").prop("checked") ? "1" : "0"));
-		misc.push("mm_dedicated_search_maxping \""+$('#mm_dedicated_search_maxping').val());
+		misc.push("mm_dedicated_search_maxping \""+$('#mm_dedicated_search_maxping').val()+"\"");
 		misc.push("gameinstructor_enable \""+($("#gameinstructor_enable").prop("checked") ? "1" : "0"));
 		misc.push("option_duck_method \""+($("#option_duck_method").prop("checked") ? "1" : "0"));
 		misc.push("option_speed_method \""+($("#option_speed_method").prop("checked") ? "1" : "0"));
 		misc.push("cl_forcepreload \""+($("#cl_forcepreload").prop("checked") ? "1" : "0"));
-		misc.push("cl_downloadfilter \""+$('#cl_downloadfilter').val());
+		misc.push("cl_downloadfilter \""+$('#cl_downloadfilter').val()+"\"");
 		misc.push("cl_disablehtmlmotd \""+($("#cl_disablehtmlmotd").prop("checked") ? "1" : "0"));
 		misc.push("cl_autohelp \""+($("#cl_autohelp").prop("checked") ? "1" : "0"));
 		misc.push("cl_showhelp \""+($("#cl_showhelp").prop("checked") ? "1" : "0"));
 		misc.push("cl_disablefreezecam \""+($("#cl_disablefreezecam").prop("checked") ? "1" : "0"));
-		//misc.push("cl_dm_buyrandomweapons \""+$('#cl_dm_buyrandomweapons').val());
+		//misc.push("cl_dm_buyrandomweapons \""+$('#cl_dm_buyrandomweapons').val()+"\"");
 		misc.push("cl_teammate_colors_show \""+($("#cl_teammate_colors_show").prop("checked") ? "1" : "0"));
 		misc.push("cl_loadout_colorweaponnames \""+($("#cl_loadout_colorweaponnames").prop("checked") ? "1" : "0"));
 		misc.push("cl_autowepswitch \""+($("#cl_autowepswitch").prop("checked") ? "1" : "0"));
@@ -115,7 +114,7 @@ $(document).ready(function(){
 		misc.push("hud_takesshots \""+($("#hud_takesshots").prop("checked") ? "1" : "0"));
 
 		for ( var i = 0; i < misc.length; i = i + 1 ) {
-			$('#finalConfig').append(misc[ i ]+'\"\n');
+			$('#finalConfig').append(misc[ i ]+'\n');
 		}
 
 		$('#finalConfig').append('\n\n');
@@ -123,7 +122,7 @@ $(document).ready(function(){
 		var hud = [];
 
 		$('#finalConfig').append("//HUD\n");
-		hud.push("hud_scaling \""+$('#hud_scaling').val());
+		hud.push("hud_scaling \""+$('#hud_scaling').val()+"\"");
 		hud.push("hud_showtargetid \""+($("#hud_showtargetid").prop("checked") ? "1" : "0"));
 		hud.push("cl_draw_only_deathnotices \""+($("#cl_draw_only_deathnotices").prop("checked") ? "1" : "0"));
 		hud.push("cl_righthand \""+($("#cl_righthand").prop("checked") ? "1" : "0"));
@@ -132,30 +131,30 @@ $(document).ready(function(){
 		hud.push("cl_showfps \""+($("#cl_showfps").prop("checked") ? "1" : "0"));
 		hud.push("net_graph \""+($("#net_graph").prop("checked") ? "1" : "0"));
 		hud.push("net_graphproportionalfont \""+($("#net_graphproportionalfont").prop("checked") ? "1" : "0"));
-		
+
 		hud.push("cl_hud_healthammo_style \""+($("#cl_hud_healthammo_style").prop("checked") ? "1" : "0"));
-		hud.push("cl_hud_background_alpha \""+$("#cl_hud_background_alpha").val());
-		hud.push("cl_hud_color \""+$("#cl_hud_color").val());
+		hud.push("cl_hud_background_alpha \""+$("#cl_hud_background_alpha").val()+"\"");
+		hud.push("cl_hud_color \""+$("#cl_hud_color").val()+"\"");
 		hud.push("cl_hud_playercount_showcount \""+($("#cl_hud_playercount_showcount").prop("checked") ? "1" : "0"));
 		hud.push("cl_hud_playercount_pos \""+($("#cl_hud_playercount_pos").prop("checked") ? "1" : "0"));
-		
-		
-		hud.push("viewmodel_presetpos \""+$('#viewmodel_presetpos').val());
+
+
+		hud.push("viewmodel_presetpos \""+$('#viewmodel_presetpos').val()+"\"");
 		if($('#viewmodel_presetpos').val() == 0){
-			hud.push("viewmodel_fov \""+$('#viewmodel_fov').val());
-			hud.push("viewmodel_offset_x \""+$('#viewmodel_offset_x').val());
-			hud.push("viewmodel_offset_y \""+$('#viewmodel_offset_y').val());
-			hud.push("viewmodel_offset_z \""+$('#viewmodel_offset_z').val());
+			hud.push("viewmodel_fov \""+$('#viewmodel_fov').val()+"\"");
+			hud.push("viewmodel_offset_x \""+$('#viewmodel_offset_x').val()+"\"");
+			hud.push("viewmodel_offset_y \""+$('#viewmodel_offset_y').val()+"\"");
+			hud.push("viewmodel_offset_z \""+$('#viewmodel_offset_z').val()+"\"");
 		}
-		hud.push("cl_viewmodel_shift_left_amt \""+$('#cl_viewmodel_shift_left_amt').val());
-		hud.push("cl_viewmodel_shift_right_amt \""+$('#cl_viewmodel_shift_right_amt').val());
-		hud.push("cl_bobcycle \""+$('#cl_bobcycle').val());
-		hud.push("cl_bob_lower_amt \""+$('#cl_bob_lower_amt').val());
-		hud.push("cl_bobamt_lat \""+$('#cl_bobamt_lat').val());
-		hud.push("cl_bobamt_vert \""+$('#cl_bobamt_vert').val());
+		hud.push("cl_viewmodel_shift_left_amt \""+$('#cl_viewmodel_shift_left_amt').val()+"\"");
+		hud.push("cl_viewmodel_shift_right_amt \""+$('#cl_viewmodel_shift_right_amt').val()+"\"");
+		hud.push("cl_bobcycle \""+$('#cl_bobcycle').val()+"\"");
+		hud.push("cl_bob_lower_amt \""+$('#cl_bob_lower_amt').val()+"\"");
+		hud.push("cl_bobamt_lat \""+$('#cl_bobamt_lat').val()+"\"");
+		hud.push("cl_bobamt_vert \""+$('#cl_bobamt_vert').val()+"\"");
 
 		for ( var i = 0; i < hud.length; i = i + 1 ) {
-			$('#finalConfig').append(hud[ i ]+'\"\n');
+			$('#finalConfig').append(hud[ i ]+'\n');
 		}
 
 		$('#finalConfig').append('\n\n');
@@ -164,25 +163,123 @@ $(document).ready(function(){
 
 		$('#finalConfig').append("//Keybinds\n");
 
-		keybinds.push("bind kp_slash \""+$('#kp_slash').val());
-		keybinds.push("bind kp_multiply \""+$('#kp_multiply').val());
-		keybinds.push("bind kp_minus \""+$('#kp_minus').val());
-		keybinds.push("bind kp_home \""+$('#kp_home').val());
-		keybinds.push("bind kp_uparrow \""+$('#kp_uparrow').val());
-		keybinds.push("bind kp_pgup \""+$('#kp_pgup').val());
-		keybinds.push("bind kp_leftarrow \""+$('#kp_leftarrow').val());
-		keybinds.push("bind kp_5 \""+$('#kp_5').val());
-		keybinds.push("bind kp_rightarrow \""+$('#kp_rightarrow').val());
-		keybinds.push("bind kp_end \""+$('#kp_end').val());
-		keybinds.push("bind kp_downarrow \""+$('#kp_downarrow').val());
-		keybinds.push("bind kp_pgdn \""+$('#kp_pgdn').val());
-		keybinds.push("bind kp_ins \""+$('#kp_ins').val());
-		keybinds.push("bind kp_del \""+$('#kp_del').val());
-		keybinds.push("bind kp_plus \""+$('#kp_plus').val());
-		keybinds.push("bind kp_enter \""+$('#kp_enter').val());
+		//Handles keybindings for the entire numpad
+		if ($.trim($('#kp_slash').val()).length > 0)
+			keybinds.push("bind kp_slash \""+$('#kp_slash').val()+"\"");
+
+		if ($.trim($('#kp_multiply').val()).length > 0)
+			keybinds.push("bind kp_multiply \""+$('#kp_multiply').val()+"\"");
+
+		if ($.trim($('#kp_minus').val()).length > 0)
+			keybinds.push("bind kp_minus \""+$('#kp_minus').val()+"\"");
+
+		if ($.trim($('#kp_home').val()).length > 0)
+			keybinds.push("bind kp_home \""+$('#kp_home').val()+"\"");
+
+		if ($.trim($('#kp_uparrow').val()).length > 0)
+			keybinds.push("bind kp_uparrow \""+$('#kp_uparrow').val()+"\"");
+
+		if ($.trim($('#kp_pgup').val()).length > 0)
+			keybinds.push("bind kp_pgup \""+$('#kp_pgup').val()+"\"");
+
+		if ($.trim($('#kp_leftarrow').val()).length > 0)
+			keybinds.push("bind kp_leftarrow \""+$('#kp_leftarrow').val()+"\"");
+
+		if ($.trim($('#kp_5').val()).length > 0)
+			keybinds.push("bind kp_5 \""+$('#kp_5').val()+"\"");
+
+		if ($.trim($('#kp_rightarrow').val()).length > 0)
+			keybinds.push("bind kp_rightarrow \""+$('#kp_rightarrow').val()+"\"");
+
+		if ($.trim($('#kp_end').val()).length > 0)
+			keybinds.push("bind kp_end \""+$('#kp_end').val()+"\"");
+
+		if ($.trim($('#kp_downarrow').val()).length > 0)
+			keybinds.push("bind kp_downarrow \""+$('#kp_downarrow').val()+"\"");
+
+		if ($.trim($('#kp_pgdn').val()).length > 0)
+			keybinds.push("bind kp_pgdn \""+$('#kp_pgdn').val()+"\"");
+
+		if ($.trim($('#kp_ins').val()).length > 0)
+			keybinds.push("bind kp_ins \""+$('#kp_ins').val()+"\"");
+
+		if ($.trim($('#kp_del').val()).length > 0)
+			keybinds.push("bind kp_del \""+$('#kp_del').val()+"\"");
+
+		if ($.trim($('#kp_plus').val()).length > 0)
+			keybinds.push("bind kp_plus \""+$('#kp_plus').val()+"\"");
+
+		if ($.trim($('#kp_enter').val()).length > 0)
+			keybinds.push("bind kp_enter \""+$('#kp_enter').val()+"\"");
+		keybinds.push("");
+
+
+		//Handles keybindings for the function keys (f1, f2,...)
+		if ($.trim($('#f1').val()).length > 0)
+			keybinds.push("bind f1 \""+$('#f1').val()+"\"");
+
+		if ($.trim($('#f2').val()).length > 0)
+			keybinds.push("bind f2 \""+$('#f2').val()+"\"");
+
+		if ($.trim($('#f3').val()).length > 0)
+			keybinds.push("bind f3 \""+$('#f3').val()+"\"");
+
+		if ($.trim($('#f4').val()).length > 0)
+			keybinds.push("bind f4 \""+$('#f4').val()+"\"");
+
+
+		if ($.trim($('#f5').val()).length > 0)
+			keybinds.push("bind f5 \""+$('#f5').val()+"\"");
+
+		if ($.trim($('#f6').val()).length > 0)
+			keybinds.push("bind f6 \""+$('#f6').val()+"\"");
+
+		if ($.trim($('#f7').val()).length > 0)
+			keybinds.push("bind f7 \""+$('#f7').val()+"\"");
+
+		if ($.trim($('#f8').val()).length > 0)
+			keybinds.push("bind f8 \""+$('#f8').val()+"\"");
+		keybinds.push("");
+
+
+		//Handles keybinds for the arrow keys
+		if ($.trim($('#uparrow').val()).length > 0)
+			keybinds.push("bind uparrow \""+$('#uparrow').val()+"\"");
+
+		if ($.trim($('#downarrow').val()).length > 0)
+			keybinds.push("bind downarrow \""+$('#downarrow').val()+"\"");
+
+		if ($.trim($('#rightarrow').val()).length > 0)
+			keybinds.push("bind rightarrow \""+$('#rightarrow').val()+"\"");
+
+		if ($.trim($('#leftarrow').val()).length > 0)
+			keybinds.push("bind leftarrow \""+$('#leftarrow').val()+"\"");
+		keybinds.push("");
+
+		//Handles the custom keybindings.
+		if ($.trim($('#customKeybind1').val()).length > 0)
+			keybinds.push("bind "+$('#customKeybind1_button').val()+" \""+$('#customKeybind1').val()+"\"");
+
+		if ($.trim($('#customKeybind2').val()).length > 0)
+			keybinds.push("bind "+$('#customKeybind2_button').val()+" \""+$('#customKeybind2').val()+"\"");
+
+		if ($.trim($('#customKeybind3').val()).length > 0)
+			keybinds.push("bind "+$('#customKeybind3_button').val()+" \""+$('#customKeybind3').val()+"\"");
+
+		if ($.trim($('#customKeybind4').val()).length > 0)
+			keybinds.push("bind "+$('#customKeybind4_button').val()+" \""+$('#customKeybind4').val()+"\"");
+
+		if ($.trim($('#customKeybind5').val()).length > 0)
+			keybinds.push("bind "+$('#customKeybind5_button').val()+" \""+$('#customKeybind5').val()+"\"");
+
+		if ($.trim($('#customKeybind6').val()).length > 0)
+			keybinds.push("bind "+$('#customKeybind6_button').val()+" \""+$('#customKeybind6').val()+"\"");
+
+
+
 
 		for ( var i = 0; i < keybinds.length; i = i + 1 ) {
-			$('#finalConfig').append(keybinds[ i ]+'\"\n');
+			$('#finalConfig').append(keybinds[ i ]+'\n');
 		}
 
 		$('#finalConfig').append('\n\n');
@@ -192,8 +289,8 @@ $(document).ready(function(){
 		$('#finalConfig').append("//Radar\n");
 		radar.push("cl_radar_always_centered \""+($("#cl_radar_always_centered").prop("checked") ? "1" : "0"));
 		radar.push("cl_radar_rotate \""+($("#cl_radar_rotate").prop("checked") ? "1" : "0"));
-		radar.push("cl_radar_scale \""+$('#cl_radar_scale').val());
-		radar.push("cl_radar_icon_scale_min \""+$('#cl_radar_icon_scale_min').val());
+		radar.push("cl_radar_scale \""+$('#cl_radar_scale').val()+"\"");
+		radar.push("cl_radar_icon_scale_min \""+$('#cl_radar_icon_scale_min').val()+"\"");
 
 
 		for ( var i = 0; i < radar.length; i = i + 1 ) {
@@ -207,7 +304,7 @@ $(document).ready(function(){
 		$('#finalConfig').append("//Crosshair \n");
 
 		for ( var i = 0; i < crosshair.length; i = i + 1 ) {
-			$('#finalConfig').append(crosshair[ i ]+'\"\n');
+			$('#finalConfig').append(crosshair[ i ]+'\n');
 		}
 
 		$('#finalConfig').append('\n\n');
@@ -224,108 +321,108 @@ $(document).ready(function(){
 		e.preventDefault();
 	});
 
-	
+
 	$("#viewmodel_presetpos").change(function () {
 		sliderValue = $(this).val();
-		
-        if (sliderValue == 0){
-        	$("#previewPresetPos").attr("src", "");
-        	$("#previewPresetPos").attr("width", "0%");
-        	$("#previewPresetPos").attr("height", "0%");
-        } 
-        if (sliderValue == 1){
-        	$("#previewPresetPos").attr("src", "http://i.imgur.com/KNtKR5W.jpg");
-        	$("#previewPresetPos").attr("width", "100%");
-        	$("#previewPresetPos").attr("height", "100%");
-        } 
-        if (sliderValue == 2){
-        	$("#previewPresetPos").attr("src", "http://i.imgur.com/LsMToLi.jpg");
-        	$("#previewPresetPos").attr("width", "100%");
-        	$("#previewPresetPos").attr("height", "100%");
-        } 
-        if (sliderValue == 3){
-        	$("#previewPresetPos").attr("src", "http://i.imgur.com/J0xSB1n.jpg");
-        	$("#previewPresetPos").attr("width", "100%");
-        	$("#previewPresetPos").attr("height", "100%");
-        }
-            
-    });
-	
+
+		if (sliderValue == 0){
+			$("#previewPresetPos").attr("src", "");
+			$("#previewPresetPos").attr("width", "0%");
+			$("#previewPresetPos").attr("height", "0%");
+		} 
+		if (sliderValue == 1){
+			$("#previewPresetPos").attr("src", "http://i.imgur.com/KNtKR5W.jpg");
+			$("#previewPresetPos").attr("width", "100%");
+			$("#previewPresetPos").attr("height", "100%");
+		} 
+		if (sliderValue == 2){
+			$("#previewPresetPos").attr("src", "http://i.imgur.com/LsMToLi.jpg");
+			$("#previewPresetPos").attr("width", "100%");
+			$("#previewPresetPos").attr("height", "100%");
+		} 
+		if (sliderValue == 3){
+			$("#previewPresetPos").attr("src", "http://i.imgur.com/J0xSB1n.jpg");
+			$("#previewPresetPos").attr("width", "100%");
+			$("#previewPresetPos").attr("height", "100%");
+		}
+
+	});
+
 	$("#viewmodel_presetpos_num").change(function () {
 		sliderValue = $(this).val();
-		
-        if (sliderValue == 0){
-        	$("#previewPresetPos").attr("src", "");
-        	$("#previewPresetPos").attr("width", "0%");
-        	$("#previewPresetPos").attr("height", "0%");
-        } 
-        if (sliderValue == 1){
-        	$("#previewPresetPos").attr("src", "http://i.imgur.com/KNtKR5W.jpg");
-        	$("#previewPresetPos").attr("width", "100%");
-        	$("#previewPresetPos").attr("height", "100%");
-        } 
-        if (sliderValue == 2){
-        	$("#previewPresetPos").attr("src", "http://i.imgur.com/LsMToLi.jpg");
-        	$("#previewPresetPos").attr("width", "100%");
-        	$("#previewPresetPos").attr("height", "100%");
-        } 
-        if (sliderValue == 3){
-        	$("#previewPresetPos").attr("src", "http://i.imgur.com/J0xSB1n.jpg");
-        	$("#previewPresetPos").attr("width", "100%");
-        	$("#previewPresetPos").attr("height", "100%");
-        }
-            
-    });
-	
+
+		if (sliderValue == 0){
+			$("#previewPresetPos").attr("src", "");
+			$("#previewPresetPos").attr("width", "0%");
+			$("#previewPresetPos").attr("height", "0%");
+		} 
+		if (sliderValue == 1){
+			$("#previewPresetPos").attr("src", "http://i.imgur.com/KNtKR5W.jpg");
+			$("#previewPresetPos").attr("width", "100%");
+			$("#previewPresetPos").attr("height", "100%");
+		} 
+		if (sliderValue == 2){
+			$("#previewPresetPos").attr("src", "http://i.imgur.com/LsMToLi.jpg");
+			$("#previewPresetPos").attr("width", "100%");
+			$("#previewPresetPos").attr("height", "100%");
+		} 
+		if (sliderValue == 3){
+			$("#previewPresetPos").attr("src", "http://i.imgur.com/J0xSB1n.jpg");
+			$("#previewPresetPos").attr("width", "100%");
+			$("#previewPresetPos").attr("height", "100%");
+		}
+
+	});
+
 	$("#viewmodel_presetpos").change(function () {
 		sliderValue = $(this).val();
-		
-        if (sliderValue == 0){
-        	$("#viewmodel_fov").prop('disabled', false);
-        	$("#viewmodel_offset_x").prop('disabled', false);
-        	$("#viewmodel_offset_y").prop('disabled', false);
-        	$("#viewmodel_offset_z").prop('disabled', false);
-        	$("#viewmodel_fov_num").prop('disabled', false);
-        	$("#viewmodel_offset_x_num").prop('disabled', false);
-        	$("#viewmodel_offset_y_num").prop('disabled', false);
-        	$("#viewmodel_offset_z_num").prop('disabled', false);
-        } 
-        if (sliderValue != 0){
-        	$("#viewmodel_fov").prop('disabled', true);
-        	$("#viewmodel_offset_x").prop('disabled', true);
-        	$("#viewmodel_offset_y").prop('disabled', true);
-        	$("#viewmodel_offset_z").prop('disabled', true);
-        	$("#viewmodel_fov_num").prop('disabled', true);
-        	$("#viewmodel_offset_x_num").prop('disabled', true);
-        	$("#viewmodel_offset_y_num").prop('disabled', true);
-        	$("#viewmodel_offset_z_num").prop('disabled', true);
-        } 
-            
-    });
-	
+
+		if (sliderValue == 0){
+			$("#viewmodel_fov").prop('disabled', false);
+			$("#viewmodel_offset_x").prop('disabled', false);
+			$("#viewmodel_offset_y").prop('disabled', false);
+			$("#viewmodel_offset_z").prop('disabled', false);
+			$("#viewmodel_fov_num").prop('disabled', false);
+			$("#viewmodel_offset_x_num").prop('disabled', false);
+			$("#viewmodel_offset_y_num").prop('disabled', false);
+			$("#viewmodel_offset_z_num").prop('disabled', false);
+		} 
+		if (sliderValue != 0){
+			$("#viewmodel_fov").prop('disabled', true);
+			$("#viewmodel_offset_x").prop('disabled', true);
+			$("#viewmodel_offset_y").prop('disabled', true);
+			$("#viewmodel_offset_z").prop('disabled', true);
+			$("#viewmodel_fov_num").prop('disabled', true);
+			$("#viewmodel_offset_x_num").prop('disabled', true);
+			$("#viewmodel_offset_y_num").prop('disabled', true);
+			$("#viewmodel_offset_z_num").prop('disabled', true);
+		} 
+
+	});
+
 	$("#viewmodel_presetpos_num").change(function () {
 		sliderValue = $(this).val();
-		
-        if (sliderValue == 0){
-        	$("#viewmodel_fov").prop('disabled', false);
-        	$("#viewmodel_offset_x").prop('disabled', false);
-        	$("#viewmodel_offset_y").prop('disabled', false);
-        	$("#viewmodel_offset_z").prop('disabled', false);
-        	$("#viewmodel_fov_num").prop('disabled', false);
-        	$("#viewmodel_offset_x_num").prop('disabled', false);
-        	$("#viewmodel_offset_y_num").prop('disabled', false);
-        	$("#viewmodel_offset_z_num").prop('disabled', false);
-        } 
-        if (sliderValue != 0){
-        	$("#viewmodel_fov").prop('disabled', true);
-        	$("#viewmodel_offset_x").prop('disabled', true);
-        	$("#viewmodel_offset_y").prop('disabled', true);
-        	$("#viewmodel_offset_z").prop('disabled', true);
-        	$("#viewmodel_fov_num").prop('disabled', true);
-        	$("#viewmodel_offset_x_num").prop('disabled', true);
-        	$("#viewmodel_offset_y_num").prop('disabled', true);
-        	$("#viewmodel_offset_z_num").prop('disabled', true);
-        } 
-            
-    });
+
+		if (sliderValue == 0){
+			$("#viewmodel_fov").prop('disabled', false);
+			$("#viewmodel_offset_x").prop('disabled', false);
+			$("#viewmodel_offset_y").prop('disabled', false);
+			$("#viewmodel_offset_z").prop('disabled', false);
+			$("#viewmodel_fov_num").prop('disabled', false);
+			$("#viewmodel_offset_x_num").prop('disabled', false);
+			$("#viewmodel_offset_y_num").prop('disabled', false);
+			$("#viewmodel_offset_z_num").prop('disabled', false);
+		} 
+		if (sliderValue != 0){
+			$("#viewmodel_fov").prop('disabled', true);
+			$("#viewmodel_offset_x").prop('disabled', true);
+			$("#viewmodel_offset_y").prop('disabled', true);
+			$("#viewmodel_offset_z").prop('disabled', true);
+			$("#viewmodel_fov_num").prop('disabled', true);
+			$("#viewmodel_offset_x_num").prop('disabled', true);
+			$("#viewmodel_offset_y_num").prop('disabled', true);
+			$("#viewmodel_offset_z_num").prop('disabled', true);
+		} 
+
+	});
 });
