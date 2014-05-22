@@ -15,6 +15,10 @@ body {
     margin: 0;
 }
 
+p {
+  display: block;
+}
+
 h2 {
 	margin-bottom: 10px;
 }
