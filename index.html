@@ -1022,7 +1022,7 @@
 					</form>
 
 					<form>
-						<b>Icon Scale <abbr title="Teammates, bomb, etc.">?</abbr></b><br>
+						<b>Icon Scale <abbr title="The size of your teammates and enemies as shown on the radar. Preview available below">?</abbr></b><br>
 						<input id="cl_radar_icon_scale_min" type="range"
 							name="cl_radar_icon_scale_min" min="0.4" max="1.0" step="0.01"
 							value="0.4"
@@ -1030,6 +1030,10 @@
 						<input type="number" name="cl_radar_icon_scale_min_num" min="0.4"
 							max="1.0" step="0.01" value="0.4"
 							oninput="this.form.cl_radar_icon_scale_min.value=this.value" />
+							<br>
+							<img id="radar" src="https://developer.valvesoftware.com/w/images/8/8f/CSGO_Example_Radar.png"></img>
+							<img id="radar_friend" src="http://i.imgur.com/qNjYL2Y.png"></img>
+							<img id="radar_enemy" src="http://i.imgur.com/tstJzpo.png"></img>
 					</form>
 				</div>
 

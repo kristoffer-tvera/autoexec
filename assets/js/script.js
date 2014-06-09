@@ -321,7 +321,7 @@ $(document).ready(function(){
 		e.preventDefault();
 	});
 
-
+	//Handles the preview display of preset post (slider input)
 	$("#viewmodel_presetpos").change(function () {
 		sliderValue = $(this).val();
 
@@ -347,7 +347,7 @@ $(document).ready(function(){
 		}
 
 	});
-
+	//Handles the preview display of preset post (numerical input)
 	$("#viewmodel_presetpos_num").change(function () {
 		sliderValue = $(this).val();
 
@@ -373,7 +373,8 @@ $(document).ready(function(){
 		}
 
 	});
-
+	
+	//Disable/Enable the sliders for fov, x, y, z, depending on presetpos.
 	$("#viewmodel_presetpos").change(function () {
 		sliderValue = $(this).val();
 
@@ -400,6 +401,7 @@ $(document).ready(function(){
 
 	});
 
+	//Disable/Enable the numerical for fov, x, y, z, depending on presetpos.
 	$("#viewmodel_presetpos_num").change(function () {
 		sliderValue = $(this).val();
 
@@ -425,4 +427,33 @@ $(document).ready(function(){
 		} 
 
 	});
+	
+    var enemyW = $('#radar_enemy').width();
+    var enemyH = $('#radar_enemy').height();
+    var friendW = $('#radar_friend').width();
+    var fiendH = $('#radar_friend').height();
+    
+    $('#radar_enemy').css("width", enemyW * 0.23);
+    $('#radar_enemy').css("height", enemyH * 0.23);
+    $('#radar_friend').css("width", friendW * 0.23);
+    $('#radar_friend').css("height", fiendH * 0.23);
+    
+	//Handles the slider radar icon scale preview
+    $("#cl_radar_icon_scale_min").on("input", function () {
+        var scale = 0.16 + ($(this).val() / 6);
+        $('#radar_enemy').css("width", enemyW * scale);
+        $('#radar_enemy').css("height", enemyH * scale);
+        $('#radar_friend').css("width", friendW * scale);
+        $('#radar_friend').css("height", fiendH * scale);
+    });
+	
+	//Handles the numerical radar icon scale preview
+    $("#cl_radar_icon_scale_min_num").change(function () {
+    	var scale = 0.16 + ($(this).val() / 6);
+		$('#radar_enemy').css("width", enemyW * scale);
+	    $('#radar_enemy').css("height", enemyH * scale);
+	    $('#radar_friend').css("width", friendW * scale);
+	    $('#radar_friend').css("height", fiendH * scale);
+	});
+	
 });

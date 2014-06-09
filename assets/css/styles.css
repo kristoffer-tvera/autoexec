@@ -220,3 +220,22 @@ input#updateButton:hover, input#updateButton:focus, input#downloadButton:hover, 
 .functionKeys .function_bracket2 {
 	width: 40%
 }
+
+#radar {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+}
+#radar_friend {
+    position: relative;
+    left: -170px;
+    top: -120px;
+    z-index: 2;
+}
+#radar_enemy {
+    position: relative;
+    left: -140px;
+    top: -150px;
+    z-index: 3;
+}
