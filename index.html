@@ -293,7 +293,7 @@
 							title="When you zoom = Zoom Sensitivity x Mouse Sensitivity">?</abbr></b><br>
 						<input id="zoom_sensitivity_ratio_mouse" type="range"
 							name="zoom_sensitivity_ratio_mouse" min="0.01" max="10.0"
-							value="1.0" step="0.05"
+							value="1.0" step="0.01"
 							oninput="this.form.zoom_sensitivity_ratio_mouse_num.value=this.value" />
 						<input type="number" name="zoom_sensitivity_ratio_mouse_num"
 							min="0.01" max="10.0" value="1.0" step="0.01"
@@ -742,63 +742,63 @@
 							</td>
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="kp_slash" 
-									style="overflow: hidden; resize: none">buy incgrenade;buy molotov</textarea></td>
+									style="overflow: hidden; resize: none">buy p90</textarea></td>
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="kp_multiply" 
-									style="overflow: hidden; resize: none">buy smokegrenade</textarea></td>
+									style="overflow: hidden; resize: none">buy mac10;buy mp7</textarea></td>
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="kp_minus" 
-									style="overflow: hidden; resize: none">buy flashbang</textarea></td>
+									style="overflow: hidden; resize: none">buy tec9;buy fn57</textarea></td>
 						</tr>
 						<tr class="key-row">
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="kp_home" 
-									style="overflow: hidden; resize: none">buy ssg08</textarea></td>
-							<td class="key-cell"><textarea class="btn btn-default key"
-									id="kp_uparrow" 
 									style="overflow: hidden; resize: none">buy awp</textarea></td>
 							<td class="key-cell"><textarea class="btn btn-default key"
+									id="kp_uparrow" 
+									style="overflow: hidden; resize: none">buy m4a1;buy ak47</textarea></td>
+							<td class="key-cell"><textarea class="btn btn-default key"
 									id="kp_pgup" 
-									style="overflow: hidden; resize: none">buy g3s1; buy scar20</textarea></td>
+									style="overflow: hidden; resize: none">buy famas; buy galilar</textarea></td>
 							<td class="key-cell" rowspan="2"><textarea
 									class="btn btn-default key tall-key" id="kp_plus"
-									 style="overflow: hidden; resize: none">buy hegrenade</textarea>
+									 style="overflow: hidden; resize: none">buy p250</textarea>
 							</td>
 						</tr>
 						<tr class="key-row">
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="kp_leftarrow" 
-									style="overflow: hidden; resize: none">buy galilar;buy famas</textarea></td>
+									style="overflow: hidden; resize: none">buy deagle</textarea></td>
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="kp_5" 
-									style="overflow: hidden; resize: none">buy ak47;buy m4a1</textarea></td>
+									style="overflow: hidden; resize: none">buy incgrenade;buy molotov</textarea></td>
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="kp_rightarrow" 
-									style="overflow: hidden; resize: none">buy aug;buy sg550</textarea></td>
+									style="overflow: hidden; resize: none">buy decoy</textarea></td>
 						</tr>
 						<tr class="key-row">
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="kp_end" 
-									style="overflow: hidden; resize: none">buy nova</textarea></td>
+									style="overflow: hidden; resize: none">buy hegrenade</textarea></td>
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="kp_downarrow" 
-									style="overflow: hidden; resize: none">buy xm1014</textarea></td>
+									style="overflow: hidden; resize: none">buy flashbang</textarea></td>
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="kp_pgdn" 
-									style="overflow: hidden; resize: none">buy mac10; buy mp9</textarea></td>
+									style="overflow: hidden; resize: none">buy smokegrenade</textarea></td>
 							<td class="key-cell" rowspan="2"><textarea
 									class="btn btn-default key tall-key" id="kp_enter"
-									 style="overflow: hidden; resize: none">buy vesthelm; buy vest; buy defuser</textarea>
+									 style="overflow: hidden; resize: none">buy defuser</textarea>
 							</td>
 						</tr>
 						<tr class="key-row">
 							<td class="key-cell" colspan="2"><textarea
 									class="btn btn-default key wide-key" id="kp_ins"
-									style="overflow: hidden; resize: none">buy p250</textarea>
+									style="overflow: hidden; resize: none">buy vesthelm</textarea>
 							</td>
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="kp_del" 
-									style="overflow: hidden; resize: none">buy p90</textarea></td>
+									style="overflow: hidden; resize: none">buy vest</textarea></td>
 						</tr>
 					</table>
 
@@ -852,7 +852,7 @@
 									disabled></textarea></td>
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="uparrow" placeholder="Arrow up"
-									style="overflow: hidden; resize: none"></textarea></td>
+									style="overflow: hidden; resize: none">incrementvar volume 0.0 1.0 0.05</textarea></td>
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="unused1"
 									style="overflow: hidden; resize: none; border: none; background: transparent"
@@ -861,13 +861,13 @@
 						<tr class="key-row">
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="leftarrow" placeholder="Arrow Left"
-									style="overflow: hidden; resize: none"></textarea></td>
+									style="overflow: hidden; resize: none"></textarea>ignorerad</td>
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="downarrow" placeholder="Arrow Down"
-									style="overflow: hidden; resize: none"></textarea></td>
+									style="overflow: hidden; resize: none">incrementvar volume 0.0 1.0 -0.05</textarea></td>
 							<td class="key-cell"><textarea class="btn btn-default key"
 									id="rightarrow" placeholder="Arrow Right"
-									style="overflow: hidden; resize: none"></textarea></td>
+									style="overflow: hidden; resize: none"></textarea>ignoremsg</td>
 						</tr>
 					</table>
 
