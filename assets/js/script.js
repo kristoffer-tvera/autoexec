@@ -57,7 +57,7 @@ $(document).ready(function(){
 		$('#finalConfig').append("//Video\n");
 		//video.push("mat_setvideomode \""+$('#mat_setvideomode').val()+"\"");
 		video.push("mat_monitorgamma \""+$('#mat_monitorgamma').val()+"\"");
-		video.push("mat_queue_mode \""+($('#mat_queue_mode').prop("checked") ? "-1" : "0")); //intentionally -1, wierd valvelogic.
+		video.push("mat_queue_mode \""+($('#mat_queue_mode').prop("checked") ? "-1" : "0") + "\""); //intentionally -1, wierd valvelogic.
 		video.push("mat_vsync \""+($("#mat_vsync").prop("checked") ? "1" : "0")+"\"");
 		video.push("fps_max \""+$('#fps_max').val()+"\"");
 		video.push("fps_max_menu \""+$('#fps_max_menu').val()+"\"");
