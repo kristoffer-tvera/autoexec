@@ -57,13 +57,13 @@ $(document).ready(function(){
 		$('#finalConfig').append("//Video\n");
 		//video.push("mat_setvideomode \""+$('#mat_setvideomode').val()+"\"");
 		video.push("mat_monitorgamma \""+$('#mat_monitorgamma').val()+"\"");
-		video.push("mat_queue_mode \""+($('#mat_queue_mode').prop("checked") ? "-1" : "0") + "\""); //intentionally -1, wierd valvelogic.
-		video.push("mat_vsync \""+($("#mat_vsync").prop("checked") ? "1" : "0")+"\"");
+		//video.push("mat_queue_mode \""+($('#mat_queue_mode').prop("checked") ? "-1" : "0") + "\""); //intentionally -1, wierd valvelogic.
+		//video.push("mat_vsync \""+($("#mat_vsync").prop("checked") ? "1" : "0")+"\"");
 		video.push("fps_max \""+$('#fps_max').val()+"\"");
 		video.push("fps_max_menu \""+$('#fps_max_menu').val()+"\"");
 		video.push("r_dynamic \""+($("#r_dynamic").prop("checked") ? "1" : "0")+"\"");
 		video.push("r_drawtracers_firstperson \""+($("#r_drawtracers_firstperson").prop("checked") ? "1" : "0")+"\"");
-		video.push("mat_savechanges //write settings to registry");
+		//video.push("mat_savechanges //write settings to registry");
 
 		for ( var i = 0; i < video.length; i = i + 1 ) {
 			$('#finalConfig').append(video[ i ]+'\n');
@@ -74,7 +74,7 @@ $(document).ready(function(){
 		var mouse = [];
 
 		$('#finalConfig').append("//Mouse\n");
-		mouse.push("sensitivity \""+$('#sensitivity').val()+"\"");
+		//mouse.push("sensitivity \""+$('#sensitivity').val()+"\"");
 		mouse.push("zoom_sensitivity_ratio_mouse \""+$('#zoom_sensitivity_ratio_mouse').val()+"\"");
 		mouse.push("m_rawinput \""+($("#m_rawinput").prop("checked") ? "1" : "0")+"\"");
 		mouse.push("m_customaccel \""+$('#m_customaccel').val()+"\"");
