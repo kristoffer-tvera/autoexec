@@ -231,20 +231,6 @@
 					</form>
 
 					<form>
-						<b>Multicore Rendering <abbr
-							title="Enable multicore rendering mode. This allows the game to properly utilize all your CPU processors, if you have multiple.">?</abbr></b><br>
-						<input id="mat_queue_mode" value="your_value2" type="checkbox"
-							checked><br>
-					</form>
-
-					<form>
-						<b>Vertical Sync <abbr
-							title="Enabling will make your computer check images before they are sent to your screen. This comes at a cost of CPU power, so it will slightly reduce framerate. If you can play without it, thats great, but some people experience tearing in the image when they play without it. Enable if you experience tearing, keep it disabled otherwise.">?</abbr></b><br>
-						<input id="mat_vsync" name="mat_vsync" value="your_value2"
-							type="checkbox"><br>
-					</form>
-
-					<form>
 						<b>Max FPS</b><br> <input id="fps_max" type="range"
 							name="fps_max" min="59" max="400" step="1" value="145"
 							oninput="this.form.fps_max_num.value=this.value" /> <input
@@ -278,15 +264,6 @@
 				</div>
 				<div class="tabpage" id="tabpage_4">
 					<h2>Mouse</h2>
-
-					<form>
-						<b>Sensitivity</b><br> <input id="sensitivity" type="range"
-							name="sensitivity" min="0" max="10.0" value="3" step="0.05"
-							oninput="this.form.sensitivity_num.value=this.value" /> <input
-							type="number" name="sensitivity_num" min="0." max="10.0"
-							value="3" step="0.05"
-							oninput="this.form.sensitivity.value=this.value" />
-					</form>
 
 					<form>
 						<b>Zoom Sensitivity <abbr
@@ -325,7 +302,7 @@
 						<b>Developer <abbr
 							title="Must be enabled for some commands below to work">?</abbr></b><br>
 						<input id="developer" name="developer" value="your_value2"
-							type="checkbox" checked><br>
+							type="checkbox"><br>
 					</form>
 
 					<form>
