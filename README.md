@@ -1,4 +1,4 @@
-Autoexec.cfg creator
+autoexec.cfg creator (for cs:go)
 ==============
 
 
@@ -16,6 +16,6 @@ Because why not. Autoexecs are largely handwritten, this just addresses the mena
 
 How?
 --------------
-Primarily created using jQuery, html5, php. Sorry for using PHP. I used jQuery because you can never get enough jQuery. Never.
+Dynamic website created using JS/jQuery, html, and php
 
 
